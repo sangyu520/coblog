@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+<style>
+.snowflakes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 3;
+}
+.snowflake {
+  position: absolute;
+  top: -10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(var(--swing)) translateY(100vh);
+    opacity: 0;
+  }
+}
+</style>
+
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
@@ -267,6 +297,8 @@
   <div class="snow-accumulation"></div>
   <div class="snowflakes"></div>
   <div class="snowman" style="display: none;"></div>
+  <div class="snowflakes" aria-hidden="true"></div>
+
 
   <main class="main">
     <div class="column">
@@ -724,6 +756,32 @@
     snowman.appendChild(rightEye);
   }, 60000);
 </script>
+<script>
+function createSnowflake() {
+  const snowflake = document.createElement('div');
+  snowflake.classList.add('snowflake');
+  const size = Math.random() * 6 + 4; // 4px ~ 10px
+  const left = Math.random() * 100;
+  const duration = Math.random() * 5 + 5; // 5s ~ 10s
+  const swing = Math.random() * 100 - 50 + 'px';
+
+  snowflake.style.width = `${size}px`;
+  snowflake.style.height = `${size}px`;
+  snowflake.style.left = `${left}%`;
+  snowflake.style.animationDuration = `${duration}s`;
+  snowflake.style.setProperty('--swing', swing);
+
+  // 淡蓝或白色
+  snowflake.style.backgroundColor = Math.random() > 0.5 ? 'rgba(255, 255, 255, 0.8)' : 'rgba(173, 216, 230, 0.7)';
+  
+  document.querySelector('.snowflakes').appendChild(snowflake);
+
+  setTimeout(() => snowflake.remove(), duration * 1000);
+}
+
+setInterval(createSnowflake, 300);
+</script>
+
 
 
 
