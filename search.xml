@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Docker</title>
-    <url>/2025/03/31/Docker/</url>
-    <content><![CDATA[<h3 id="visit-this-article"><a href="#visit-this-article" class="headerlink" title="visit this article"></a>visit this article</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/QINGZHID/article/details/144520000</span><br></pre></td></tr></table></figure>
-
-<h2 id="supplement"><a href="#supplement" class="headerlink" title="supplement"></a>supplement</h2><h3 id="install-Vmvare-and-install-the-Linux-system"><a href="#install-Vmvare-and-install-the-Linux-system" class="headerlink" title="install Vmvare and install the Linux system"></a>install Vmvare and install the Linux system</h3><p>···<br><a href="https://blog.csdn.net/weixin_61536532/article/details/129778310">https://blog.csdn.net/weixin_61536532/article/details/129778310</a><br><a href="https://blog.csdn.net/qq_57728300/article/details/139613989">https://blog.csdn.net/qq_57728300/article/details/139613989</a><br><a href="https://blog.csdn.net/weixin_45910027/article/details/130526456">https://blog.csdn.net/weixin_45910027/article/details/130526456</a><br><a href="https://blog.csdn.net/qq_38056704/article/details/90264044">https://blog.csdn.net/qq_38056704/article/details/90264044</a><br>···</p>
-]]></content>
-      <categories>
-        <category>前端开发</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Leetcode刷题记录</title>
     <url>/2025/04/09/Leetcode%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>太可恶了，我刚学完C++那些基础理论，像泛型编程，类，然后再没什么刷题经验的情况下，来了Leetcode，我就说这咋实现，感觉头都大了，怎么写怎么不对，然后一看发现，数据外部传入，我只需要补充类函数实现就行了，像int main()这些根本不用写，我只需要写个处理方法就行，气死我了！！！ </p>
@@ -76,6 +65,115 @@
 <p>头文件：</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br></pre></td></tr></table></figure>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2025/04/13/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Docker</title>
+    <url>/2025/03/31/Docker/</url>
+    <content><![CDATA[<h3 id="visit-this-article"><a href="#visit-this-article" class="headerlink" title="visit this article"></a>visit this article</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/QINGZHID/article/details/144520000</span><br></pre></td></tr></table></figure>
+
+<h2 id="supplement"><a href="#supplement" class="headerlink" title="supplement"></a>supplement</h2><h3 id="install-Vmvare-and-install-the-Linux-system"><a href="#install-Vmvare-and-install-the-Linux-system" class="headerlink" title="install Vmvare and install the Linux system"></a>install Vmvare and install the Linux system</h3><p>···<br><a href="https://blog.csdn.net/weixin_61536532/article/details/129778310">https://blog.csdn.net/weixin_61536532/article/details/129778310</a><br><a href="https://blog.csdn.net/qq_57728300/article/details/139613989">https://blog.csdn.net/qq_57728300/article/details/139613989</a><br><a href="https://blog.csdn.net/weixin_45910027/article/details/130526456">https://blog.csdn.net/weixin_45910027/article/details/130526456</a><br><a href="https://blog.csdn.net/qq_38056704/article/details/90264044">https://blog.csdn.net/qq_38056704/article/details/90264044</a><br>···</p>
+]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Markdown</title>
+    <url>/2025/04/05/markown/</url>
+    <content><![CDATA[<h1 id="有什么需要用到外挂标签的地方可以查阅这个大佬写的"><a href="#有什么需要用到外挂标签的地方可以查阅这个大佬写的" class="headerlink" title="有什么需要用到外挂标签的地方可以查阅这个大佬写的"></a>有什么需要用到外挂标签的地方可以查阅这个大佬写的</h1><h3 id="安知鱼主题标签-Tag-Plugins-安知鱼"><a href="#安知鱼主题标签-Tag-Plugins-安知鱼" class="headerlink" title="安知鱼主题标签 Tag Plugins | 安知鱼"></a><a href="https://blog.anheyu.com/posts/d50a.html">安知鱼主题标签 Tag Plugins | 安知鱼</a></h3><p>#：表示一级标题（最大的标题，几个#就是几级，最多六级）</p>
+<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><p>“-” + “空格”：可以生成无序列表</p>
+<ul>
+<li>无序列表</li>
+</ul>
+<ol>
+<li>有序列表</li>
+</ol>
+<p>*文字*：<em>斜体</em>          </p>
+<p>  **文字**：<strong>加粗</strong>    </p>
+<p>  ~~文字~~：<del>删除</del>       </p>
+<p>==文字==：&#x3D;&#x3D;高亮&#x3D;&#x3D;（typora要自己手动打开偏好设置）</p>
+<p>---：表示分隔线 （分隔一整行）</p>
+<p>&lt;u&gt;文字&lt;&#x2F;u&gt;：<u>下划线</u></p>
+<hr>
+<p>超链接： [放网站标题](放链接)     </p>
+<p> 图片（多一个！：![名字](链接)</p>
+<p>&gt;：表示引用</p>
+<blockquote>
+<p>哝这里</p>
+</blockquote>
+<p>- [ ]：这是任务块 </p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 完成勾选</li>
+</ul>
+ <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//代码块</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;Hello world!&quot;</span>&lt;&lt;endl;</span><br><span class="line">&#125;<span class="comment">//实现就是	```+对应语言</span></span><br></pre></td></tr></table></figure>
+
+<p>数学公式用&#x3D;&#x3D;LaTeX&#x3D;&#x3D; ：$$公式$$<br>$$<br>{2{x^T}(t)x(t - \tau ) &#x3D; {x^T}(t){Q^{ - \frac{1}{2}}}x(t - \tau ) \le \frac{1}{\alpha }{x^T}(t)Px(t) + \alpha {x^T}(t - \tau )x(t - \tau )}<br>$$<br>表格：用| |分隔</p>
+<p>|:—|:—:|—:|：分别是左对齐，居中对齐，右对齐（当然typora有智能的对齐）</p>
+<p>|-|-|-|：表分割</p>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>睡觉</th>
+<th>吃饭</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>√</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<p>[^ ]：脚注<a href="%E8%BF%99%E9%87%8C%E5%86%99%E8%A7%A3%E9%87%8A">^文字</a></p>
+<p>一般在最后是脚注内容用[^  ]:解释</p>
+<p><a href="baidu">名字</a>引用链接</p>
+<p>` 行内代码`：<code>cout&lt;&lt;&quot;Hello world!&quot;</code></p>
+<p>:表情名: ：:smile:(参考emoji)</p>
+<p>~ 下标~：H<del>2</del>O         </p>
+<p>​     ^上标^ ：x^2^</p>
+<h2 id="补上一句"><a href="#补上一句" class="headerlink" title="补上一句"></a>补上一句</h2><p>&#x3D;&#x3D;还支持HTML语法&#x3D;&#x3D;！！！！！（以后慢慢补充）</p>
+<p>&#x3D;&#x3D;锚点&#x3D;&#x3D;</p>
+<p>\：转义符，让其回归符号</p>
+<p>换行（两个空格加回车！其实直接下箭头就行）</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>react实现</title>
+    <url>/2025/04/07/react%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<p>我在page.pug内插入了<br>    div#react-root  &#x2F;&#x2F; 这是 React 组件的挂载点</p>
+<p>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;js&#x2F;bundle.js’)</p>
+<p>创建了有关index.js在src里面（src也是为创建的）<br>还创建了一个webpack.config.js和react.babelrc</p>
+<p>装了这些<br>npm install react react-dom<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;preset-env @babel&#x2F;preset-react webpack webpack-cli babel-loader<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;cli @babel&#x2F;preset-env @babel&#x2F;preset-react babel-loader<br>然后还要在layout.pug里面加上<br>    &#x2F;&#x2F;- 弹窗通知<br>    !&#x3D;partial(‘includes&#x2F;popup&#x2F;index’, {}, {cache: true})</p>
+<pre><code>block scripts（加上这句话，与上面弹窗通知对齐！）就可以实现react了
+我将bundle.js从&quot;C:\Users\86198\myblog\world-map-widget\node_modules\ajv\scripts\bundle.js&quot;移动到了source/js
+我在source/js里加了一个world-map.js
+在about里的index.md里面加了
+&lt;world-map data-dots=&#39;[&#123;&quot;start&quot;:&#123;&quot;lat&quot;:34.0522,&quot;lng&quot;:-118.2437&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:40.7128,&quot;lng&quot;:-74.0060&#125;&#125;,&#123;&quot;start&quot;:&#123;&quot;lat&quot;:51.5074,&quot;lng&quot;:-0.1278&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:48.8566,&quot;lng&quot;:2.3522&#125;&#125;]&#39;&gt;&lt;/world-map&gt;
+</code></pre>
+<script src="/js/world-map.js"></script>
+<p>cao,就是加载不出来地图<br>我删除了一个index.js<br>内容&#x2F;<em>在 index.js 中编写你的 React 组件代码。例如：</em>&#x2F;<br>import React from ‘react’;<br>import ReactDOM from ‘react-dom’;</p>
+<p>function App() {<br>  return <div>Hello from React!</div>;<br>}</p>
+<p>ReactDOM.render(<App />, document.getElementById(‘react-root’));</p>
+<p>我从source&#x2F;js里把echarts.min.js移动到桌面了<br>我删除了page.pug里的<br>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;public&#x2F;js&#x2F;bundle.js’)</p>
 ]]></content>
   </entry>
   <entry>
@@ -145,109 +243,6 @@
 <p>​	MP4格式是分享高质量视频的最好选择。然而，在保留视频质量和保持低文件大小方面，MP4算法并不尽如人意。如果你的视频要放在网站上，这可能会对你的页面加载速度产生负面影响。为了避免这个问题，在将你的视频放在网站上之前，将MP4转换为WebP!这将保持文件大小较小，页面加载时间快，视频质量基本相同。</p>
 <p>​	但是我试了一下webp没法自动播放啊，我再研究研究。（最主要确实我那个方法操作起来费时间）</p>
 <p>​	</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>react实现</title>
-    <url>/2025/04/07/react%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<p>我在page.pug内插入了<br>    div#react-root  &#x2F;&#x2F; 这是 React 组件的挂载点</p>
-<p>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;js&#x2F;bundle.js’)</p>
-<p>创建了有关index.js在src里面（src也是为创建的）<br>还创建了一个webpack.config.js和react.babelrc</p>
-<p>装了这些<br>npm install react react-dom<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;preset-env @babel&#x2F;preset-react webpack webpack-cli babel-loader<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;cli @babel&#x2F;preset-env @babel&#x2F;preset-react babel-loader<br>然后还要在layout.pug里面加上<br>    &#x2F;&#x2F;- 弹窗通知<br>    !&#x3D;partial(‘includes&#x2F;popup&#x2F;index’, {}, {cache: true})</p>
-<pre><code>block scripts（加上这句话，与上面弹窗通知对齐！）就可以实现react了
-我将bundle.js从&quot;C:\Users\86198\myblog\world-map-widget\node_modules\ajv\scripts\bundle.js&quot;移动到了source/js
-我在source/js里加了一个world-map.js
-在about里的index.md里面加了
-&lt;world-map data-dots=&#39;[&#123;&quot;start&quot;:&#123;&quot;lat&quot;:34.0522,&quot;lng&quot;:-118.2437&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:40.7128,&quot;lng&quot;:-74.0060&#125;&#125;,&#123;&quot;start&quot;:&#123;&quot;lat&quot;:51.5074,&quot;lng&quot;:-0.1278&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:48.8566,&quot;lng&quot;:2.3522&#125;&#125;]&#39;&gt;&lt;/world-map&gt;
-</code></pre>
-<script src="/js/world-map.js"></script>
-<p>cao,就是加载不出来地图<br>我删除了一个index.js<br>内容&#x2F;<em>在 index.js 中编写你的 React 组件代码。例如：</em>&#x2F;<br>import React from ‘react’;<br>import ReactDOM from ‘react-dom’;</p>
-<p>function App() {<br>  return <div>Hello from React!</div>;<br>}</p>
-<p>ReactDOM.render(<App />, document.getElementById(‘react-root’));</p>
-<p>我从source&#x2F;js里把echarts.min.js移动到桌面了<br>我删除了page.pug里的<br>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;public&#x2F;js&#x2F;bundle.js’)</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Markdown</title>
-    <url>/2025/04/05/markown/</url>
-    <content><![CDATA[<h1 id="有什么需要用到外挂标签的地方可以查阅这个大佬写的"><a href="#有什么需要用到外挂标签的地方可以查阅这个大佬写的" class="headerlink" title="有什么需要用到外挂标签的地方可以查阅这个大佬写的"></a>有什么需要用到外挂标签的地方可以查阅这个大佬写的</h1><h3 id="安知鱼主题标签-Tag-Plugins-安知鱼"><a href="#安知鱼主题标签-Tag-Plugins-安知鱼" class="headerlink" title="安知鱼主题标签 Tag Plugins | 安知鱼"></a><a href="https://blog.anheyu.com/posts/d50a.html">安知鱼主题标签 Tag Plugins | 安知鱼</a></h3><p>#：表示一级标题（最大的标题，几个#就是几级，最多六级）</p>
-<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><p>“-” + “空格”：可以生成无序列表</p>
-<ul>
-<li>无序列表</li>
-</ul>
-<ol>
-<li>有序列表</li>
-</ol>
-<p>*文字*：<em>斜体</em>          </p>
-<p>  **文字**：<strong>加粗</strong>    </p>
-<p>  ~~文字~~：<del>删除</del>       </p>
-<p>==文字==：&#x3D;&#x3D;高亮&#x3D;&#x3D;（typora要自己手动打开偏好设置）</p>
-<p>---：表示分隔线 （分隔一整行）</p>
-<p>&lt;u&gt;文字&lt;&#x2F;u&gt;：<u>下划线</u></p>
-<hr>
-<p>超链接： [放网站标题](放链接)     </p>
-<p> 图片（多一个！：![名字](链接)</p>
-<p>&gt;：表示引用</p>
-<blockquote>
-<p>哝这里</p>
-</blockquote>
-<p>- [ ]：这是任务块 </p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 完成勾选</li>
-</ul>
- <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//代码块</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;Hello world!&quot;</span>&lt;&lt;endl;</span><br><span class="line">&#125;<span class="comment">//实现就是	```+对应语言</span></span><br></pre></td></tr></table></figure>
-
-<p>数学公式用&#x3D;&#x3D;LaTeX&#x3D;&#x3D; ：$$公式$$<br>$$<br>{2{x^T}(t)x(t - \tau ) &#x3D; {x^T}(t){Q^{ - \frac{1}{2}}}x(t - \tau ) \le \frac{1}{\alpha }{x^T}(t)Px(t) + \alpha {x^T}(t - \tau )x(t - \tau )}<br>$$<br>表格：用| |分隔</p>
-<p>|:—|:—:|—:|：分别是左对齐，居中对齐，右对齐（当然typora有智能的对齐）</p>
-<p>|-|-|-|：表分割</p>
-<table>
-<thead>
-<tr>
-<th>任务</th>
-<th>睡觉</th>
-<th>吃饭</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td>√</td>
-<td>√</td>
-</tr>
-</tbody></table>
-<p>[^ ]：脚注<a href="%E8%BF%99%E9%87%8C%E5%86%99%E8%A7%A3%E9%87%8A">^文字</a></p>
-<p>一般在最后是脚注内容用[^  ]:解释</p>
-<p><a href="baidu">名字</a>引用链接</p>
-<p>` 行内代码`：<code>cout&lt;&lt;&quot;Hello world!&quot;</code></p>
-<p>:表情名: ：:smile:(参考emoji)</p>
-<p>~ 下标~：H<del>2</del>O         </p>
-<p>​     ^上标^ ：x^2^</p>
-<h2 id="补上一句"><a href="#补上一句" class="headerlink" title="补上一句"></a>补上一句</h2><p>&#x3D;&#x3D;还支持HTML语法&#x3D;&#x3D;！！！！！（以后慢慢补充）</p>
-<p>&#x3D;&#x3D;锚点&#x3D;&#x3D;</p>
-<p>\：转义符，让其回归符号</p>
-<p>换行（两个空格加回车！其实直接下箭头就行）</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>这是一篇文章</title>
-    <url>/2025/04/13/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h3 id="测试一下，其实什么也没有"><a href="#测试一下，其实什么也没有" class="headerlink" title="测试一下，其实什么也没有"></a>测试一下，其实什么也没有</h3>]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2025/04/13/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -369,6 +364,11 @@
 <p>​	大致上就这样</p>
 <p>​	然后在你的博客文件source中创建一个名为CNAME文件，不要后缀。写上你的域名。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>这是一篇文章</title>
+    <url>/2025/04/13/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h3 id="测试一下，其实什么也没有"><a href="#测试一下，其实什么也没有" class="headerlink" title="测试一下，其实什么也没有"></a>测试一下，其实什么也没有</h3>]]></content>
   </entry>
   <entry>
     <title>数据结构和算法</title>
