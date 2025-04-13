@@ -74,38 +74,7 @@
   </noscript>
 
   <style>
-  #dreamy-loading {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(ellipse at center, rgba(30, 30, 60, 0.9), rgba(10, 10, 30, 0.95));
-  backdrop-filter: blur(10px);
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.8s ease, visibility 0.8s ease;
-}
-
-.dreamy-loader {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: conic-gradient(from 0deg, #c084fc, #60a5fa, #a78bfa, #f472b6, #c084fc);
-  animation: rotate 2s linear infinite, glow 2s ease-in-out infinite alternate;
-  box-shadow: 0 0 25px rgba(200, 120, 255, 0.5), 0 0 50px rgba(140, 180, 255, 0.4);
-  mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%);
-}
-
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes glow {
-  0% { box-shadow: 0 0 25px rgba(200, 120, 255, 0.3), 0 0 50px rgba(140, 180, 255, 0.2); transform: scale(1); }
-  100% { box-shadow: 0 0 40px rgba(200, 120, 255, 0.6), 0 0 80px rgba(140, 180, 255, 0.5); transform: scale(1.1); }
-}
-
+  
   .snowflakes {
   position: fixed;
   top: 0;
@@ -384,10 +353,6 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-
-  <div id="dreamy-loading">
-    <div class="dreamy-loader"></div>
-  </div>
 
   <div id="loading-overlay">
     <div class="spinner"></div>
@@ -898,15 +863,6 @@ function createSnowflake() {
 }
 setInterval(createSnowflake, 300);
 </script>
-<script>
-  window.addEventListener('load', () => {
-    const loader = document.getElementById('dreamy-loading');
-    loader.style.opacity = '0';
-    loader.style.visibility = 'hidden';
-    setTimeout(() => loader.remove(), 1000);
-  });
-</script>
-
 
 
 </body>
