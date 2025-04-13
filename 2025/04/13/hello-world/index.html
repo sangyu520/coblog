@@ -380,7 +380,7 @@
 
     // Set a sky background image
     const backgroundImage = new Image();
-    backgroundImage.src = 'https://i.postimg.cc/26xZLTRg/image.jpg'; // Replace with your sky image URL
+    backgroundImage.src = 'https://example.com/sky-background.jpg'; // Replace with your sky image URL
 
     const ripples = [];
 
@@ -388,18 +388,21 @@
         constructor(x, y) {
             this.x = x;
             this.y = y;
-            this.radius = 1;
-            this.alpha = 0.6;
-            this.maxRadius = 150; // The maximum radius of the ripple
+            this.radius = 0;  // Initial radius is 0
+            this.alpha = 0.6;  // Initial alpha
+            this.maxRadius = 150; // Maximum radius of the ripple
+            this.growthRate = 2; // Rate of expansion
+            this.fadeRate = 0.02; // Rate of fading
         }
 
         update() {
-            this.radius += 2; // Increase the radius for the wave
-            this.alpha -= 0.02; // Fade the wave out
+            this.radius += this.growthRate; // Increase the radius
+            this.alpha -= this.fadeRate; // Fade the ripple
+
             if (this.alpha <= 0) {
                 // Reset ripple when it fades out
-                this.alpha = 0.6;
-                this.radius = 1;
+                this.alpha = 0;
+                this.radius = this.maxRadius;
             }
         }
 
