@@ -72,7 +72,7 @@
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
-  <!-- Flowing Gradient Blocks Canvas -->
+  <!-- Canvas for Water Ripple Effect -->
   <canvas id="canvas"></canvas>
 
   <main class="main">
@@ -417,7 +417,7 @@
          alt="Fork me on GitHub">
   </a>
 
-  <!-- Flowing Gradient Blocks JS -->
+  <!-- Water Ripple Effect JS -->
   <script>
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
@@ -425,51 +425,69 @@
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    let colors = ['#f9d423', '#ff4e50', '#fc4a1a', '#6a11cb'];
-    let blocks = [];
+    // Set a sky background image
+    const backgroundImage = new Image();
+    backgroundImage.src = 'https://example.com/sky-background.jpg'; // Replace with your sky image URL
 
-    class Block {
-        constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 200 + 50;
-            this.speed = Math.random() * 2 + 1;
-            this.color = colors[Math.floor(Math.random() * colors.length)];
+    const ripples = [];
+
+    class Ripple {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.radius = 1;
+            this.alpha = 0.6;
+            this.maxRadius = 150; // The maximum radius of the ripple
         }
 
         update() {
-            this.x += Math.cos(Math.random() * Math.PI) * this.speed;
-            this.y += Math.sin(Math.random() * Math.PI) * this.speed;
-
-            if (this.x > canvas.width || this.x < 0) this.speed = -this.speed;
-            if (this.y > canvas.height || this.y < 0) this.speed = -this.speed;
+            this.radius += 2; // Increase the radius for the wave
+            this.alpha -= 0.02; // Fade the wave out
+            if (this.alpha <= 0) {
+                // Reset ripple when it fades out
+                this.alpha = 0.6;
+                this.radius = 1;
+            }
         }
 
         draw() {
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-            ctx.fillStyle = this.color;
-            ctx.globalAlpha = 0.7;
-            ctx.fill();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+            ctx.strokeStyle = `rgba(255, 255, 255, ${this.alpha})`;
+            ctx.lineWidth = 2;
+            ctx.stroke();
         }
     }
 
+    // Draw background
+    function drawBackground() {
+        ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+    }
+
+    // Create ripple on click
+    canvas.addEventListener('click', (event) => {
+        const ripple = new Ripple(event.clientX, event.clientY);
+        ripples.push(ripple);
+    });
+
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        drawBackground();
 
-        if (blocks.length < 50) {
-            blocks.push(new Block());
-        }
-
-        blocks.forEach(block => {
-            block.update();
-            block.draw();
+        // Update and draw each ripple
+        ripples.forEach(ripple => {
+            ripple.update();
+            ripple.draw();
         });
 
         requestAnimationFrame(animate);
     }
 
-    animate();
+    // Load background image and start animation
+    backgroundImage.onload = () => {
+        animate();
+    };
   </script>
 </body>
 </html>
