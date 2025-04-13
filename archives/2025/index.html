@@ -186,7 +186,75 @@
         opacity: 0.4;
       }
     }
-    
+    /* 雪堆动态浮动效果 */
+.snow-accumulation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  pointer-events: none;
+  z-index: 4;
+  overflow: hidden;
+  animation: snowWiggle 10s ease-in-out infinite alternate;
+}
+
+@keyframes snowWiggle {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(5px); }
+}
+
+/* 雪人样式 */
+.snowman {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 60px;
+  height: 100px;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.snowman::before, .snowman::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+.snowman::before {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+}
+
+.snowman::after {
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+}
+
+/* 雪人眼睛和装饰 */
+.snowman-eye {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: black;
+  top: 68px;
+  left: 50%;
+  transform: translateX(-12px);
+}
+
+.snowman-eye.right {
+  transform: translateX(6px);
+}
+
   </style>
   
 </head>
@@ -197,6 +265,9 @@
   <div class="snowflakes"></div> <!-- Snowfall Layer -->
   <div class="snowflakes"></div>
   <div class="snow-accumulation"></div>
+  <div class="snowflakes"></div>
+  <div class="snowman" style="display: none;"></div>
+
   <main class="main">
     <div class="column">
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
@@ -590,6 +661,70 @@
 
   setInterval(createSnowflake, 200);
 </script>
+<script>
+  const snowflakeContainer = document.querySelector('.snowflakes');
+  const accumulationContainer = document.querySelector('.snow-accumulation');
+  const snowman = document.querySelector('.snowman');
+
+  function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.classList.add('snowflake');
+
+    const size = Math.random() * 4 + 2; // 2px - 6px
+    const left = Math.random() * 100;
+    const duration = Math.random() * 8 + 6;
+    const delay = Math.random() * 5;
+    const color = ['#ffffff', '#d8f0ff'][Math.floor(Math.random() * 2)];
+    const horizontalMove = (Math.random() - 0.5) * 100;
+
+    snowflake.style.width = `${size}px`;
+    snowflake.style.height = `${size}px`;
+    snowflake.style.left = `${left}vw`;
+    snowflake.style.backgroundColor = color;
+    snowflake.style.setProperty('--x-move', `${horizontalMove}px`);
+    snowflake.style.animationDuration = `${duration}s`;
+    snowflake.style.animationDelay = `${delay}s`;
+
+    snowflake.addEventListener('animationend', () => {
+      const fallen = snowflake.cloneNode(true);
+      fallen.style.top = 'auto';
+      fallen.style.bottom = '0';
+      fallen.style.left = `${left}vw`;
+      fallen.style.position = 'absolute';
+      fallen.style.animation = 'none';
+      fallen.style.opacity = 0.5;
+      fallen.style.transform = 'translateY(0) translateX(0)';
+      fallen.style.filter = 'blur(1.2px)';
+      fallen.style.boxShadow = '0 0 4px rgba(255,255,255,0.5)';
+      accumulationContainer.appendChild(fallen);
+
+      if (accumulationContainer.childElementCount > 100) {
+        accumulationContainer.removeChild(accumulationContainer.firstChild);
+      }
+
+      snowflake.remove();
+    });
+
+    snowflakeContainer.appendChild(snowflake);
+  }
+
+  // 生成雪花
+  setInterval(createSnowflake, 200);
+
+  // 雪人计时器（60秒后显示）
+  setTimeout(() => {
+    snowman.style.display = 'block';
+
+    const leftEye = document.createElement('div');
+    leftEye.className = 'snowman-eye';
+    snowman.appendChild(leftEye);
+
+    const rightEye = document.createElement('div');
+    rightEye.className = 'snowman-eye right';
+    snowman.appendChild(rightEye);
+  }, 60000);
+</script>
+
 
 
 
