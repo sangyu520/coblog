@@ -113,6 +113,7 @@
       z-index: 5;
     }
 
+    /* Snowflakes */
     .snowflakes {
       position: fixed;
       top: 0;
@@ -127,19 +128,20 @@
     .snowflake {
       position: absolute;
       top: -10px;
-      color: rgba(255, 255, 255, 0.7);
-      font-size: calc(1.5em + 1vw);
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      pointer-events: none;
       animation: fall linear infinite;
     }
 
     @keyframes fall {
       0% {
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(0) translateX(0);
         opacity: 1;
       }
       100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
+        transform: translateY(100vh) translateX(30px);
+        opacity: 0.4;
       }
     }
   </style>
@@ -147,8 +149,8 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
 
-  <div class="snowflakes" aria-hidden="true"></div> <!-- 飘雪容器 -->
-  <div class="background"></div> <!-- 背景动效 -->
+  <div class="background"></div>
+  <div class="snowflakes"></div> <!-- Snowfall Layer -->
 
   <main class="main">
     <div class="column">
@@ -378,16 +380,14 @@
 
   <canvas id="canvas"></canvas>
 
+  <!-- Water Ripple Script -->
   <script>
-    // 水波纹
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const ripples = [];
-
     class Ripple {
         constructor(x, y) {
             this.x = x;
@@ -398,7 +398,6 @@
             this.growthRate = 2;
             this.fadeRate = 0.02;
         }
-
         update() {
             this.radius += this.growthRate;
             this.alpha -= this.fadeRate;
@@ -407,7 +406,6 @@
                 this.radius = this.maxRadius;
             }
         }
-
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
@@ -436,33 +434,41 @@
         });
         requestAnimationFrame(animate);
     }
-
     animate();
 
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     });
+  </script>
 
-    // 飘雪效果
+  <!-- Snowfall Script -->
+  <script>
     const snowflakeContainer = document.querySelector('.snowflakes');
 
     function createSnowflake() {
       const snowflake = document.createElement('div');
       snowflake.classList.add('snowflake');
-      snowflake.innerText = '❄';
 
-      snowflake.style.left = `${Math.random() * 100}vw`;
-      snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`;
+      const size = Math.random() * 4 + 2; // 2px to 6px
+      const left = Math.random() * 100;
+      const duration = Math.random() * 7 + 8; // 8s to 15s
+      const delay = Math.random() * 5;
+
+      snowflake.style.width = `${size}px`;
+      snowflake.style.height = `${size}px`;
+      snowflake.style.left = `${left}vw`;
+      snowflake.style.animationDuration = `${duration}s`;
+      snowflake.style.animationDelay = `${delay}s`;
 
       snowflakeContainer.appendChild(snowflake);
 
       setTimeout(() => {
         snowflake.remove();
-      }, 10000);
+      }, (duration + delay) * 1000);
     }
 
-    setInterval(createSnowflake, 300);
+    setInterval(createSnowflake, 200);
   </script>
 </body>
 </html>
