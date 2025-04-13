@@ -154,13 +154,33 @@
       100% { background-position: 100% 0; }
     }
 
-    .content {
+    <!--.content {
       position: relative;
       z-index: 10;
       text-align: center;
       color: transparent;
       padding-top: 100px;
-    }
+    }-->
+    .content {
+  position: relative;
+  z-index: 10;
+  color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px) saturate(120%);
+  background-color: rgba(255, 255, 255, 0.05); /* 白色轻柔背景 */
+  border-radius: 16px;
+  padding: 40px;
+  margin: auto;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+    .navbar, .footer {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
 
     #canvas {
       position: absolute;
