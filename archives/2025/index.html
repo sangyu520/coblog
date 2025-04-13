@@ -70,7 +70,6 @@
   </noscript>
 
   <style>
-  
   .snowflakes {
   position: fixed;
   top: 0;
@@ -288,35 +287,6 @@
   
 
   <style>
-  #loading-overlay {
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.spinner {
-  width: 60px;
-  height: 60px;
-  border: 6px solid rgba(255, 255, 255, 0.2);
-  border-top-color: #ffffff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
   .snowflakes {
     position: fixed;
     top: 0;
@@ -349,10 +319,6 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-
-  <div id="loading-overlay">
-    <div class="spinner"></div>
-  </div>
 
   <div class="background"></div>
   <div class="snowflakes"></div> <!-- Snowfall Layer -->
@@ -833,7 +799,6 @@ function createSnowflake() {
 }
 setInterval(createSnowflake, 300);
 </script>
-
 
 </body>
 </html>
