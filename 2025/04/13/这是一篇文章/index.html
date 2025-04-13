@@ -320,60 +320,67 @@
   }
   </style>
   <style>
-@keyframes inkSpread {
-  0% {
-    transform: scale(0.5);
-    opacity: 0.3;
-    filter: blur(6px);
-  }
-  50% {
-    transform: scale(1.05);
-    opacity: 0.6;
-    filter: blur(2px);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.4;
-    filter: blur(4px);
-  }
+@import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
+
+@keyframes fogDrift {
+  0% { transform: translateX(0); opacity: 0.2; }
+  50% { transform: translateX(30px); opacity: 0.4; }
+  100% { transform: translateX(0); opacity: 0.2; }
 }
 
-@keyframes textFade {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
+@keyframes inkExpand {
+  0% { transform: scale(1.1); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
-#ink-loader {
+#shanshui-loader {
   position: fixed;
   z-index: 9999;
-  background: radial-gradient(circle at center, #f5f5f2 0%, #e6e1dc 100%);
-  width: 100%;
+  background: #f9f7f3;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Zhi Mang Xing', 'KaiTi', serif;
+  transition: opacity 2s ease;
+}
+
+.shanshui-bg {
+  width: 280px;
+  height: 280px;
+  background-image: url('https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/img/misc/green-shanshui.png'); /* 青绿山水画 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+  animation: inkExpand 3s ease-in-out;
+  filter: drop-shadow(0 0 15px rgba(60, 100, 60, 0.3));
+}
+
+.fog-layer {
+  position: absolute;
+  width: 300%;
   height: 100%;
   top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 1.5s ease;
-  font-family: "Noto Serif SC", "KaiTi", serif;
+  left: -100%;
+  background: url('https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/img/misc/cloud-fog.png') repeat-x;
+  background-size: contain;
+  opacity: 0.12;
+  animation: fogDrift 15s ease-in-out infinite;
+  pointer-events: none;
 }
 
-.ink-circle {
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(closest-side, rgba(0, 0, 0, 0.4), rgba(0,0,0,0) 70%);
-  border-radius: 50%;
-  animation: inkSpread 3s ease-in-out infinite;
-  mix-blend-mode: multiply;
-}
-
-.ink-text {
+.loader-text {
   margin-top: 30px;
-  font-size: 24px;
-  color: #2c2c2c;
-  opacity: 0.8;
-  animation: textFade 2s ease forwards;
+  font-size: 30px;
+  color: #3e3e3e;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  animation: inkExpand 2s ease-out;
 }
 </style>
 
@@ -381,9 +388,10 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div id="ink-loader">
-    <div class="ink-circle"></div>
-    <div class="ink-text">墨韵初现...</div>
+  <div id="shanshui-loader">
+    <div class="shanshui-bg"></div>
+    <div class="fog-layer"></div>
+    <div class="loader-text">画卷徐开，青山远黛</div>
   </div>
 
   <div class="background"></div>
@@ -892,12 +900,13 @@ function createSnowflake() {
 setInterval(createSnowflake, 300);
 </script>
 <script>
-  window.addEventListener('load', () => {
-    const loader = document.getElementById('ink-loader');
-    loader.style.opacity = '0';
-    setTimeout(() => loader.remove(), 1500);
-  });
+window.addEventListener('load', () => {
+  const loader = document.getElementById('shanshui-loader');
+  loader.style.opacity = '0';
+  setTimeout(() => loader.remove(), 2000);
+});
 </script>
+
 
 </body>
 </html>
