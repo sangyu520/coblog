@@ -130,19 +130,10 @@
       background-size: cover;
       animation: backgroundFlow 60s linear infinite;
       z-index: -1;
+      background-position: center;
+      filter: brightness(0.8); /* 降低亮度，使颜色更加柔和 */
     }
     
-
-.background::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent; /* 半透明的黑色蒙版，调整透明度 */
-  pointer-events: none; /* 确保不会阻止其他元素的交互 */
-}
 
     @keyframes backgroundFlow {
       0% { background-position: 0 0; }
