@@ -49,7 +49,6 @@
 
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
 <script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
 
@@ -76,6 +75,9 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
+
+  <!-- Flowing Gradient Blocks Canvas -->
+  <canvas id="canvas"></canvas>
 
   <main class="main">
     <div class="column">
@@ -355,5 +357,59 @@
          alt="Fork me on GitHub">
   </a>
 
+  <!-- Flowing Gradient Blocks JS -->
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let colors = ['#f9d423', '#ff4e50', '#fc4a1a', '#6a11cb'];
+    let blocks = [];
+
+    class Block {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 200 + 50;
+            this.speed = Math.random() * 2 + 1;
+            this.color = colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        update() {
+            this.x += Math.cos(Math.random() * Math.PI) * this.speed;
+            this.y += Math.sin(Math.random() * Math.PI) * this.speed;
+
+            if (this.x > canvas.width || this.x < 0) this.speed = -this.speed;
+            if (this.y > canvas.height || this.y < 0) this.speed = -this.speed;
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+            ctx.fillStyle = this.color;
+            ctx.globalAlpha = 0.7;
+            ctx.fill();
+        }
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        if (blocks.length < 50) {
+            blocks.push(new Block());
+        }
+
+        blocks.forEach(block => {
+            block.update();
+            block.draw();
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
 </body>
 </html>
