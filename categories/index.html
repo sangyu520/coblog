@@ -72,6 +72,51 @@
   </noscript>
 
   <style>
+  .snowflakes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation-name: fall;
+  animation-timing-function: cubic-bezier(0.3, 0.5, 0.7, 1);
+  animation-iteration-count: 1;
+  filter: blur(0.8px);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(var(--x-move, 0px));
+    opacity: 0.3;
+  }
+}
+
+.snow-accumulation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  pointer-events: none;
+  z-index: 4;
+  overflow: hidden;
+}
+
     body {
       margin: 0;
       overflow: auto;
@@ -144,14 +189,17 @@
         opacity: 0.4;
       }
     }
+    
   </style>
+  
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
 
   <div class="background"></div>
   <div class="snowflakes"></div> <!-- Snowfall Layer -->
-
+  <div class="snowflakes"></div>
+  <div class="snow-accumulation"></div>
   <main class="main">
     <div class="column">
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
@@ -469,6 +517,58 @@
     }
 
     setInterval(createSnowflake, 200);
+    
   </script>
+  <script>
+  const snowflakeContainer = document.querySelector('.snowflakes');
+  const accumulationContainer = document.querySelector('.snow-accumulation');
+
+  function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.classList.add('snowflake');
+
+    const size = Math.random() * 4 + 2; // 2px - 6px
+    const left = Math.random() * 100;
+    const duration = Math.random() * 8 + 6; // 6s - 14s
+    const delay = Math.random() * 5;
+    const color = ['#ffffff', '#d8f0ff'][Math.floor(Math.random() * 2)];
+    const horizontalMove = (Math.random() - 0.5) * 100;
+
+    snowflake.style.width = `${size}px`;
+    snowflake.style.height = `${size}px`;
+    snowflake.style.left = `${left}vw`;
+    snowflake.style.backgroundColor = color;
+    snowflake.style.setProperty('--x-move', `${horizontalMove}px`);
+    snowflake.style.animationDuration = `${duration}s`;
+    snowflake.style.animationDelay = `${delay}s`;
+
+    snowflake.addEventListener('animationend', () => {
+      const fallen = snowflake.cloneNode(true);
+      fallen.style.top = 'auto';
+      fallen.style.bottom = '0';
+      fallen.style.left = `${left}vw`;
+      fallen.style.position = 'absolute';
+      fallen.style.animation = 'none';
+      fallen.style.opacity = 0.5;
+      fallen.style.transform = 'translateY(0) translateX(0)';
+      fallen.style.filter = 'blur(1.2px)';
+      fallen.style.boxShadow = '0 0 4px rgba(255,255,255,0.5)';
+      accumulationContainer.appendChild(fallen);
+
+      if (accumulationContainer.childElementCount > 100) {
+        accumulationContainer.removeChild(accumulationContainer.firstChild);
+      }
+
+      snowflake.remove();
+    });
+
+    snowflakeContainer.appendChild(snowflake);
+  }
+
+  setInterval(createSnowflake, 200);
+</script>
+
+
+
 </body>
 </html>
