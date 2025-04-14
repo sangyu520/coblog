@@ -1,22 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2025/04/13/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>STL</title>
+    <url>/2025/04/09/STL/</url>
+    <content><![CDATA[<h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><p>动态数组，单端数组（在堆中开的）</p>
+<p>头文件：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <tags>
+        <tag>learn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown</title>
+    <url>/2025/04/05/markown/</url>
+    <content><![CDATA[<h1 id="有什么需要用到外挂标签的地方可以查阅这个大佬写的"><a href="#有什么需要用到外挂标签的地方可以查阅这个大佬写的" class="headerlink" title="有什么需要用到外挂标签的地方可以查阅这个大佬写的"></a>有什么需要用到外挂标签的地方可以查阅这个大佬写的</h1><h3 id="安知鱼主题标签-Tag-Plugins-安知鱼"><a href="#安知鱼主题标签-Tag-Plugins-安知鱼" class="headerlink" title="安知鱼主题标签 Tag Plugins | 安知鱼"></a><a href="https://blog.anheyu.com/posts/d50a.html">安知鱼主题标签 Tag Plugins | 安知鱼</a></h3><p>#：表示一级标题（最大的标题，几个#就是几级，最多六级）</p>
+<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><p>“-” + “空格”：可以生成无序列表</p>
+<ul>
+<li>无序列表</li>
+</ul>
+<ol>
+<li>有序列表</li>
+</ol>
+<p>*文字*：<em>斜体</em>          </p>
+<p>  **文字**：<strong>加粗</strong>    </p>
+<p>  ~~文字~~：<del>删除</del>       </p>
+<p>==文字==：&#x3D;&#x3D;高亮&#x3D;&#x3D;（typora要自己手动打开偏好设置）</p>
+<p>---：表示分隔线 （分隔一整行）</p>
+<p>&lt;u&gt;文字&lt;&#x2F;u&gt;：<u>下划线</u></p>
+<hr>
+<p>超链接： [放网站标题](放链接)     </p>
+<p> 图片（多一个！：![名字](链接)</p>
+<p>&gt;：表示引用</p>
+<blockquote>
+<p>哝这里</p>
+</blockquote>
+<p>- [ ]：这是任务块 </p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 完成勾选</li>
+</ul>
+ <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//代码块</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;Hello world!&quot;</span>&lt;&lt;endl;</span><br><span class="line">&#125;<span class="comment">//实现就是	```+对应语言</span></span><br></pre></td></tr></table></figure>
+
+<p>数学公式用&#x3D;&#x3D;LaTeX&#x3D;&#x3D; ：$$公式$$<br>$$<br>{2{x^T}(t)x(t - \tau ) &#x3D; {x^T}(t){Q^{ - \frac{1}{2}}}x(t - \tau ) \le \frac{1}{\alpha }{x^T}(t)Px(t) + \alpha {x^T}(t - \tau )x(t - \tau )}<br>$$<br>表格：用| |分隔</p>
+<p>|:—|:—:|—:|：分别是左对齐，居中对齐，右对齐（当然typora有智能的对齐）</p>
+<p>|-|-|-|：表分割</p>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>睡觉</th>
+<th>吃饭</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>√</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<p>[^ ]：脚注<a href="%E8%BF%99%E9%87%8C%E5%86%99%E8%A7%A3%E9%87%8A">^文字</a></p>
+<p>一般在最后是脚注内容用[^  ]:解释</p>
+<p><a href="baidu">名字</a>引用链接</p>
+<p>` 行内代码`：<code>cout&lt;&lt;&quot;Hello world!&quot;</code></p>
+<p>:表情名: ：:smile:(参考emoji)</p>
+<p>~ 下标~：H<del>2</del>O         </p>
+<p>​     ^上标^ ：x^2^</p>
+<h2 id="补上一句"><a href="#补上一句" class="headerlink" title="补上一句"></a>补上一句</h2><p>&#x3D;&#x3D;还支持HTML语法&#x3D;&#x3D;！！！！！（以后慢慢补充）</p>
+<p>&#x3D;&#x3D;锚点&#x3D;&#x3D;</p>
+<p>\：转义符，让其回归符号</p>
+<p>换行（两个空格加回车！其实直接下箭头就行）</p>
+]]></content>
+      <tags>
+        <tag>learn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>react实现</title>
+    <url>/2025/04/07/react%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<p>我在page.pug内插入了<br>    div#react-root  &#x2F;&#x2F; 这是 React 组件的挂载点</p>
+<p>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;js&#x2F;bundle.js’)</p>
+<p>创建了有关index.js在src里面（src也是为创建的）<br>还创建了一个webpack.config.js和react.babelrc</p>
+<p>装了这些<br>npm install react react-dom<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;preset-env @babel&#x2F;preset-react webpack webpack-cli babel-loader<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;cli @babel&#x2F;preset-env @babel&#x2F;preset-react babel-loader<br>然后还要在layout.pug里面加上<br>    &#x2F;&#x2F;- 弹窗通知<br>    !&#x3D;partial(‘includes&#x2F;popup&#x2F;index’, {}, {cache: true})</p>
+<pre><code>block scripts（加上这句话，与上面弹窗通知对齐！）就可以实现react了
+我将bundle.js从&quot;C:\Users\86198\myblog\world-map-widget\node_modules\ajv\scripts\bundle.js&quot;移动到了source/js
+我在source/js里加了一个world-map.js
+在about里的index.md里面加了
+&lt;world-map data-dots=&#39;[&#123;&quot;start&quot;:&#123;&quot;lat&quot;:34.0522,&quot;lng&quot;:-118.2437&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:40.7128,&quot;lng&quot;:-74.0060&#125;&#125;,&#123;&quot;start&quot;:&#123;&quot;lat&quot;:51.5074,&quot;lng&quot;:-0.1278&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:48.8566,&quot;lng&quot;:2.3522&#125;&#125;]&#39;&gt;&lt;/world-map&gt;
+</code></pre>
+<script src="/js/world-map.js"></script>
+<p>cao,就是加载不出来地图<br>我删除了一个index.js<br>内容&#x2F;<em>在 index.js 中编写你的 React 组件代码。例如：</em>&#x2F;<br>import React from ‘react’;<br>import ReactDOM from ‘react-dom’;</p>
+<p>function App() {<br>  return <div>Hello from React!</div>;<br>}</p>
+<p>ReactDOM.render(<App />, document.getElementById(‘react-root’));</p>
+<p>我从source&#x2F;js里把echarts.min.js移动到桌面了<br>我删除了page.pug里的<br>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;public&#x2F;js&#x2F;bundle.js’)</p>
+]]></content>
+      <tags>
+        <tag>try</tag>
+      </tags>
   </entry>
   <entry>
     <title>如何写一篇文章</title>
@@ -28,16 +108,15 @@
       </tags>
   </entry>
   <entry>
-    <title>STL</title>
-    <url>/2025/04/09/STL/</url>
-    <content><![CDATA[<h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><p>动态数组，单端数组（在堆中开的）</p>
-<p>头文件：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br></pre></td></tr></table></figure>
+    <title>learn</title>
+    <url>/2025/03/31/Docker/</url>
+    <content><![CDATA[<h3 id="visit-this-article"><a href="#visit-this-article" class="headerlink" title="visit this article"></a>visit this article</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/QINGZHID/article/details/144520000</span><br></pre></td></tr></table></figure>
 
+<h2 id="supplement"><a href="#supplement" class="headerlink" title="supplement"></a>supplement</h2><h3 id="install-Vmvare-and-install-the-Linux-system"><a href="#install-Vmvare-and-install-the-Linux-system" class="headerlink" title="install Vmvare and install the Linux system"></a>install Vmvare and install the Linux system</h3><p>···<br><a href="https://blog.csdn.net/weixin_61536532/article/details/129778310">https://blog.csdn.net/weixin_61536532/article/details/129778310</a><br><a href="https://blog.csdn.net/qq_57728300/article/details/139613989">https://blog.csdn.net/qq_57728300/article/details/139613989</a><br><a href="https://blog.csdn.net/weixin_45910027/article/details/130526456">https://blog.csdn.net/weixin_45910027/article/details/130526456</a><br><a href="https://blog.csdn.net/qq_38056704/article/details/90264044">https://blog.csdn.net/qq_38056704/article/details/90264044</a><br>···</p>
 ]]></content>
-      <tags>
-        <tag>learn</tag>
-      </tags>
+      <categories>
+        <category>前端开发</category>
+      </categories>
   </entry>
   <entry>
     <title>如何在hexo里面实现类似动态播放视频</title>
@@ -103,78 +182,6 @@
 ]]></content>
       <tags>
         <tag>think</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>learn</title>
-    <url>/2025/03/31/Docker/</url>
-    <content><![CDATA[<h3 id="visit-this-article"><a href="#visit-this-article" class="headerlink" title="visit this article"></a>visit this article</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/QINGZHID/article/details/144520000</span><br></pre></td></tr></table></figure>
-
-<h2 id="supplement"><a href="#supplement" class="headerlink" title="supplement"></a>supplement</h2><h3 id="install-Vmvare-and-install-the-Linux-system"><a href="#install-Vmvare-and-install-the-Linux-system" class="headerlink" title="install Vmvare and install the Linux system"></a>install Vmvare and install the Linux system</h3><p>···<br><a href="https://blog.csdn.net/weixin_61536532/article/details/129778310">https://blog.csdn.net/weixin_61536532/article/details/129778310</a><br><a href="https://blog.csdn.net/qq_57728300/article/details/139613989">https://blog.csdn.net/qq_57728300/article/details/139613989</a><br><a href="https://blog.csdn.net/weixin_45910027/article/details/130526456">https://blog.csdn.net/weixin_45910027/article/details/130526456</a><br><a href="https://blog.csdn.net/qq_38056704/article/details/90264044">https://blog.csdn.net/qq_38056704/article/details/90264044</a><br>···</p>
-]]></content>
-      <categories>
-        <category>前端开发</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Leetcode刷题记录</title>
-    <url>/2025/04/09/Leetcode%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>太可恶了，我刚学完C++那些基础理论，像泛型编程，类，然后再没什么刷题经验的情况下，来了Leetcode，我就说这咋实现，感觉头都大了，怎么写怎么不对，然后一看发现，数据外部传入，我只需要补充类函数实现就行了，像int main()这些根本不用写，我只需要写个处理方法就行，气死我了！！！ </p>
-<p><a href="https://www.bilibili.com/video/BV1AL4y1H7UH/?spm_id_from=333.337.search-card.all.click&vd_source=df6bd7ad18c270eed1dcad06d9983510">学算法，刷力扣（leetcode）不知道怎么刷？来看看，我把刷题网站上线了！最强刷题攻略！_哔哩哔哩_bilibili</a></p>
-<p><a href="https://programmercarl.com/">代码随想录</a></p>
-<h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><h4 id="第704题"><a href="#第704题" class="headerlink" title="第704题"></a>第704题</h4><p><a href="https://leetcode.cn/problems/binary-search/description/">704. 二分查找 - 力扣（LeetCode）</a></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">search</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right=nums.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        <span class="type">int</span> mid;</span><br><span class="line">        <span class="keyword">while</span>(left&lt;=right)</span><br><span class="line">        &#123;</span><br><span class="line">            mid=left+(right-left)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]==target)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> mid;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&gt;target)</span><br><span class="line">            &#123;</span><br><span class="line">                right=mid<span class="number">-1</span>;<span class="comment">/*为什么加一，因为边界条件一定不满足，可以丢弃，而且可以实现最终结束循环，left&gt;right-1!!!*/</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&lt;target)</span><br><span class="line">            &#123;</span><br><span class="line">                left=mid<span class="number">+1</span>;<span class="comment">/*为什么加一，因为边界条件一定不满足，可以丢弃，而且可以实现最终结束循环，left+1&gt;right!!!*/</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/*这道题目的前提是数组为有序数组，同时题目还强调数组中无重复元素，因为一旦有重复元素，使用二分查找法返回的元素下标可能不是唯一的，这些都是使用二分法的前提条件，当大家看到题目描述满足如上条件的时候，可要想一想是不是可以用二分法了。</span></span><br><span class="line"><span class="comment">第一种写法，我们定义 target 是在一个在左闭右闭的区间里，也就是[left, right] （这个很重要非常重要）。</span></span><br><span class="line"><span class="comment">while (left &lt;= right) 要使用 &lt;= ，因为left == right是有意义的，所以使用 &lt;=</span></span><br><span class="line"><span class="comment">if (nums[middle] &gt; target) right 要赋值为 middle - 1，因为当前这个nums[middle]一定不是target，那么接下来要查找的左区间结束下标位置就是 middle - 1</span></span><br><span class="line"><span class="comment">如果说定义 target 是在一个在左闭右开的区间里，也就是[left, right) ，那么二分法的边界处理方式则截然不同。</span></span><br><span class="line"><span class="comment">while (left &lt; right)，这里使用 &lt; ,因为left == right在区间[left, right)是没有意义的</span></span><br><span class="line"><span class="comment">if (nums[middle] &gt; target) right 更新为 middle，因为当前nums[middle]不等于target，去左区间继续寻找，而寻找区间是左闭右开区间，所以right更新为middle，即：下一个查询区间不会去比较nums[middle]*/</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="第35题"><a href="#第35题" class="headerlink" title="第35题"></a>第35题</h4><p><a href="https://leetcode.cn/problems/search-insert-position/description/">35. 搜索插入位置 - 力扣（LeetCode）</a></p>
-<h4 id="第34题"><a href="#第34题" class="headerlink" title="第34题"></a>第34题</h4><p><a href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/">34. 在排序数组中查找元素的第一个和最后一个位置 - 力扣（LeetCode）</a></p>
-<h4 id="第69题"><a href="#第69题" class="headerlink" title="第69题"></a>第69题</h4><p><a href="https://leetcode.cn/problems/sqrtx/description/">69. x 的平方根 - 力扣（LeetCode）</a></p>
-<h4 id="第367题"><a href="#第367题" class="headerlink" title="第367题"></a>第367题</h4><p><a href="https://leetcode.cn/problems/valid-perfect-square/description/">367. 有效的完全平方数 - 力扣（LeetCode）</a></p>
-<h1 id="哈希"><a href="#哈希" class="headerlink" title="哈希"></a>哈希</h1><h4 id="第242题"><a href="#第242题" class="headerlink" title="第242题"></a>第242题</h4><p><a href="https://leetcode.cn/problems/valid-anagram/description/">242. 有效的字母异位词 - 力扣（LeetCode）</a></p>
-<p><img src="C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20250409211853398.png" alt="image-20250409211853398"></p>
-<p>好家伙，这就速度能比，那个内存分布有点奇怪，提交次数不一样，内存分布大小就不一样</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isAnagram</span><span class="params">(string s, string t)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> hash[<span class="number">26</span>]=&#123;<span class="number">0</span>&#125;;<span class="comment">/*切记不要忘了化0！！！C++ 中的局部变量如果没有手动初始化，值是随机的垃圾值。你需要把 hash 初始化为全 0*/</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:s)</span><br><span class="line">        &#123;</span><br><span class="line">            hash[i-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> j:t)</span><br><span class="line">        &#123;</span><br><span class="line">            hash[j-<span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> n=<span class="number">0</span>;n&lt;<span class="number">26</span>;n++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(hash[n]!=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="第349题"><a href="#第349题" class="headerlink" title="第349题"></a>第349题</h4><p><a href="https://leetcode.cn/problems/intersection-of-two-arrays/solutions/469445/liang-ge-shu-zu-de-jiao-ji-by-leetcode-solution/">349. 两个数组的交集 - 力扣（LeetCode）</a></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">intersection</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums1, vector&lt;<span class="type">int</span>&gt;&amp; nums2)</span> </span>&#123;</span><br><span class="line">        <span class="function">unordered_set&lt;<span class="type">int</span>&gt; <span class="title">u1</span><span class="params">(nums<span class="number">1.</span>begin(),nums<span class="number">1.</span>end())</span></span>;<span class="comment">//记住vector!!!很有说法</span></span><br><span class="line">        <span class="comment">//他们之间相互转化很有意思，iterator</span></span><br><span class="line">        set&lt;<span class="type">int</span>&gt; u2;<span class="comment">//目的是帮我去重！！！</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:nums2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(u<span class="number">1.f</span>ind(i)!=u<span class="number">1.</span><span class="built_in">end</span>())<span class="comment">//记住这些方法！，因为find没有则返回.end()</span></span><br><span class="line">            &#123;</span><br><span class="line">                u<span class="number">2.</span><span class="built_in">insert</span>(i);<span class="comment">//vector与set，insert不一样</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt;num;<span class="comment">//我的返回值是vector</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:u2)</span><br><span class="line">        &#123;</span><br><span class="line">            num.<span class="built_in">push_back</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/*因为题目改了，所以我也可以用数组，因为范围小了，习惯性数组都要大一点hash[1005]，因为要给hash碰撞腾出空间*/</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">intersection</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums1, vector&lt;<span class="type">int</span>&gt;&amp; nums2)</span> </span>&#123;</span><br><span class="line">        unordered_set&lt;<span class="type">int</span>&gt; s1;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">        vec.<span class="built_in">reserve</span>(<span class="number">1000</span>);</span><br><span class="line">        <span class="type">int</span> hash[<span class="number">1005</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i:nums1)</span><br><span class="line">        &#123;</span><br><span class="line">            hash[i]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j:nums2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(hash[j]==<span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                s<span class="number">1.</span><span class="built_in">insert</span>(j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> a:s1)</span><br><span class="line">        &#123;</span><br><span class="line">            vec.<span class="built_in">push_back</span>(a);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> vec;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;;<span class="comment">//但是数组的空间占用更多了</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="第202题"><a href="#第202题" class="headerlink" title="第202题"></a>第202题</h4><p><a href="https://leetcode.cn/problems/happy-number/">202. 快乐数 - 力扣（LeetCode）</a></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">Sum</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="type">int</span> m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(n)</span><br><span class="line">        &#123;</span><br><span class="line">            m+=(n%<span class="number">10</span>)*(n%<span class="number">10</span>);</span><br><span class="line">            n=n/<span class="number">10</span>;</span><br><span class="line">            <span class="comment">//这里写的好，要实现一个数每一项都进行一个操作，就用while循环判定，从最后一位向高位推进，每次丢掉最后一位就行了！！！！</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> m;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//这个地方就是来验证是否出现过，判定是否是死循环，提前退出，避免时间浪费</span></span><br><span class="line">    unordered_set&lt;<span class="type">int</span>&gt; s1;</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isHappy</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(n==<span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            s<span class="number">1.</span><span class="built_in">insert</span>(n);</span><br><span class="line">            n=<span class="built_in">Sum</span>(n);</span><br><span class="line">            <span class="keyword">if</span>(s<span class="number">1.f</span>ind(n)!=s<span class="number">1.</span><span class="built_in">end</span>())</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;   </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;<span class="comment">//判定一个元素是否在一个整体里出现过就用hash</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<h4 id="第1题"><a href="#第1题" class="headerlink" title="第1题"></a>第1题</h4><p><a href="https://leetcode.cn/problems/two-sum/submissions/">1. 两数之和 - 力扣（LeetCode）</a></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:<span class="comment">//当时学了STL，但不了解咋做题，直接给我弄红温了</span></span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); j++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(nums[i] + nums[j] == target)&#123;</span><br><span class="line">                        <span class="keyword">return</span> &#123;i,j&#125;;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> &#123;<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;<span class="comment">/*这一次写出来，是因为要蓝桥杯了，所以临时抱佛脚，赶紧来做题，所有耐下心慢慢看我的问题，然后给我说int main有问题，我就知道了，所以稍加修改*/</span></span><br><span class="line"><span class="comment">//当然，看这个题还有个原因是刚好看了hash，来试试，显然没有头绪，所以我决定看看代码随想录了。</span></span><br><span class="line"><span class="comment">/*因为本题，我们不仅要知道元素有没有遍历过，还要知道这个元素对应的下标，需要使用 key value结构来存放，key来存元素，value来存下标，那么使用map正合适。*/</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        unordered_map&lt;<span class="type">int</span>,<span class="type">int</span>&gt;mp;<span class="comment">//map就是遇到有下标保存输出的情况</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">auto</span> iter=mp.<span class="built_in">find</span>(target-nums[i]);<span class="comment">/*明确自己的目标哦，因为find返回的地址，所以用迭代器去接收*/</span></span><br><span class="line">            <span class="keyword">if</span>(iter!=mp.<span class="built_in">end</span>())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;iter-&gt;second,i&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">            mp.<span class="built_in">insert</span>(<span class="built_in">pair</span>&lt;<span class="type">int</span>,<span class="type">int</span>&gt;(nums[i],i));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;;<span class="comment">/*根据题目，虽然我们知道一定会有结果，但一定还是写上如果找不到的情况，增加代码的健壮性，return接相当于break，只不过return更强，代表直接结束，break只能循环里用！！！*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;<span class="comment">//切记我们要查找什么，要得到什么，查的放key（因为可以用find(key)返回），要得到的什么，得到的用value，可以iter-&gt;second()来查找!</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>数组的大小是受限制的，而且如果元素很少，而哈希值太大会造成内存空间的浪费。</p>
-</li>
-<li><p>set是一个集合，里面放的元素只能是一个key，而两数之和这道题目，不仅要判断y是否存在而且还要记录y的下标位置，因为要返回x 和 y的下标。所以set 也不能用。</p>
-</li>
-<li><p>std::map 和std::multimap 的key也是有序的有序才用红黑树为底层的，无序直接用哈希表为底层的</p>
-</li>
-<li><p><strong>map用来做什么</strong></p>
-</li>
-<li><p><strong>map中key和value分别表示什么</strong></p>
-</li>
-</ul>
-<p>map目的用来存放我们访问过的元素，因为遍历数组的时候，需要记录我们之前遍历过哪些元素和对应的下标，这样才能找到与当前元素相匹配的（也就是相加等于target）</p>
-<p>接下来是map中key和value分别表示什么。</p>
-<p>这道题 我们需要 给出一个元素，判断这个元素是否出现过，如果出现过，返回这个元素的下标。</p>
-<p>那么判断元素是否出现，这个元素就要作为key，所以数组中的元素作为key，有key对应的就是value，value用来存下标。</p>
-<p>所以 map中的存储结构为 {key：数据元素，value：数组元素对应的下标}。</p>
-<p>在遍历数组的时候，只需要向map去查询是否有和目前遍历元素匹配的数值，如果有，就找到的匹配对，如果没有，就把目前遍历的元素放进map中，因为map存放的就是我们访问过的元素。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/20220711202638.png" alt="过程一"></p>
-]]></content>
-      <tags>
-        <tag>examination</tag>
       </tags>
   </entry>
   <entry>
@@ -548,94 +555,87 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown</title>
-    <url>/2025/04/05/markown/</url>
-    <content><![CDATA[<h1 id="有什么需要用到外挂标签的地方可以查阅这个大佬写的"><a href="#有什么需要用到外挂标签的地方可以查阅这个大佬写的" class="headerlink" title="有什么需要用到外挂标签的地方可以查阅这个大佬写的"></a>有什么需要用到外挂标签的地方可以查阅这个大佬写的</h1><h3 id="安知鱼主题标签-Tag-Plugins-安知鱼"><a href="#安知鱼主题标签-Tag-Plugins-安知鱼" class="headerlink" title="安知鱼主题标签 Tag Plugins | 安知鱼"></a><a href="https://blog.anheyu.com/posts/d50a.html">安知鱼主题标签 Tag Plugins | 安知鱼</a></h3><p>#：表示一级标题（最大的标题，几个#就是几级，最多六级）</p>
-<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><p>“-” + “空格”：可以生成无序列表</p>
-<ul>
-<li>无序列表</li>
-</ul>
-<ol>
-<li>有序列表</li>
-</ol>
-<p>*文字*：<em>斜体</em>          </p>
-<p>  **文字**：<strong>加粗</strong>    </p>
-<p>  ~~文字~~：<del>删除</del>       </p>
-<p>==文字==：&#x3D;&#x3D;高亮&#x3D;&#x3D;（typora要自己手动打开偏好设置）</p>
-<p>---：表示分隔线 （分隔一整行）</p>
-<p>&lt;u&gt;文字&lt;&#x2F;u&gt;：<u>下划线</u></p>
-<hr>
-<p>超链接： [放网站标题](放链接)     </p>
-<p> 图片（多一个！：![名字](链接)</p>
-<p>&gt;：表示引用</p>
-<blockquote>
-<p>哝这里</p>
-</blockquote>
-<p>- [ ]：这是任务块 </p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 完成勾选</li>
-</ul>
- <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//代码块</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;Hello world!&quot;</span>&lt;&lt;endl;</span><br><span class="line">&#125;<span class="comment">//实现就是	```+对应语言</span></span><br></pre></td></tr></table></figure>
-
-<p>数学公式用&#x3D;&#x3D;LaTeX&#x3D;&#x3D; ：$$公式$$<br>$$<br>{2{x^T}(t)x(t - \tau ) &#x3D; {x^T}(t){Q^{ - \frac{1}{2}}}x(t - \tau ) \le \frac{1}{\alpha }{x^T}(t)Px(t) + \alpha {x^T}(t - \tau )x(t - \tau )}<br>$$<br>表格：用| |分隔</p>
-<p>|:—|:—:|—:|：分别是左对齐，居中对齐，右对齐（当然typora有智能的对齐）</p>
-<p>|-|-|-|：表分割</p>
-<table>
-<thead>
-<tr>
-<th>任务</th>
-<th>睡觉</th>
-<th>吃饭</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td>√</td>
-<td>√</td>
-</tr>
-</tbody></table>
-<p>[^ ]：脚注<a href="%E8%BF%99%E9%87%8C%E5%86%99%E8%A7%A3%E9%87%8A">^文字</a></p>
-<p>一般在最后是脚注内容用[^  ]:解释</p>
-<p><a href="baidu">名字</a>引用链接</p>
-<p>` 行内代码`：<code>cout&lt;&lt;&quot;Hello world!&quot;</code></p>
-<p>:表情名: ：:smile:(参考emoji)</p>
-<p>~ 下标~：H<del>2</del>O         </p>
-<p>​     ^上标^ ：x^2^</p>
-<h2 id="补上一句"><a href="#补上一句" class="headerlink" title="补上一句"></a>补上一句</h2><p>&#x3D;&#x3D;还支持HTML语法&#x3D;&#x3D;！！！！！（以后慢慢补充）</p>
-<p>&#x3D;&#x3D;锚点&#x3D;&#x3D;</p>
-<p>\：转义符，让其回归符号</p>
-<p>换行（两个空格加回车！其实直接下箭头就行）</p>
-]]></content>
-      <tags>
-        <tag>learn</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>这是一篇文章</title>
     <url>/2025/04/13/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h3 id="测试一下，其实什么也没有"><a href="#测试一下，其实什么也没有" class="headerlink" title="测试一下，其实什么也没有"></a>测试一下，其实什么也没有</h3>]]></content>
   </entry>
   <entry>
-    <title>react实现</title>
-    <url>/2025/04/07/react%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<p>我在page.pug内插入了<br>    div#react-root  &#x2F;&#x2F; 这是 React 组件的挂载点</p>
-<p>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;js&#x2F;bundle.js’)</p>
-<p>创建了有关index.js在src里面（src也是为创建的）<br>还创建了一个webpack.config.js和react.babelrc</p>
-<p>装了这些<br>npm install react react-dom<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;preset-env @babel&#x2F;preset-react webpack webpack-cli babel-loader<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;cli @babel&#x2F;preset-env @babel&#x2F;preset-react babel-loader<br>然后还要在layout.pug里面加上<br>    &#x2F;&#x2F;- 弹窗通知<br>    !&#x3D;partial(‘includes&#x2F;popup&#x2F;index’, {}, {cache: true})</p>
-<pre><code>block scripts（加上这句话，与上面弹窗通知对齐！）就可以实现react了
-我将bundle.js从&quot;C:\Users\86198\myblog\world-map-widget\node_modules\ajv\scripts\bundle.js&quot;移动到了source/js
-我在source/js里加了一个world-map.js
-在about里的index.md里面加了
-&lt;world-map data-dots=&#39;[&#123;&quot;start&quot;:&#123;&quot;lat&quot;:34.0522,&quot;lng&quot;:-118.2437&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:40.7128,&quot;lng&quot;:-74.0060&#125;&#125;,&#123;&quot;start&quot;:&#123;&quot;lat&quot;:51.5074,&quot;lng&quot;:-0.1278&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:48.8566,&quot;lng&quot;:2.3522&#125;&#125;]&#39;&gt;&lt;/world-map&gt;
-</code></pre>
-<script src="/js/world-map.js"></script>
-<p>cao,就是加载不出来地图<br>我删除了一个index.js<br>内容&#x2F;<em>在 index.js 中编写你的 React 组件代码。例如：</em>&#x2F;<br>import React from ‘react’;<br>import ReactDOM from ‘react-dom’;</p>
-<p>function App() {<br>  return <div>Hello from React!</div>;<br>}</p>
-<p>ReactDOM.render(<App />, document.getElementById(‘react-root’));</p>
-<p>我从source&#x2F;js里把echarts.min.js移动到桌面了<br>我删除了page.pug里的<br>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;public&#x2F;js&#x2F;bundle.js’)</p>
+    <title>Hello World</title>
+    <url>/2025/04/13/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Leetcode刷题记录</title>
+    <url>/2025/04/09/Leetcode%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>太可恶了，我刚学完C++那些基础理论，像泛型编程，类，然后再没什么刷题经验的情况下，来了Leetcode，我就说这咋实现，感觉头都大了，怎么写怎么不对，然后一看发现，数据外部传入，我只需要补充类函数实现就行了，像int main()这些根本不用写，我只需要写个处理方法就行，气死我了！！！ </p>
+<p><a href="https://www.bilibili.com/video/BV1AL4y1H7UH/?spm_id_from=333.337.search-card.all.click&vd_source=df6bd7ad18c270eed1dcad06d9983510">学算法，刷力扣（leetcode）不知道怎么刷？来看看，我把刷题网站上线了！最强刷题攻略！_哔哩哔哩_bilibili</a></p>
+<p><a href="https://programmercarl.com/">代码随想录</a></p>
+<h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><h4 id="第704题"><a href="#第704题" class="headerlink" title="第704题"></a>第704题</h4><p><a href="https://leetcode.cn/problems/binary-search/description/">704. 二分查找 - 力扣（LeetCode）</a></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">search</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right=nums.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        <span class="type">int</span> mid;</span><br><span class="line">        <span class="keyword">while</span>(left&lt;=right)</span><br><span class="line">        &#123;</span><br><span class="line">            mid=left+(right-left)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]==target)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> mid;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&gt;target)</span><br><span class="line">            &#123;</span><br><span class="line">                right=mid<span class="number">-1</span>;<span class="comment">/*为什么加一，因为边界条件一定不满足，可以丢弃，而且可以实现最终结束循环，left&gt;right-1!!!*/</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&lt;target)</span><br><span class="line">            &#123;</span><br><span class="line">                left=mid<span class="number">+1</span>;<span class="comment">/*为什么加一，因为边界条件一定不满足，可以丢弃，而且可以实现最终结束循环，left+1&gt;right!!!*/</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/*这道题目的前提是数组为有序数组，同时题目还强调数组中无重复元素，因为一旦有重复元素，使用二分查找法返回的元素下标可能不是唯一的，这些都是使用二分法的前提条件，当大家看到题目描述满足如上条件的时候，可要想一想是不是可以用二分法了。</span></span><br><span class="line"><span class="comment">第一种写法，我们定义 target 是在一个在左闭右闭的区间里，也就是[left, right] （这个很重要非常重要）。</span></span><br><span class="line"><span class="comment">while (left &lt;= right) 要使用 &lt;= ，因为left == right是有意义的，所以使用 &lt;=</span></span><br><span class="line"><span class="comment">if (nums[middle] &gt; target) right 要赋值为 middle - 1，因为当前这个nums[middle]一定不是target，那么接下来要查找的左区间结束下标位置就是 middle - 1</span></span><br><span class="line"><span class="comment">如果说定义 target 是在一个在左闭右开的区间里，也就是[left, right) ，那么二分法的边界处理方式则截然不同。</span></span><br><span class="line"><span class="comment">while (left &lt; right)，这里使用 &lt; ,因为left == right在区间[left, right)是没有意义的</span></span><br><span class="line"><span class="comment">if (nums[middle] &gt; target) right 更新为 middle，因为当前nums[middle]不等于target，去左区间继续寻找，而寻找区间是左闭右开区间，所以right更新为middle，即：下一个查询区间不会去比较nums[middle]*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="第35题"><a href="#第35题" class="headerlink" title="第35题"></a>第35题</h4><p><a href="https://leetcode.cn/problems/search-insert-position/description/">35. 搜索插入位置 - 力扣（LeetCode）</a></p>
+<h4 id="第34题"><a href="#第34题" class="headerlink" title="第34题"></a>第34题</h4><p><a href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/">34. 在排序数组中查找元素的第一个和最后一个位置 - 力扣（LeetCode）</a></p>
+<h4 id="第69题"><a href="#第69题" class="headerlink" title="第69题"></a>第69题</h4><p><a href="https://leetcode.cn/problems/sqrtx/description/">69. x 的平方根 - 力扣（LeetCode）</a></p>
+<h4 id="第367题"><a href="#第367题" class="headerlink" title="第367题"></a>第367题</h4><p><a href="https://leetcode.cn/problems/valid-perfect-square/description/">367. 有效的完全平方数 - 力扣（LeetCode）</a></p>
+<h1 id="哈希"><a href="#哈希" class="headerlink" title="哈希"></a>哈希</h1><h4 id="第242题"><a href="#第242题" class="headerlink" title="第242题"></a>第242题</h4><p><a href="https://leetcode.cn/problems/valid-anagram/description/">242. 有效的字母异位词 - 力扣（LeetCode）</a></p>
+<p><img src="C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20250409211853398.png" alt="image-20250409211853398"></p>
+<p>好家伙，这就速度能比，那个内存分布有点奇怪，提交次数不一样，内存分布大小就不一样</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isAnagram</span><span class="params">(string s, string t)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> hash[<span class="number">26</span>]=&#123;<span class="number">0</span>&#125;;<span class="comment">/*切记不要忘了化0！！！C++ 中的局部变量如果没有手动初始化，值是随机的垃圾值。你需要把 hash 初始化为全 0*/</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:s)</span><br><span class="line">        &#123;</span><br><span class="line">            hash[i-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> j:t)</span><br><span class="line">        &#123;</span><br><span class="line">            hash[j-<span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> n=<span class="number">0</span>;n&lt;<span class="number">26</span>;n++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(hash[n]!=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="第349题"><a href="#第349题" class="headerlink" title="第349题"></a>第349题</h4><p><a href="https://leetcode.cn/problems/intersection-of-two-arrays/solutions/469445/liang-ge-shu-zu-de-jiao-ji-by-leetcode-solution/">349. 两个数组的交集 - 力扣（LeetCode）</a></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">intersection</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums1, vector&lt;<span class="type">int</span>&gt;&amp; nums2)</span> </span>&#123;</span><br><span class="line">        <span class="function">unordered_set&lt;<span class="type">int</span>&gt; <span class="title">u1</span><span class="params">(nums<span class="number">1.</span>begin(),nums<span class="number">1.</span>end())</span></span>;<span class="comment">//记住vector!!!很有说法</span></span><br><span class="line">        <span class="comment">//他们之间相互转化很有意思，iterator</span></span><br><span class="line">        set&lt;<span class="type">int</span>&gt; u2;<span class="comment">//目的是帮我去重！！！</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:nums2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(u<span class="number">1.f</span>ind(i)!=u<span class="number">1.</span><span class="built_in">end</span>())<span class="comment">//记住这些方法！，因为find没有则返回.end()</span></span><br><span class="line">            &#123;</span><br><span class="line">                u<span class="number">2.</span><span class="built_in">insert</span>(i);<span class="comment">//vector与set，insert不一样</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt;num;<span class="comment">//我的返回值是vector</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:u2)</span><br><span class="line">        &#123;</span><br><span class="line">            num.<span class="built_in">push_back</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/*因为题目改了，所以我也可以用数组，因为范围小了，习惯性数组都要大一点hash[1005]，因为要给hash碰撞腾出空间*/</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">intersection</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums1, vector&lt;<span class="type">int</span>&gt;&amp; nums2)</span> </span>&#123;</span><br><span class="line">        unordered_set&lt;<span class="type">int</span>&gt; s1;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">        vec.<span class="built_in">reserve</span>(<span class="number">1000</span>);</span><br><span class="line">        <span class="type">int</span> hash[<span class="number">1005</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i:nums1)</span><br><span class="line">        &#123;</span><br><span class="line">            hash[i]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j:nums2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(hash[j]==<span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                s<span class="number">1.</span><span class="built_in">insert</span>(j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> a:s1)</span><br><span class="line">        &#123;</span><br><span class="line">            vec.<span class="built_in">push_back</span>(a);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> vec;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;;<span class="comment">//但是数组的空间占用更多了</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="第202题"><a href="#第202题" class="headerlink" title="第202题"></a>第202题</h4><p><a href="https://leetcode.cn/problems/happy-number/">202. 快乐数 - 力扣（LeetCode）</a></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">Sum</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="type">int</span> m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(n)</span><br><span class="line">        &#123;</span><br><span class="line">            m+=(n%<span class="number">10</span>)*(n%<span class="number">10</span>);</span><br><span class="line">            n=n/<span class="number">10</span>;</span><br><span class="line">            <span class="comment">//这里写的好，要实现一个数每一项都进行一个操作，就用while循环判定，从最后一位向高位推进，每次丢掉最后一位就行了！！！！</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> m;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//这个地方就是来验证是否出现过，判定是否是死循环，提前退出，避免时间浪费</span></span><br><span class="line">    unordered_set&lt;<span class="type">int</span>&gt; s1;</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isHappy</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(n==<span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            s<span class="number">1.</span><span class="built_in">insert</span>(n);</span><br><span class="line">            n=<span class="built_in">Sum</span>(n);</span><br><span class="line">            <span class="keyword">if</span>(s<span class="number">1.f</span>ind(n)!=s<span class="number">1.</span><span class="built_in">end</span>())</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;   </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;<span class="comment">//判定一个元素是否在一个整体里出现过就用hash</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h4 id="第1题"><a href="#第1题" class="headerlink" title="第1题"></a>第1题</h4><p><a href="https://leetcode.cn/problems/two-sum/submissions/">1. 两数之和 - 力扣（LeetCode）</a></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:<span class="comment">//当时学了STL，但不了解咋做题，直接给我弄红温了</span></span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); j++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(nums[i] + nums[j] == target)&#123;</span><br><span class="line">                        <span class="keyword">return</span> &#123;i,j&#125;;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> &#123;<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;<span class="comment">/*这一次写出来，是因为要蓝桥杯了，所以临时抱佛脚，赶紧来做题，所有耐下心慢慢看我的问题，然后给我说int main有问题，我就知道了，所以稍加修改*/</span></span><br><span class="line"><span class="comment">//当然，看这个题还有个原因是刚好看了hash，来试试，显然没有头绪，所以我决定看看代码随想录了。</span></span><br><span class="line"><span class="comment">/*因为本题，我们不仅要知道元素有没有遍历过，还要知道这个元素对应的下标，需要使用 key value结构来存放，key来存元素，value来存下标，那么使用map正合适。*/</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        unordered_map&lt;<span class="type">int</span>,<span class="type">int</span>&gt;mp;<span class="comment">//map就是遇到有下标保存输出的情况</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">auto</span> iter=mp.<span class="built_in">find</span>(target-nums[i]);<span class="comment">/*明确自己的目标哦，因为find返回的地址，所以用迭代器去接收*/</span></span><br><span class="line">            <span class="keyword">if</span>(iter!=mp.<span class="built_in">end</span>())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;iter-&gt;second,i&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">            mp.<span class="built_in">insert</span>(<span class="built_in">pair</span>&lt;<span class="type">int</span>,<span class="type">int</span>&gt;(nums[i],i));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;;<span class="comment">/*根据题目，虽然我们知道一定会有结果，但一定还是写上如果找不到的情况，增加代码的健壮性，return接相当于break，只不过return更强，代表直接结束，break只能循环里用！！！*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;<span class="comment">//切记我们要查找什么，要得到什么，查的放key（因为可以用find(key)返回），要得到的什么，得到的用value，可以iter-&gt;second()来查找!</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>数组的大小是受限制的，而且如果元素很少，而哈希值太大会造成内存空间的浪费。</p>
+</li>
+<li><p>set是一个集合，里面放的元素只能是一个key，而两数之和这道题目，不仅要判断y是否存在而且还要记录y的下标位置，因为要返回x 和 y的下标。所以set 也不能用。</p>
+</li>
+<li><p>std::map 和std::multimap 的key也是有序的有序才用红黑树为底层的，无序直接用哈希表为底层的</p>
+</li>
+<li><p><strong>map用来做什么</strong></p>
+</li>
+<li><p><strong>map中key和value分别表示什么</strong></p>
+</li>
+</ul>
+<p>map目的用来存放我们访问过的元素，因为遍历数组的时候，需要记录我们之前遍历过哪些元素和对应的下标，这样才能找到与当前元素相匹配的（也就是相加等于target）</p>
+<p>接下来是map中key和value分别表示什么。</p>
+<p>这道题 我们需要 给出一个元素，判断这个元素是否出现过，如果出现过，返回这个元素的下标。</p>
+<p>那么判断元素是否出现，这个元素就要作为key，所以数组中的元素作为key，有key对应的就是value，value用来存下标。</p>
+<p>所以 map中的存储结构为 {key：数据元素，value：数组元素对应的下标}。</p>
+<p>在遍历数组的时候，只需要向map去查询是否有和目前遍历元素匹配的数值，如果有，就找到的匹配对，如果没有，就把目前遍历的元素放进map中，因为map存放的就是我们访问过的元素。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/20220711202638.png" alt="过程一"></p>
 ]]></content>
       <tags>
-        <tag>try</tag>
+        <tag>examination</tag>
       </tags>
   </entry>
 </search>
