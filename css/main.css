@@ -1378,7 +1378,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #42beff;
+  background: #f64efa;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2836,14 +2836,16 @@ header.header {
   transition: all 0.2s ease-out;
   width: $sidebar-desktop;
   z-index: 20;
+/* 半透明背景增加对比度 */
+  background-color: rgba(0,0,0,0.6) /* 调整背景色透明度，以增强文字对比度 */;
 }
 .sidebar a {
   border-bottom-color: #fff;
   color: #fff;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* Add text shadow for better visibility */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.9) /* 更强的文字阴影增强可读性 */;
 }
 .sidebar a:hover {
   border-bottom-color: #fff;
-  color: #fff;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.8); /* Enhance shadow on hover */
+  color: #ffd700 /* 鼠标悬停时，文字颜色变成金色 */;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.9) /* 增强悬停时的文字阴影 */;
 }
