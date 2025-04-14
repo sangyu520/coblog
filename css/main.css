@@ -1378,7 +1378,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #500a95;
+  background: #c359cf;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2838,10 +2838,10 @@ header.header {
   z-index: 20;
 }
 .sidebar a {
-  border-bottom-color: #000;
-  color: #000;
+  border-bottom-color: #fff;
+  color: #fff;
 }
 .sidebar a:hover {
   border-bottom-color: $FFFFFF;
-  color: #000;
+  color: #fff;
 }
