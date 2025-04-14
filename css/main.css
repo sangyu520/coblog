@@ -1378,7 +1378,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #d6bada;
+  background: #cd05ff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2825,25 +2825,25 @@ header.header {
   }
 }
 .sidebar {
-/* 设置背景图片，图片放在Hexo/themes/hexo-theme-next/source/images目录下 */
   background: url("/images/sidebar-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   bottom: 0;
-/* 这里是动态背景色亮度判断时的条件 */
+  box-shadow: inset 0 2px 6px #000;
   position: fixed;
   top: 0;
-  transition: all 0.3s ease-out; /* 我改为固定的 transition 时间 */
-  width: 250px; /* 使用固定的宽度 */
-  z-index: 2;
+  transition: all 0.2s ease-out;
+  width: $sidebar-desktop;
+  z-index: 20;
 }
 .sidebar a {
-/* 设置文字颜色，默认白色 */
   border-bottom-color: #fff;
   color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* Add text shadow for better visibility */
 }
 .sidebar a:hover {
   border-bottom-color: #fff;
   color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.8); /* Enhance shadow on hover */
 }
