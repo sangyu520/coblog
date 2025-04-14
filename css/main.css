@@ -1406,7 +1406,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #30f1ff;
+  background: #ad2004;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2916,4 +2916,11 @@ code {
 }
 .highlight .number {
   color: #ffb6b6;
+}
+.post-title {
+  color: #ffc1cc;
+}
+canvas#tag-cloud {
+  color: #fcf !important;
+  text-shadow: 0 0 8px #fcf !important;
 }

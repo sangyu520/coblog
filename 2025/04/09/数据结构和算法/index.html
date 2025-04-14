@@ -540,19 +540,94 @@
 
   
 
-  
-  
-    <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
-    <div class="widget-wrap">
-      <h3 class="widget-title">Tag Cloud</h3>
-      <div id="myCanvasContainer" class="widget tagcloud">
-        <canvas width="100" height="150" id="resCanvas" style="width:100%">
-          <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/examination/" rel="tag">examination</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/" rel="tag">learn</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/think/" rel="tag">think</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/try/" rel="tag">try</a><span class="tag-list-count">1</span></li></ul>
-        </canvas>
+
+  <script type="text/javascript" src="/static"></script>
+
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div id="myCanvasContainer" class="widget tagcloud" style="position: relative;">
+      <!-- 背景星星 canvas -->
+      <canvas id="bgCanvas" width="300" height="300" style="position:absolute; top:0; left:0; z-index:0;"></canvas>
+
+      <!-- 标签 canvas -->
+      <canvas id="resCanvas" width="300" height="300" style="width:100%; max-width:300px; z-index:1; position:relative;"></canvas>
+
+      <!-- 标签列表，供 TagCanvas 使用 -->
+      <div id="tags" style="display:none;">
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/examination/" rel="tag">examination</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/" rel="tag">learn</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/think/" rel="tag">think</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/try/" rel="tag">try</a><span class="tag-list-count">1</span></li></ul>
       </div>
     </div>
-  
+  </div>
+
+  <script type="text/javascript">
+    // 标签颜色渐变设置
+    const tagColors = ['#c9a0ff', '#a0d8ef', '#ffc0cb', '#b0e0e6', '#dda0dd', '#f0e68c', '#ffffff'];
+
+    window.onload = function () {
+      // 启动标签云
+      if (!TagCanvas.start("resCanvas", "tags", {
+        textColour: null,
+        outlineMethod: "none",
+        reverse: true,
+        depth: 0.8,
+        maxSpeed: 0.03,
+        textHeight: 16,
+        weight: true,
+        weightMode: 'size',
+        weightGradient: {
+          0: tagColors[0],
+          0.2: tagColors[1],
+          0.4: tagColors[2],
+          0.6: tagColors[3],
+          0.8: tagColors[4],
+          1: tagColors[5]
+        },
+        fadeIn: 800,
+        initial: [0.1, -0.1]
+      })) {
+        document.getElementById("myCanvasContainer").style.display = "none";
+      }
+
+      // 背景星星动画
+      const bgCanvas = document.getElementById("bgCanvas");
+      const ctx = bgCanvas.getContext("2d");
+      const w = bgCanvas.width;
+      const h = bgCanvas.height;
+      const stars = [];
+
+      for (let i = 0; i < 60; i++) {
+        stars.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: Math.random() * 1.5 + 0.5,
+          dx: (Math.random() - 0.5) * 0.2,
+          dy: (Math.random() - 0.5) * 0.2,
+          alpha: Math.random() * 0.5 + 0.5
+        });
+      }
+
+      function drawStars() {
+        ctx.clearRect(0, 0, w, h);
+        for (let i = 0; i < stars.length; i++) {
+          let s = stars[i];
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r, 0, 2 * Math.PI);
+          ctx.fillStyle = `rgba(255, 255, 255, ${s.alpha})`;
+          ctx.fill();
+          s.x += s.dx;
+          s.y += s.dy;
+
+          if (s.x < 0 || s.x > w) s.dx *= -1;
+          if (s.y < 0 || s.y > h) s.dy *= -1;
+        }
+        requestAnimationFrame(drawStars);
+      }
+
+      drawStars();
+    };
+  </script>
+
+
 </aside>
 
 
