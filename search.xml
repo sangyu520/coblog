@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Docker</title>
+    <title>learn</title>
     <url>/2025/03/31/Docker/</url>
     <content><![CDATA[<h3 id="visit-this-article"><a href="#visit-this-article" class="headerlink" title="visit this article"></a>visit this article</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/QINGZHID/article/details/144520000</span><br></pre></td></tr></table></figure>
 
@@ -10,6 +10,36 @@
       <categories>
         <category>前端开发</category>
       </categories>
+  </entry>
+  <entry>
+    <title>STL</title>
+    <url>/2025/04/09/STL/</url>
+    <content><![CDATA[<h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><p>动态数组，单端数组（在堆中开的）</p>
+<p>头文件：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>learn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2025/04/13/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>Leetcode刷题记录</title>
@@ -68,33 +98,9 @@
 <p>在遍历数组的时候，只需要向map去查询是否有和目前遍历元素匹配的数值，如果有，就找到的匹配对，如果没有，就把目前遍历的元素放进map中，因为map存放的就是我们访问过的元素。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/20220711202638.png" alt="过程一"></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>STL</title>
-    <url>/2025/04/09/STL/</url>
-    <content><![CDATA[<h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><p>动态数组，单端数组（在堆中开的）</p>
-<p>头文件：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2025/04/13/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
+      <tags>
+        <tag>examination</tag>
+      </tags>
   </entry>
   <entry>
     <title>Markdown</title>
@@ -155,6 +161,9 @@
 <p>\：转义符，让其回归符号</p>
 <p>换行（两个空格加回车！其实直接下箭头就行）</p>
 ]]></content>
+      <tags>
+        <tag>learn</tag>
+      </tags>
   </entry>
   <entry>
     <title>react实现</title>
@@ -175,12 +184,18 @@
 <p>ReactDOM.render(<App />, document.getElementById(‘react-root’));</p>
 <p>我从source&#x2F;js里把echarts.min.js移动到桌面了<br>我删除了page.pug里的<br>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;public&#x2F;js&#x2F;bundle.js’)</p>
 ]]></content>
+      <tags>
+        <tag>try</tag>
+      </tags>
   </entry>
   <entry>
     <title>如何写一篇文章</title>
     <url>/2025/04/05/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h2 id="详情参考："><a href="#详情参考：" class="headerlink" title="详情参考："></a>详情参考：</h2><p><strong><a href="https://markdown.com.cn/basic-syntax/code.html">https://markdown.com.cn/basic-syntax/code.html</a></strong></p>
 ]]></content>
+      <tags>
+        <tag>learn</tag>
+      </tags>
   </entry>
   <entry>
     <title>如何在hexo里面实现类似动态播放视频</title>
@@ -244,6 +259,9 @@
 <p>​	但是我试了一下webp没法自动播放啊，我再研究研究。（最主要确实我那个方法操作起来费时间）</p>
 <p>​	</p>
 ]]></content>
+      <tags>
+        <tag>think</tag>
+      </tags>
   </entry>
   <entry>
     <title>我搭建hexo博客之路</title>
@@ -611,6 +629,9 @@
 <p>动态规划，英文：Dynamic Programming，简称DP，如果某一问题有很多重叠子问题，使用动态规划是最有效的。</p>
 <p>记忆化搜索，保存！</p>
 <h1 id="红黑树-AVL树"><a href="#红黑树-AVL树" class="headerlink" title="红黑树&#x2F;AVL树"></a>红黑树&#x2F;AVL树</h1><h1 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h1>]]></content>
+      <tags>
+        <tag>learn</tag>
+      </tags>
   </entry>
   <entry>
     <title>这是一篇文章</title>
