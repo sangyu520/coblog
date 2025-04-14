@@ -287,6 +287,23 @@
 }
 
   </style>
+    <!-- Stylus CSS for dynamic text color -->
+  <style>
+    .content {
+      background: linear-gradient(135deg, #000000 50%, #ffffff 50%);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dynamic-text {
+      font-size: 48px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+  </style>
+</head>
   
 
   <style>
@@ -391,6 +408,9 @@
     <div class="shanshui-bg"></div>
     <div class="fog-layer"></div>
     <div class="loader-text">这是桑榆的笔记</div>
+  </div>
+  <div class="content">
+    <h1 class="dynamic-text">实现文字智能适配背景</h1>
   </div>
 
   <div class="background"></div>
@@ -914,6 +934,38 @@ window.addEventListener('load', () => {
   setTimeout(() => loader.remove(), 2000);
 });
 </script>
+ <!-- JavaScript for adjusting text color based on background -->
+  <script>
+    window.onload = function () {
+      const textElement = document.querySelector('.dynamic-text');
+      const contentElement = document.querySelector('.content');
+
+      function getLuminance(color) {
+        const rgb = color.match(/\d+/g).map(Number);
+        const [r, g, b] = rgb;
+        const a = [r, g, b].map(function (v) {
+          v /= 255;
+          return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+        });
+        return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
+      }
+
+      function updateTextColor() {
+        const bgColor = window.getComputedStyle(contentElement).backgroundImage;
+        const color1 = bgColor.match(/rgb\((.*?)\)/)[1]; // 获取背景颜色（简化）
+        const luminance = getLuminance(color1);
+
+        if (luminance > 0.5) {
+          textElement.style.color = "#000"; // 背景较亮时，文字为黑色
+        } else {
+          textElement.style.color = "#fff"; // 背景较暗时，文字为白色
+        }
+      }
+
+      updateTextColor();
+      window.addEventListener('resize', updateTextColor); // 窗口调整时重新计算
+    };
+  </script>
 
 
 </body>
