@@ -12,35 +12,6 @@
       </categories>
   </entry>
   <entry>
-    <title>STL</title>
-    <url>/2025/04/09/STL/</url>
-    <content><![CDATA[<h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><p>动态数组，单端数组（在堆中开的）</p>
-<p>头文件：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>react实现</title>
-    <url>/2025/04/07/react%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<p>我在page.pug内插入了<br>    div#react-root  &#x2F;&#x2F; 这是 React 组件的挂载点</p>
-<p>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;js&#x2F;bundle.js’)</p>
-<p>创建了有关index.js在src里面（src也是为创建的）<br>还创建了一个webpack.config.js和react.babelrc</p>
-<p>装了这些<br>npm install react react-dom<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;preset-env @babel&#x2F;preset-react webpack webpack-cli babel-loader<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;cli @babel&#x2F;preset-env @babel&#x2F;preset-react babel-loader<br>然后还要在layout.pug里面加上<br>    &#x2F;&#x2F;- 弹窗通知<br>    !&#x3D;partial(‘includes&#x2F;popup&#x2F;index’, {}, {cache: true})</p>
-<pre><code>block scripts（加上这句话，与上面弹窗通知对齐！）就可以实现react了
-我将bundle.js从&quot;C:\Users\86198\myblog\world-map-widget\node_modules\ajv\scripts\bundle.js&quot;移动到了source/js
-我在source/js里加了一个world-map.js
-在about里的index.md里面加了
-&lt;world-map data-dots=&#39;[&#123;&quot;start&quot;:&#123;&quot;lat&quot;:34.0522,&quot;lng&quot;:-118.2437&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:40.7128,&quot;lng&quot;:-74.0060&#125;&#125;,&#123;&quot;start&quot;:&#123;&quot;lat&quot;:51.5074,&quot;lng&quot;:-0.1278&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:48.8566,&quot;lng&quot;:2.3522&#125;&#125;]&#39;&gt;&lt;/world-map&gt;
-</code></pre>
-<script src="/js/world-map.js"></script>
-<p>cao,就是加载不出来地图<br>我删除了一个index.js<br>内容&#x2F;<em>在 index.js 中编写你的 React 组件代码。例如：</em>&#x2F;<br>import React from ‘react’;<br>import ReactDOM from ‘react-dom’;</p>
-<p>function App() {<br>  return <div>Hello from React!</div>;<br>}</p>
-<p>ReactDOM.render(<App />, document.getElementById(‘react-root’));</p>
-<p>我从source&#x2F;js里把echarts.min.js移动到桌面了<br>我删除了page.pug里的<br>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;public&#x2F;js&#x2F;bundle.js’)</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Leetcode刷题记录</title>
     <url>/2025/04/09/Leetcode%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>太可恶了，我刚学完C++那些基础理论，像泛型编程，类，然后再没什么刷题经验的情况下，来了Leetcode，我就说这咋实现，感觉头都大了，怎么写怎么不对，然后一看发现，数据外部传入，我只需要补充类函数实现就行了，像int main()这些根本不用写，我只需要写个处理方法就行，气死我了！！！ </p>
@@ -177,6 +148,32 @@
 ]]></content>
   </entry>
   <entry>
+    <title>react实现</title>
+    <url>/2025/04/07/react%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<p>我在page.pug内插入了<br>    div#react-root  &#x2F;&#x2F; 这是 React 组件的挂载点</p>
+<p>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;js&#x2F;bundle.js’)</p>
+<p>创建了有关index.js在src里面（src也是为创建的）<br>还创建了一个webpack.config.js和react.babelrc</p>
+<p>装了这些<br>npm install react react-dom<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;preset-env @babel&#x2F;preset-react webpack webpack-cli babel-loader<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;cli @babel&#x2F;preset-env @babel&#x2F;preset-react babel-loader<br>然后还要在layout.pug里面加上<br>    &#x2F;&#x2F;- 弹窗通知<br>    !&#x3D;partial(‘includes&#x2F;popup&#x2F;index’, {}, {cache: true})</p>
+<pre><code>block scripts（加上这句话，与上面弹窗通知对齐！）就可以实现react了
+我将bundle.js从&quot;C:\Users\86198\myblog\world-map-widget\node_modules\ajv\scripts\bundle.js&quot;移动到了source/js
+我在source/js里加了一个world-map.js
+在about里的index.md里面加了
+&lt;world-map data-dots=&#39;[&#123;&quot;start&quot;:&#123;&quot;lat&quot;:34.0522,&quot;lng&quot;:-118.2437&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:40.7128,&quot;lng&quot;:-74.0060&#125;&#125;,&#123;&quot;start&quot;:&#123;&quot;lat&quot;:51.5074,&quot;lng&quot;:-0.1278&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:48.8566,&quot;lng&quot;:2.3522&#125;&#125;]&#39;&gt;&lt;/world-map&gt;
+</code></pre>
+<script src="/js/world-map.js"></script>
+<p>cao,就是加载不出来地图<br>我删除了一个index.js<br>内容&#x2F;<em>在 index.js 中编写你的 React 组件代码。例如：</em>&#x2F;<br>import React from ‘react’;<br>import ReactDOM from ‘react-dom’;</p>
+<p>function App() {<br>  return <div>Hello from React!</div>;<br>}</p>
+<p>ReactDOM.render(<App />, document.getElementById(‘react-root’));</p>
+<p>我从source&#x2F;js里把echarts.min.js移动到桌面了<br>我删除了page.pug里的<br>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;public&#x2F;js&#x2F;bundle.js’)</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>如何写一篇文章</title>
+    <url>/2025/04/05/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h2 id="详情参考："><a href="#详情参考：" class="headerlink" title="详情参考："></a>详情参考：</h2><p><strong><a href="https://markdown.com.cn/basic-syntax/code.html">https://markdown.com.cn/basic-syntax/code.html</a></strong></p>
+]]></content>
+  </entry>
+  <entry>
     <title>如何在hexo里面实现类似动态播放视频</title>
     <url>/2025/04/07/%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E9%87%8C%E9%9D%A2%E5%AE%9E%E7%8E%B0%E7%B1%BB%E4%BC%BC%E5%8A%A8%E6%80%81%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91/</url>
     <content><![CDATA[<p>​	昨天访问了<a href="https://blog.kouseki.cn/gamelife/">游戏人生 | 铭心石刻</a>这个大佬的博客，对于他的这个动态图很心动，于是想自己实现一个，如果能循环播放一个视频，那么效果应该还是很不错的。</p>
@@ -237,6 +234,135 @@
 <p>​	MP4格式是分享高质量视频的最好选择。然而，在保留视频质量和保持低文件大小方面，MP4算法并不尽如人意。如果你的视频要放在网站上，这可能会对你的页面加载速度产生负面影响。为了避免这个问题，在将你的视频放在网站上之前，将MP4转换为WebP!这将保持文件大小较小，页面加载时间快，视频质量基本相同。</p>
 <p>​	但是我试了一下webp没法自动播放啊，我再研究研究。（最主要确实我那个方法操作起来费时间）</p>
 <p>​	</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>STL</title>
+    <url>/2025/04/09/STL/</url>
+    <content><![CDATA[<h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><p>动态数组，单端数组（在堆中开的）</p>
+<p>头文件：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>我搭建hexo博客之路</title>
+    <url>/2025/04/07/%E6%88%91%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/</url>
+    <content><![CDATA[<h1 id="我的第四版网页："><a href="#我的第四版网页：" class="headerlink" title="我的第四版网页："></a>我的第四版网页：</h1><p>​	（有一点我觉得很正确，如果你是什么也不会的小白^因为我也是小白^，那么看我这个，也可以写出自己喜欢的blog，&#x3D;&#x3D;而且要学会借助人工智能&#x3D;&#x3D;！Chat gpt（至少现在）挺好用的，可以帮你很快上手，而且你即使有很好的功底，你也可以用它节约你写这个的过程，毕竟花时间在开发上，比花时间在搭建这个写代码上更有意义，现在的博客都是扒代码，取其精华）前前后后已经搭建了三次了，挺可惜的，但虽然不断搭建花费了我很多时间，但我却也愈发熟悉了，我打算记录一下我的建站过程和感受，以防在某一个时刻我忘记了当初的细节而再次建站浪费时间。</p>
+<h2 id="第一章-创建blog"><a href="#第一章-创建blog" class="headerlink" title="第一章:创建blog"></a>第一章:创建blog</h2><h3 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1.安装Git"></a>1.安装Git</h3><p>​			Git（分布式版本控制系统）（&#x3D;&#x3D;不要纠结叫什么，在处理hexo里面也就是用来管理你的hexo博客文章，上传到GitHub的工具。&#x3D;&#x3D;）</p>
+<p>​			因为我用的Windows，所以Windows：到git官网上下载,<a href="https://gitforwindows.org/">Download git</a>,下载后会有一个&#x3D;&#x3D;Git Bash&#x3D;&#x3D;的命令工具，以后就用这个工具来使用git！！</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git --version   //这里就开始使用git bash了</span><br></pre></td></tr></table></figure>
+
+<p>​			如果没找到，点击最下方的 显示更多选项，切记是&#x3D;&#x3D;git bash&#x3D;&#x3D;(不是git GUI)，然后就会看到这个命令行，就可以开始输入代码了。（接下来就不会用cmd了）</p>
+<p><img src="https://i.postimg.cc/15fkshBw/1.png"></p>
+<p>​	复制粘贴（合理偷懒）git –version 注意：这个里面CTRL+v不能用CTRL+c可以复制但也会终止当前命令，别不小心终止了这里的复制可以右键命令行来查看。Paste这就是粘贴（后面的Shift+Ins是快捷键！）</p>
+<p><img src="https://i.postimg.cc/YSwZ64Hz/2.png"></p>
+<p>​	Hexo是基于nodeJS编写的，所以需要安装一下nodeJs和里面的npm工具。（都直接next）</p>
+<p><img src="https://i.postimg.cc/3R8qqPWy/3.png"></p>
+<p>​	可以顺手看看版本，也是确保已经安装好了	接下来（下载hexo）并看一下版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.postimg.cc/90znmZdC/4.png"></p>
+<p>​	然后电脑上就已经有了hexo了，接下来就是创建项目（也就是自己的博客）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init myblog    //hexo init 自己取的博客名,这一般会在c盘里面（记得找到位置）</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.postimg.cc/WzKfhz8r/5.png"></p>
+<p>​	这种情况是自己已经有了这个名字的博客了（不用担心，白色边框内就是地址）</p>
+<p><img src="https://i.postimg.cc/3JschydQ/6.png"></p>
+<p>​	这就表示成功了，这就是我们的第一个博客！</p>
+<p><img src="https://i.postimg.cc/hGgZJHLC/7.png"></p>
+<p>​	这一步是表示进入这个文件内部，因为我们以后的操作几乎都在这里面(cd 表进这个文件，注意空格)</p>
+<p>​	然后npm install（这个速度很慢，可以考虑用淘宝的镜像）</p>
+<p>​	当前项目使用npm install安装所有module依赖太慢了，但又不想安装整一个cnpm下来，这时就可以把源换成淘宝镜像，会快很多</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --registry=http://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+
+<p>​	互联网上的东西变化很快，日日新，所以一旦遇到问题，可能是这个镜像换了，直接浏览器搜索镜像就行了或者不会用，就搜索：npm淘宝镜像(就有人教)，很详细（所以就不附加网址了，以后会改变）</p>
+<p>​	补上一句：</p>
+<p>​		对于npm总是会出现一些无法使用的问题的时候就重新安装一下npm。最简单的方法是从官方安装程序重新安装 node</p>
+<p>（都不需要删除），官网上会弹出删除选项，他帮你删除，删除后再下载（记得注意有时候没变化可能是需要看后台开管理员权限）</p>
+<p>如果报错了可以：</p>
+<p><strong>1. 清理 npm 缓存：</strong></p>
+<p>​	npm 缓存有时会被损坏，导致安装失败。你可以尝试清理缓存：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. 更新npm(新的可能修复了)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g npm@latest</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.万不得已了，尝试删除 node_modules 目录和 package-lock.json 文件，重装</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -rf node_modules package-lock.json</span><br><span class="line">npm install --registry=http://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+
+<p>补充： 可以忽略这些依赖冲突，进行安装。</p>
+<p>​	 <em>然后检查：</em></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gitnpm config list</span><br></pre></td></tr></table></figure>
+
+<p>​	这将显示你的 npm 配置文件内容，包括注册表、代理设置等。如果你看到异常的配置，可能需要进行修改。</p>
+<p>​	这里介绍一下AI的食用：这一大段我不想看怎么快速知道什么意思（复制，粘贴，AI）<img src="https://i.postimg.cc/v89PzY0P/8.png"></p>
+<p><img src="https://i.postimg.cc/PrQ2g6sY/9.png"></p>
+<p><img src="https://i.postimg.cc/RZPGFN00/10.png"></p>
+<p><img src="https://i.postimg.cc/Z5qF14Lz/11.png"></p>
+<p>我们的第一个博客网页就搭建好了，当然，这远远不够，我们要美化和部署，加域名绑定服务器才算一个精美的blog，还可以创主副页</p>
+<h2 id="第二章：部署到GitHub上"><a href="#第二章：部署到GitHub上" class="headerlink" title="第二章：部署到GitHub上"></a>第二章：部署到GitHub上</h2><h3 id="创建GitHub账号"><a href="#创建GitHub账号" class="headerlink" title="创建GitHub账号"></a>创建GitHub账号</h3><p>点击左上角<img src="https://i.postimg.cc/W4Fm18K9/12.png">到Home页面</p>
+<p><img src="https://i.postimg.cc/hvgVMBGw/14.png"></p>
+<p>​	就会有这个，直接创建即可，因为我不是第一次创建，所以有一点不一样</p>
+<p>​	如果你是第一次搭建，我建议创建一个和你用户名相同的仓库，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名（主要是避免一些麻烦，新手能简单点就好）</p>
+<p><img src="https://i.postimg.cc/ryC1sKnL/15.png"></p>
+<p>​	然后就是将hexo部署到GitHub的这个仓库了</p>
+<h3 id="生成SSH添加到GitHub"><a href="#生成SSH添加到GitHub" class="headerlink" title="生成SSH添加到GitHub"></a>生成SSH添加到GitHub</h3><p>（看到这个git就是在git bash里面，记得要在你的博客所处的文件夹下执行）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot; //内部写自己的名字和邮箱</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.postimg.cc/FH13TG99/16.png"></p>
+<p>​	这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。</p>
+<p>​	可以用以下两条，检查一下你有没有输对</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+
+<p>​	然后创建SSH,一路回车，（中间有一个问题，如果已经创建过一个ssh了会问你）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.postimg.cc/QtZ7x3ct/17.png"></p>
+<p>​	ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
+<p>​	而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key把你的id_rsa.pub里面的信息复制进去。</p>
+<p><img src="https://i.postimg.cc/CMN8Y95h/18.png"></p>
+<p><strong>如果你想用指令打开也行</strong></p>
+<p>通过命令窗口:</p>
+<p>​	a. 打开你的 <strong>git bash</strong> 窗口</p>
+<p>​	b. 进入 <strong>.ssh</strong> 目录：<em><strong>*cd ~&#x2F;.ssh*</strong></em></p>
+<p>​	c. 找到 <strong>id_rsa.pub</strong> 文件：<em><strong>*ls*</strong></em></p>
+<p>​	d. 查看公钥：<em><strong>*cat id_rsa.pub*</strong></em> </p>
+<p><img src="https://i.postimg.cc/8Pz6Cwfh/19.png"></p>
+<p>输入这个</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.postimg.cc/Yq0v79TR/21.png"></p>
+<p>​	出现这个就代表成功了，&#x3D;&#x3D;不用管后面那个but那个是一直都有&#x3D;&#x3D;</p>
+<p>​	打开站点配置文件 _config.yml，翻到最后，修改为</p>
+<p>​	YourgithubName就是你的GitHub账户</p>
+<p><img src="https://i.postimg.cc/SRsxmT1R/22.png"></p>
+<p>​	切记我们是用的ssh，所以我们复制ssh下的，不然后面会出问题（这是在_config.yml里最下面写的）</p>
+<p><img src="https://i.postimg.cc/rFDwbHtY/23.png"></p>
+<p>​	这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>​	其中 hexo clean清除了你之前生成的东西，也可以不加。(我习惯加了)</p>
+<p>​	hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写（埋个点，后面安装一些插件的时候可能会使hexo g不可使用了，准确的来讲是为了方便，所以采取不用hexo g的这种方式）</p>
+<p>​	hexo deploy 部署文章，可以用hexo d缩写</p>
+<p>​	注意deploy时可能要你输入username和password。</p>
+<p>得到下图就说明部署成功了，过一会儿就可以在<a href="http://yourname.github.io/">http://yourname.github.io</a> 这个网站看到你的博客了！！</p>
+<p><img src="https://i.postimg.cc/yNH6DYpw/24.png"></p>
+<p>​	很有可能你会遇到这个</p>
+<p>​	我没找到解决方法</p>
+<p>​	但是这并不影响后面的操作，因为设置个人域名后又可以打开</p>
+<p>​	注册一个阿里云账户,在<a href="https://wanwang.aliyun.com/?spm=5176.8142029.digitalization.2.e9396d3e46JCc5">阿里云</a>上买一个域名，我买的是 sangyufeiwan.com，各个后缀的价格不太一样，比如最广泛的.com就比较贵，看个人喜好咯</p>
+<p>​	你需要先去进行实名认证,然后在域名控制台中，看到你购买的域名。</p>
+<p><img src="https://i.postimg.cc/cHDdk71S/25.png"></p>
+<p><img src="https://i.postimg.cc/2yVrsq3B/26.png"></p>
+<p>​	这是GitHub的服务器地址记得添加</p>
+<p><img src="https://i.postimg.cc/59CxSzcZ/27.png"></p>
+<p>​	这是你的博客网页的记得添加</p>
+<p>​	登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名sangyufeiwan.com</p>
+<p><img src="https://i.postimg.cc/SN4pLtfM/28.png"></p>
+<p><img src="https://i.postimg.cc/bNRfmHmF/29.png"></p>
+<p>​	大致上就这样</p>
+<p>​	然后在你的博客文件source中创建一个名为CNAME文件，不要后缀。写上你的域名。</p>
 ]]></content>
   </entry>
   <entry>
@@ -487,134 +613,8 @@
 <h1 id="红黑树-AVL树"><a href="#红黑树-AVL树" class="headerlink" title="红黑树&#x2F;AVL树"></a>红黑树&#x2F;AVL树</h1><h1 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h1>]]></content>
   </entry>
   <entry>
-    <title>如何写一篇文章</title>
-    <url>/2025/04/05/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h2 id="详情参考："><a href="#详情参考：" class="headerlink" title="详情参考："></a>详情参考：</h2><p><strong><a href="https://markdown.com.cn/basic-syntax/code.html">https://markdown.com.cn/basic-syntax/code.html</a></strong></p>
-]]></content>
-  </entry>
-  <entry>
     <title>这是一篇文章</title>
     <url>/2025/04/13/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h3 id="测试一下，其实什么也没有"><a href="#测试一下，其实什么也没有" class="headerlink" title="测试一下，其实什么也没有"></a>测试一下，其实什么也没有</h3>]]></content>
-  </entry>
-  <entry>
-    <title>我搭建hexo博客之路</title>
-    <url>/2025/04/07/%E6%88%91%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/</url>
-    <content><![CDATA[<h1 id="我的第四版网页："><a href="#我的第四版网页：" class="headerlink" title="我的第四版网页："></a>我的第四版网页：</h1><p>​	（有一点我觉得很正确，如果你是什么也不会的小白^因为我也是小白^，那么看我这个，也可以写出自己喜欢的blog，&#x3D;&#x3D;而且要学会借助人工智能&#x3D;&#x3D;！Chat gpt（至少现在）挺好用的，可以帮你很快上手，而且你即使有很好的功底，你也可以用它节约你写这个的过程，毕竟花时间在开发上，比花时间在搭建这个写代码上更有意义，现在的博客都是扒代码，取其精华）前前后后已经搭建了三次了，挺可惜的，但虽然不断搭建花费了我很多时间，但我却也愈发熟悉了，我打算记录一下我的建站过程和感受，以防在某一个时刻我忘记了当初的细节而再次建站浪费时间。</p>
-<h2 id="第一章-创建blog"><a href="#第一章-创建blog" class="headerlink" title="第一章:创建blog"></a>第一章:创建blog</h2><h3 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1.安装Git"></a>1.安装Git</h3><p>​			Git（分布式版本控制系统）（&#x3D;&#x3D;不要纠结叫什么，在处理hexo里面也就是用来管理你的hexo博客文章，上传到GitHub的工具。&#x3D;&#x3D;）</p>
-<p>​			因为我用的Windows，所以Windows：到git官网上下载,<a href="https://gitforwindows.org/">Download git</a>,下载后会有一个&#x3D;&#x3D;Git Bash&#x3D;&#x3D;的命令工具，以后就用这个工具来使用git！！</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git --version   //这里就开始使用git bash了</span><br></pre></td></tr></table></figure>
-
-<p>​			如果没找到，点击最下方的 显示更多选项，切记是&#x3D;&#x3D;git bash&#x3D;&#x3D;(不是git GUI)，然后就会看到这个命令行，就可以开始输入代码了。（接下来就不会用cmd了）</p>
-<p><img src="https://i.postimg.cc/15fkshBw/1.png"></p>
-<p>​	复制粘贴（合理偷懒）git –version 注意：这个里面CTRL+v不能用CTRL+c可以复制但也会终止当前命令，别不小心终止了这里的复制可以右键命令行来查看。Paste这就是粘贴（后面的Shift+Ins是快捷键！）</p>
-<p><img src="https://i.postimg.cc/YSwZ64Hz/2.png"></p>
-<p>​	Hexo是基于nodeJS编写的，所以需要安装一下nodeJs和里面的npm工具。（都直接next）</p>
-<p><img src="https://i.postimg.cc/3R8qqPWy/3.png"></p>
-<p>​	可以顺手看看版本，也是确保已经安装好了	接下来（下载hexo）并看一下版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://i.postimg.cc/90znmZdC/4.png"></p>
-<p>​	然后电脑上就已经有了hexo了，接下来就是创建项目（也就是自己的博客）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init myblog    //hexo init 自己取的博客名,这一般会在c盘里面（记得找到位置）</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://i.postimg.cc/WzKfhz8r/5.png"></p>
-<p>​	这种情况是自己已经有了这个名字的博客了（不用担心，白色边框内就是地址）</p>
-<p><img src="https://i.postimg.cc/3JschydQ/6.png"></p>
-<p>​	这就表示成功了，这就是我们的第一个博客！</p>
-<p><img src="https://i.postimg.cc/hGgZJHLC/7.png"></p>
-<p>​	这一步是表示进入这个文件内部，因为我们以后的操作几乎都在这里面(cd 表进这个文件，注意空格)</p>
-<p>​	然后npm install（这个速度很慢，可以考虑用淘宝的镜像）</p>
-<p>​	当前项目使用npm install安装所有module依赖太慢了，但又不想安装整一个cnpm下来，这时就可以把源换成淘宝镜像，会快很多</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --registry=http://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
-
-<p>​	互联网上的东西变化很快，日日新，所以一旦遇到问题，可能是这个镜像换了，直接浏览器搜索镜像就行了或者不会用，就搜索：npm淘宝镜像(就有人教)，很详细（所以就不附加网址了，以后会改变）</p>
-<p>​	补上一句：</p>
-<p>​		对于npm总是会出现一些无法使用的问题的时候就重新安装一下npm。最简单的方法是从官方安装程序重新安装 node</p>
-<p>（都不需要删除），官网上会弹出删除选项，他帮你删除，删除后再下载（记得注意有时候没变化可能是需要看后台开管理员权限）</p>
-<p>如果报错了可以：</p>
-<p><strong>1. 清理 npm 缓存：</strong></p>
-<p>​	npm 缓存有时会被损坏，导致安装失败。你可以尝试清理缓存：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure>
-
-<p><strong>2. 更新npm(新的可能修复了)</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g npm@latest</span><br></pre></td></tr></table></figure>
-
-<p><strong>3.万不得已了，尝试删除 node_modules 目录和 package-lock.json 文件，重装</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -rf node_modules package-lock.json</span><br><span class="line">npm install --registry=http://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
-
-<p>补充： 可以忽略这些依赖冲突，进行安装。</p>
-<p>​	 <em>然后检查：</em></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gitnpm config list</span><br></pre></td></tr></table></figure>
-
-<p>​	这将显示你的 npm 配置文件内容，包括注册表、代理设置等。如果你看到异常的配置，可能需要进行修改。</p>
-<p>​	这里介绍一下AI的食用：这一大段我不想看怎么快速知道什么意思（复制，粘贴，AI）<img src="https://i.postimg.cc/v89PzY0P/8.png"></p>
-<p><img src="https://i.postimg.cc/PrQ2g6sY/9.png"></p>
-<p><img src="https://i.postimg.cc/RZPGFN00/10.png"></p>
-<p><img src="https://i.postimg.cc/Z5qF14Lz/11.png"></p>
-<p>我们的第一个博客网页就搭建好了，当然，这远远不够，我们要美化和部署，加域名绑定服务器才算一个精美的blog，还可以创主副页</p>
-<h2 id="第二章：部署到GitHub上"><a href="#第二章：部署到GitHub上" class="headerlink" title="第二章：部署到GitHub上"></a>第二章：部署到GitHub上</h2><h3 id="创建GitHub账号"><a href="#创建GitHub账号" class="headerlink" title="创建GitHub账号"></a>创建GitHub账号</h3><p>点击左上角<img src="https://i.postimg.cc/W4Fm18K9/12.png">到Home页面</p>
-<p><img src="https://i.postimg.cc/hvgVMBGw/14.png"></p>
-<p>​	就会有这个，直接创建即可，因为我不是第一次创建，所以有一点不一样</p>
-<p>​	如果你是第一次搭建，我建议创建一个和你用户名相同的仓库，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名（主要是避免一些麻烦，新手能简单点就好）</p>
-<p><img src="https://i.postimg.cc/ryC1sKnL/15.png"></p>
-<p>​	然后就是将hexo部署到GitHub的这个仓库了</p>
-<h3 id="生成SSH添加到GitHub"><a href="#生成SSH添加到GitHub" class="headerlink" title="生成SSH添加到GitHub"></a>生成SSH添加到GitHub</h3><p>（看到这个git就是在git bash里面，记得要在你的博客所处的文件夹下执行）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot; //内部写自己的名字和邮箱</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://i.postimg.cc/FH13TG99/16.png"></p>
-<p>​	这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。</p>
-<p>​	可以用以下两条，检查一下你有没有输对</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
-
-<p>​	然后创建SSH,一路回车，（中间有一个问题，如果已经创建过一个ssh了会问你）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://i.postimg.cc/QtZ7x3ct/17.png"></p>
-<p>​	ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
-<p>​	而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key把你的id_rsa.pub里面的信息复制进去。</p>
-<p><img src="https://i.postimg.cc/CMN8Y95h/18.png"></p>
-<p><strong>如果你想用指令打开也行</strong></p>
-<p>通过命令窗口:</p>
-<p>​	a. 打开你的 <strong>git bash</strong> 窗口</p>
-<p>​	b. 进入 <strong>.ssh</strong> 目录：<em><strong>*cd ~&#x2F;.ssh*</strong></em></p>
-<p>​	c. 找到 <strong>id_rsa.pub</strong> 文件：<em><strong>*ls*</strong></em></p>
-<p>​	d. 查看公钥：<em><strong>*cat id_rsa.pub*</strong></em> </p>
-<p><img src="https://i.postimg.cc/8Pz6Cwfh/19.png"></p>
-<p>输入这个</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://i.postimg.cc/Yq0v79TR/21.png"></p>
-<p>​	出现这个就代表成功了，&#x3D;&#x3D;不用管后面那个but那个是一直都有&#x3D;&#x3D;</p>
-<p>​	打开站点配置文件 _config.yml，翻到最后，修改为</p>
-<p>​	YourgithubName就是你的GitHub账户</p>
-<p><img src="https://i.postimg.cc/SRsxmT1R/22.png"></p>
-<p>​	切记我们是用的ssh，所以我们复制ssh下的，不然后面会出问题（这是在_config.yml里最下面写的）</p>
-<p><img src="https://i.postimg.cc/rFDwbHtY/23.png"></p>
-<p>​	这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>​	其中 hexo clean清除了你之前生成的东西，也可以不加。(我习惯加了)</p>
-<p>​	hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写（埋个点，后面安装一些插件的时候可能会使hexo g不可使用了，准确的来讲是为了方便，所以采取不用hexo g的这种方式）</p>
-<p>​	hexo deploy 部署文章，可以用hexo d缩写</p>
-<p>​	注意deploy时可能要你输入username和password。</p>
-<p>得到下图就说明部署成功了，过一会儿就可以在<a href="http://yourname.github.io/">http://yourname.github.io</a> 这个网站看到你的博客了！！</p>
-<p><img src="https://i.postimg.cc/yNH6DYpw/24.png"></p>
-<p>​	很有可能你会遇到这个</p>
-<p>​	我没找到解决方法</p>
-<p>​	但是这并不影响后面的操作，因为设置个人域名后又可以打开</p>
-<p>​	注册一个阿里云账户,在<a href="https://wanwang.aliyun.com/?spm=5176.8142029.digitalization.2.e9396d3e46JCc5">阿里云</a>上买一个域名，我买的是 sangyufeiwan.com，各个后缀的价格不太一样，比如最广泛的.com就比较贵，看个人喜好咯</p>
-<p>​	你需要先去进行实名认证,然后在域名控制台中，看到你购买的域名。</p>
-<p><img src="https://i.postimg.cc/cHDdk71S/25.png"></p>
-<p><img src="https://i.postimg.cc/2yVrsq3B/26.png"></p>
-<p>​	这是GitHub的服务器地址记得添加</p>
-<p><img src="https://i.postimg.cc/59CxSzcZ/27.png"></p>
-<p>​	这是你的博客网页的记得添加</p>
-<p>​	登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名sangyufeiwan.com</p>
-<p><img src="https://i.postimg.cc/SN4pLtfM/28.png"></p>
-<p><img src="https://i.postimg.cc/bNRfmHmF/29.png"></p>
-<p>​	大致上就这样</p>
-<p>​	然后在你的博客文件source中创建一个名为CNAME文件，不要后缀。写上你的域名。</p>
-]]></content>
   </entry>
 </search>
