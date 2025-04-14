@@ -1406,7 +1406,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ff58ff;
+  background: #30f1ff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2863,6 +2863,57 @@ header.header {
   color: #ffd700 /* 鼠标悬停时，文字颜色变成金色 */;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.9) /* 增强悬停时的文字阴影 */;
 }
-* {
-  color: #2a0600;
+body {
+  color: #eaf6ff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ddbaff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+a {
+  color: #000;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: #ffd0ec;
+  text-decoration: underline;
+}
+.post-body,
+.content,
+.article-entry {
+  background: rgba(160,174,192,0.35);
+  backdrop-filter: blur(3px);
+  padding: 1.5em;
+  border-radius: 12px;
+  color: #f0f8ff;
+}
+.highlight {
+  background: rgba(40,60,80,0.7);
+  color: #eaffff;
+  border-radius: 8px;
+  padding: 1em;
+  overflow-x: auto;
+}
+code {
+  background: rgba(255,255,255,0.2);
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  color: #ffd2f0;
+}
+.highlight .comment {
+  color: #a0aec0;
+}
+.highlight .keyword {
+  color: #ffd580;
+}
+.highlight .string {
+  color: #afffc3;
+}
+.highlight .number {
+  color: #ffb6b6;
 }
