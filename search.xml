@@ -59,35 +59,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>STL</title>
-    <url>/2025/04/09/STL/</url>
-    <content><![CDATA[<h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><p>动态数组，单端数组（在堆中开的）</p>
-<p>头文件：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>react实现</title>
-    <url>/2025/04/07/react%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<p>我在page.pug内插入了<br>    div#react-root  &#x2F;&#x2F; 这是 React 组件的挂载点</p>
-<p>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;js&#x2F;bundle.js’)</p>
-<p>创建了有关index.js在src里面（src也是为创建的）<br>还创建了一个webpack.config.js和react.babelrc</p>
-<p>装了这些<br>npm install react react-dom<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;preset-env @babel&#x2F;preset-react webpack webpack-cli babel-loader<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;cli @babel&#x2F;preset-env @babel&#x2F;preset-react babel-loader<br>然后还要在layout.pug里面加上<br>    &#x2F;&#x2F;- 弹窗通知<br>    !&#x3D;partial(‘includes&#x2F;popup&#x2F;index’, {}, {cache: true})</p>
-<pre><code>block scripts（加上这句话，与上面弹窗通知对齐！）就可以实现react了
-我将bundle.js从&quot;C:\Users\86198\myblog\world-map-widget\node_modules\ajv\scripts\bundle.js&quot;移动到了source/js
-我在source/js里加了一个world-map.js
-在about里的index.md里面加了
-&lt;world-map data-dots=&#39;[&#123;&quot;start&quot;:&#123;&quot;lat&quot;:34.0522,&quot;lng&quot;:-118.2437&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:40.7128,&quot;lng&quot;:-74.0060&#125;&#125;,&#123;&quot;start&quot;:&#123;&quot;lat&quot;:51.5074,&quot;lng&quot;:-0.1278&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:48.8566,&quot;lng&quot;:2.3522&#125;&#125;]&#39;&gt;&lt;/world-map&gt;
-</code></pre>
-<script src="/js/world-map.js"></script>
-<p>cao,就是加载不出来地图<br>我删除了一个index.js<br>内容&#x2F;<em>在 index.js 中编写你的 React 组件代码。例如：</em>&#x2F;<br>import React from ‘react’;<br>import ReactDOM from ‘react-dom’;</p>
-<p>function App() {<br>  return <div>Hello from React!</div>;<br>}</p>
-<p>ReactDOM.render(<App />, document.getElementById(‘react-root’));</p>
-<p>我从source&#x2F;js里把echarts.min.js移动到桌面了<br>我删除了page.pug里的<br>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;public&#x2F;js&#x2F;bundle.js’)</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Markdown</title>
     <url>/2025/04/05/markown/</url>
     <content><![CDATA[<h1 id="有什么需要用到外挂标签的地方可以查阅这个大佬写的"><a href="#有什么需要用到外挂标签的地方可以查阅这个大佬写的" class="headerlink" title="有什么需要用到外挂标签的地方可以查阅这个大佬写的"></a>有什么需要用到外挂标签的地方可以查阅这个大佬写的</h1><h3 id="安知鱼主题标签-Tag-Plugins-安知鱼"><a href="#安知鱼主题标签-Tag-Plugins-安知鱼" class="headerlink" title="安知鱼主题标签 Tag Plugins | 安知鱼"></a><a href="https://blog.anheyu.com/posts/d50a.html">安知鱼主题标签 Tag Plugins | 安知鱼</a></h3><p>#：表示一级标题（最大的标题，几个#就是几级，最多六级）</p>
@@ -148,6 +119,26 @@
 ]]></content>
   </entry>
   <entry>
+    <title>react实现</title>
+    <url>/2025/04/07/react%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<p>我在page.pug内插入了<br>    div#react-root  &#x2F;&#x2F; 这是 React 组件的挂载点</p>
+<p>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;js&#x2F;bundle.js’)</p>
+<p>创建了有关index.js在src里面（src也是为创建的）<br>还创建了一个webpack.config.js和react.babelrc</p>
+<p>装了这些<br>npm install react react-dom<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;preset-env @babel&#x2F;preset-react webpack webpack-cli babel-loader<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;cli @babel&#x2F;preset-env @babel&#x2F;preset-react babel-loader<br>然后还要在layout.pug里面加上<br>    &#x2F;&#x2F;- 弹窗通知<br>    !&#x3D;partial(‘includes&#x2F;popup&#x2F;index’, {}, {cache: true})</p>
+<pre><code>block scripts（加上这句话，与上面弹窗通知对齐！）就可以实现react了
+我将bundle.js从&quot;C:\Users\86198\myblog\world-map-widget\node_modules\ajv\scripts\bundle.js&quot;移动到了source/js
+我在source/js里加了一个world-map.js
+在about里的index.md里面加了
+&lt;world-map data-dots=&#39;[&#123;&quot;start&quot;:&#123;&quot;lat&quot;:34.0522,&quot;lng&quot;:-118.2437&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:40.7128,&quot;lng&quot;:-74.0060&#125;&#125;,&#123;&quot;start&quot;:&#123;&quot;lat&quot;:51.5074,&quot;lng&quot;:-0.1278&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:48.8566,&quot;lng&quot;:2.3522&#125;&#125;]&#39;&gt;&lt;/world-map&gt;
+</code></pre>
+<script src="/js/world-map.js"></script>
+<p>cao,就是加载不出来地图<br>我删除了一个index.js<br>内容&#x2F;<em>在 index.js 中编写你的 React 组件代码。例如：</em>&#x2F;<br>import React from ‘react’;<br>import ReactDOM from ‘react-dom’;</p>
+<p>function App() {<br>  return <div>Hello from React!</div>;<br>}</p>
+<p>ReactDOM.render(<App />, document.getElementById(‘react-root’));</p>
+<p>我从source&#x2F;js里把echarts.min.js移动到桌面了<br>我删除了page.pug里的<br>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;public&#x2F;js&#x2F;bundle.js’)</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2025/04/13/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -166,6 +157,12 @@
 ]]></content>
   </entry>
   <entry>
+    <title>如何写一篇文章</title>
+    <url>/2025/04/05/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h2 id="详情参考："><a href="#详情参考：" class="headerlink" title="详情参考："></a>详情参考：</h2><p><strong><a href="https://markdown.com.cn/basic-syntax/code.html">https://markdown.com.cn/basic-syntax/code.html</a></strong></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Docker</title>
     <url>/2025/03/31/Docker/</url>
     <content><![CDATA[<h3 id="visit-this-article"><a href="#visit-this-article" class="headerlink" title="visit this article"></a>visit this article</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/QINGZHID/article/details/144520000</span><br></pre></td></tr></table></figure>
@@ -177,9 +174,12 @@
       </categories>
   </entry>
   <entry>
-    <title>如何写一篇文章</title>
-    <url>/2025/04/05/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h2 id="详情参考："><a href="#详情参考：" class="headerlink" title="详情参考："></a>详情参考：</h2><p><strong><a href="https://markdown.com.cn/basic-syntax/code.html">https://markdown.com.cn/basic-syntax/code.html</a></strong></p>
+    <title>STL</title>
+    <url>/2025/04/09/STL/</url>
+    <content><![CDATA[<h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><p>动态数组，单端数组（在堆中开的）</p>
+<p>头文件：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
   <entry>
@@ -303,6 +303,11 @@
 ]]></content>
   </entry>
   <entry>
+    <title>这是一篇文章</title>
+    <url>/2025/04/13/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h3 id="测试一下，其实什么也没有"><a href="#测试一下，其实什么也没有" class="headerlink" title="测试一下，其实什么也没有"></a>测试一下，其实什么也没有</h3>]]></content>
+  </entry>
+  <entry>
     <title>如何在hexo里面实现类似动态播放视频</title>
     <url>/2025/04/07/%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E9%87%8C%E9%9D%A2%E5%AE%9E%E7%8E%B0%E7%B1%BB%E4%BC%BC%E5%8A%A8%E6%80%81%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91/</url>
     <content><![CDATA[<p>​	昨天访问了<a href="https://blog.kouseki.cn/gamelife/">游戏人生 | 铭心石刻</a>这个大佬的博客，对于他的这个动态图很心动，于是想自己实现一个，如果能循环播放一个视频，那么效果应该还是很不错的。</p>
@@ -364,11 +369,6 @@
 <p>​	但是我试了一下webp没法自动播放啊，我再研究研究。（最主要确实我那个方法操作起来费时间）</p>
 <p>​	</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>这是一篇文章</title>
-    <url>/2025/04/13/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h3 id="测试一下，其实什么也没有"><a href="#测试一下，其实什么也没有" class="headerlink" title="测试一下，其实什么也没有"></a>测试一下，其实什么也没有</h3>]]></content>
   </entry>
   <entry>
     <title>数据结构和算法</title>
