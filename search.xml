@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Leetcode刷题记录</title>
+    <url>/2025/04/09/Leetcode%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>太可恶了，我刚学完C++那些基础理论，像泛型编程，类，然后再没什么刷题经验的情况下，来了Leetcode，我就说这咋实现，感觉头都大了，怎么写怎么不对，然后一看发现，数据外部传入，我只需要补充类函数实现就行了，像int main()这些根本不用写，我只需要写个处理方法就行，气死我了！！！ </p>
+<p><a href="https://www.bilibili.com/video/BV1AL4y1H7UH/?spm_id_from=333.337.search-card.all.click&vd_source=df6bd7ad18c270eed1dcad06d9983510">学算法，刷力扣（leetcode）不知道怎么刷？来看看，我把刷题网站上线了！最强刷题攻略！_哔哩哔哩_bilibili</a></p>
+<p><a href="https://programmercarl.com/">代码随想录</a></p>
+<h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><h4 id="第704题"><a href="#第704题" class="headerlink" title="第704题"></a>第704题</h4><p><a href="https://leetcode.cn/problems/binary-search/description/">704. 二分查找 - 力扣（LeetCode）</a></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">search</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right=nums.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        <span class="type">int</span> mid;</span><br><span class="line">        <span class="keyword">while</span>(left&lt;=right)</span><br><span class="line">        &#123;</span><br><span class="line">            mid=left+(right-left)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]==target)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> mid;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&gt;target)</span><br><span class="line">            &#123;</span><br><span class="line">                right=mid<span class="number">-1</span>;<span class="comment">/*为什么加一，因为边界条件一定不满足，可以丢弃，而且可以实现最终结束循环，left&gt;right-1!!!*/</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&lt;target)</span><br><span class="line">            &#123;</span><br><span class="line">                left=mid<span class="number">+1</span>;<span class="comment">/*为什么加一，因为边界条件一定不满足，可以丢弃，而且可以实现最终结束循环，left+1&gt;right!!!*/</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/*这道题目的前提是数组为有序数组，同时题目还强调数组中无重复元素，因为一旦有重复元素，使用二分查找法返回的元素下标可能不是唯一的，这些都是使用二分法的前提条件，当大家看到题目描述满足如上条件的时候，可要想一想是不是可以用二分法了。</span></span><br><span class="line"><span class="comment">第一种写法，我们定义 target 是在一个在左闭右闭的区间里，也就是[left, right] （这个很重要非常重要）。</span></span><br><span class="line"><span class="comment">while (left &lt;= right) 要使用 &lt;= ，因为left == right是有意义的，所以使用 &lt;=</span></span><br><span class="line"><span class="comment">if (nums[middle] &gt; target) right 要赋值为 middle - 1，因为当前这个nums[middle]一定不是target，那么接下来要查找的左区间结束下标位置就是 middle - 1</span></span><br><span class="line"><span class="comment">如果说定义 target 是在一个在左闭右开的区间里，也就是[left, right) ，那么二分法的边界处理方式则截然不同。</span></span><br><span class="line"><span class="comment">while (left &lt; right)，这里使用 &lt; ,因为left == right在区间[left, right)是没有意义的</span></span><br><span class="line"><span class="comment">if (nums[middle] &gt; target) right 更新为 middle，因为当前nums[middle]不等于target，去左区间继续寻找，而寻找区间是左闭右开区间，所以right更新为middle，即：下一个查询区间不会去比较nums[middle]*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="第35题"><a href="#第35题" class="headerlink" title="第35题"></a>第35题</h4><p><a href="https://leetcode.cn/problems/search-insert-position/description/">35. 搜索插入位置 - 力扣（LeetCode）</a></p>
+<h4 id="第34题"><a href="#第34题" class="headerlink" title="第34题"></a>第34题</h4><p><a href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/">34. 在排序数组中查找元素的第一个和最后一个位置 - 力扣（LeetCode）</a></p>
+<h4 id="第69题"><a href="#第69题" class="headerlink" title="第69题"></a>第69题</h4><p><a href="https://leetcode.cn/problems/sqrtx/description/">69. x 的平方根 - 力扣（LeetCode）</a></p>
+<h4 id="第367题"><a href="#第367题" class="headerlink" title="第367题"></a>第367题</h4><p><a href="https://leetcode.cn/problems/valid-perfect-square/description/">367. 有效的完全平方数 - 力扣（LeetCode）</a></p>
+<h1 id="哈希"><a href="#哈希" class="headerlink" title="哈希"></a>哈希</h1><h4 id="第242题"><a href="#第242题" class="headerlink" title="第242题"></a>第242题</h4><p><a href="https://leetcode.cn/problems/valid-anagram/description/">242. 有效的字母异位词 - 力扣（LeetCode）</a></p>
+<p><img src="C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20250409211853398.png" alt="image-20250409211853398"></p>
+<p>好家伙，这就速度能比，那个内存分布有点奇怪，提交次数不一样，内存分布大小就不一样</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isAnagram</span><span class="params">(string s, string t)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> hash[<span class="number">26</span>]=&#123;<span class="number">0</span>&#125;;<span class="comment">/*切记不要忘了化0！！！C++ 中的局部变量如果没有手动初始化，值是随机的垃圾值。你需要把 hash 初始化为全 0*/</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:s)</span><br><span class="line">        &#123;</span><br><span class="line">            hash[i-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> j:t)</span><br><span class="line">        &#123;</span><br><span class="line">            hash[j-<span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> n=<span class="number">0</span>;n&lt;<span class="number">26</span>;n++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(hash[n]!=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="第349题"><a href="#第349题" class="headerlink" title="第349题"></a>第349题</h4><p><a href="https://leetcode.cn/problems/intersection-of-two-arrays/solutions/469445/liang-ge-shu-zu-de-jiao-ji-by-leetcode-solution/">349. 两个数组的交集 - 力扣（LeetCode）</a></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">intersection</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums1, vector&lt;<span class="type">int</span>&gt;&amp; nums2)</span> </span>&#123;</span><br><span class="line">        <span class="function">unordered_set&lt;<span class="type">int</span>&gt; <span class="title">u1</span><span class="params">(nums<span class="number">1.</span>begin(),nums<span class="number">1.</span>end())</span></span>;<span class="comment">//记住vector!!!很有说法</span></span><br><span class="line">        <span class="comment">//他们之间相互转化很有意思，iterator</span></span><br><span class="line">        set&lt;<span class="type">int</span>&gt; u2;<span class="comment">//目的是帮我去重！！！</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:nums2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(u<span class="number">1.f</span>ind(i)!=u<span class="number">1.</span><span class="built_in">end</span>())<span class="comment">//记住这些方法！，因为find没有则返回.end()</span></span><br><span class="line">            &#123;</span><br><span class="line">                u<span class="number">2.</span><span class="built_in">insert</span>(i);<span class="comment">//vector与set，insert不一样</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt;num;<span class="comment">//我的返回值是vector</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:u2)</span><br><span class="line">        &#123;</span><br><span class="line">            num.<span class="built_in">push_back</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/*因为题目改了，所以我也可以用数组，因为范围小了，习惯性数组都要大一点hash[1005]，因为要给hash碰撞腾出空间*/</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">intersection</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums1, vector&lt;<span class="type">int</span>&gt;&amp; nums2)</span> </span>&#123;</span><br><span class="line">        unordered_set&lt;<span class="type">int</span>&gt; s1;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">        vec.<span class="built_in">reserve</span>(<span class="number">1000</span>);</span><br><span class="line">        <span class="type">int</span> hash[<span class="number">1005</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i:nums1)</span><br><span class="line">        &#123;</span><br><span class="line">            hash[i]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j:nums2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(hash[j]==<span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                s<span class="number">1.</span><span class="built_in">insert</span>(j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> a:s1)</span><br><span class="line">        &#123;</span><br><span class="line">            vec.<span class="built_in">push_back</span>(a);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> vec;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;;<span class="comment">//但是数组的空间占用更多了</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="第202题"><a href="#第202题" class="headerlink" title="第202题"></a>第202题</h4><p><a href="https://leetcode.cn/problems/happy-number/">202. 快乐数 - 力扣（LeetCode）</a></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">Sum</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="type">int</span> m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(n)</span><br><span class="line">        &#123;</span><br><span class="line">            m+=(n%<span class="number">10</span>)*(n%<span class="number">10</span>);</span><br><span class="line">            n=n/<span class="number">10</span>;</span><br><span class="line">            <span class="comment">//这里写的好，要实现一个数每一项都进行一个操作，就用while循环判定，从最后一位向高位推进，每次丢掉最后一位就行了！！！！</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> m;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//这个地方就是来验证是否出现过，判定是否是死循环，提前退出，避免时间浪费</span></span><br><span class="line">    unordered_set&lt;<span class="type">int</span>&gt; s1;</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isHappy</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(n==<span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            s<span class="number">1.</span><span class="built_in">insert</span>(n);</span><br><span class="line">            n=<span class="built_in">Sum</span>(n);</span><br><span class="line">            <span class="keyword">if</span>(s<span class="number">1.f</span>ind(n)!=s<span class="number">1.</span><span class="built_in">end</span>())</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;   </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;<span class="comment">//判定一个元素是否在一个整体里出现过就用hash</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h4 id="第1题"><a href="#第1题" class="headerlink" title="第1题"></a>第1题</h4><p><a href="https://leetcode.cn/problems/two-sum/submissions/">1. 两数之和 - 力扣（LeetCode）</a></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:<span class="comment">//当时学了STL，但不了解咋做题，直接给我弄红温了</span></span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); j++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(nums[i] + nums[j] == target)&#123;</span><br><span class="line">                        <span class="keyword">return</span> &#123;i,j&#125;;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> &#123;<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;<span class="comment">/*这一次写出来，是因为要蓝桥杯了，所以临时抱佛脚，赶紧来做题，所有耐下心慢慢看我的问题，然后给我说int main有问题，我就知道了，所以稍加修改*/</span></span><br><span class="line"><span class="comment">//当然，看这个题还有个原因是刚好看了hash，来试试，显然没有头绪，所以我决定看看代码随想录了。</span></span><br><span class="line"><span class="comment">/*因为本题，我们不仅要知道元素有没有遍历过，还要知道这个元素对应的下标，需要使用 key value结构来存放，key来存元素，value来存下标，那么使用map正合适。*/</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        unordered_map&lt;<span class="type">int</span>,<span class="type">int</span>&gt;mp;<span class="comment">//map就是遇到有下标保存输出的情况</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">auto</span> iter=mp.<span class="built_in">find</span>(target-nums[i]);<span class="comment">/*明确自己的目标哦，因为find返回的地址，所以用迭代器去接收*/</span></span><br><span class="line">            <span class="keyword">if</span>(iter!=mp.<span class="built_in">end</span>())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;iter-&gt;second,i&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">            mp.<span class="built_in">insert</span>(<span class="built_in">pair</span>&lt;<span class="type">int</span>,<span class="type">int</span>&gt;(nums[i],i));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;;<span class="comment">/*根据题目，虽然我们知道一定会有结果，但一定还是写上如果找不到的情况，增加代码的健壮性，return接相当于break，只不过return更强，代表直接结束，break只能循环里用！！！*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;<span class="comment">//切记我们要查找什么，要得到什么，查的放key（因为可以用find(key)返回），要得到的什么，得到的用value，可以iter-&gt;second()来查找!</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>数组的大小是受限制的，而且如果元素很少，而哈希值太大会造成内存空间的浪费。</p>
+</li>
+<li><p>set是一个集合，里面放的元素只能是一个key，而两数之和这道题目，不仅要判断y是否存在而且还要记录y的下标位置，因为要返回x 和 y的下标。所以set 也不能用。</p>
+</li>
+<li><p>std::map 和std::multimap 的key也是有序的有序才用红黑树为底层的，无序直接用哈希表为底层的</p>
+</li>
+<li><p><strong>map用来做什么</strong></p>
+</li>
+<li><p><strong>map中key和value分别表示什么</strong></p>
+</li>
+</ul>
+<p>map目的用来存放我们访问过的元素，因为遍历数组的时候，需要记录我们之前遍历过哪些元素和对应的下标，这样才能找到与当前元素相匹配的（也就是相加等于target）</p>
+<p>接下来是map中key和value分别表示什么。</p>
+<p>这道题 我们需要 给出一个元素，判断这个元素是否出现过，如果出现过，返回这个元素的下标。</p>
+<p>那么判断元素是否出现，这个元素就要作为key，所以数组中的元素作为key，有key对应的就是value，value用来存下标。</p>
+<p>所以 map中的存储结构为 {key：数据元素，value：数组元素对应的下标}。</p>
+<p>在遍历数组的时候，只需要向map去查询是否有和目前遍历元素匹配的数值，如果有，就找到的匹配对，如果没有，就把目前遍历的元素放进map中，因为map存放的就是我们访问过的元素。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/20220711202638.png" alt="过程一"></p>
+<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><h4 id="第509题"><a href="#第509题" class="headerlink" title="第509题"></a>第509题</h4><p><a href="https://leetcode.cn/problems/fibonacci-number/submissions/622484941/">509. 斐波那契数 - 力扣（LeetCode）</a></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">fib</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>||n==<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">fib</span>(n<span class="number">-1</span>)+<span class="built_in">fib</span>(n<span class="number">-2</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;<span class="comment">//暴力，从后向前推</span></span><br><span class="line"><span class="comment">//这样是根据函数来感觉，还可以自定义一个数组，向里面存放数据，这样更有感觉，从前向后推</span></span><br><span class="line"><span class="comment">//还可以采用动态规划，剪枝，避免重复运算，使时间复杂度变大</span></span><br><span class="line"><span class="comment">//用的dp[]数组保留来实现</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">dp</span><span class="params">(<span class="type">int</span> n)</span></span>;<span class="comment">//这是动态规划</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">iteration</span><span class="params">(<span class="type">int</span> n)</span></span>;<span class="comment">//这是迭代</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;输入你想知道的斐波拉契第几项：&quot;</span>;</span><br><span class="line">		cin &gt;&gt; n;</span><br><span class="line">		cout &lt;&lt; <span class="built_in">dp</span>(n) &lt;&lt;<span class="string">&quot; --动态规划&quot;</span>&lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; <span class="built_in">iteration</span>(n) &lt;&lt;<span class="string">&quot; --迭代&quot;</span>&lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">dp</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> dp[<span class="number">1000</span>] = &#123; <span class="number">0</span>,<span class="number">1</span> &#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		dp[i + <span class="number">2</span>] = dp[i] + dp[i + <span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> dp[n];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">iteration</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span> || n == <span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">1</span>, b = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">2</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> temp = a + b;</span><br><span class="line">		a = b;</span><br><span class="line">		b = temp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="第70题"><a href="#第70题" class="headerlink" title="第70题"></a>第70题</h4><p><a href="https://leetcode.cn/problems/climbing-stairs/submissions/622491197/">70. 爬楼梯 - 力扣（LeetCode）</a></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">climbStairs</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">1</span>||n==<span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">climbStairs</span>(n<span class="number">-1</span>)+<span class="built_in">climbStairs</span>(n<span class="number">-2</span>);</span><br><span class="line">        <span class="comment">//考虑所有可能实现的，然后加上去，这就是马尔科夫链那种呀</span></span><br><span class="line">        <span class="comment">//切记这里是俩，所以我们至少得有俩终止条件，否则会无限递归停不下来！！！！</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//暴力，但是已经超出时间了，因为同Fibonacci一样，越是后面越是指数级增长，所以我们需要动态规划减枝</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>examination</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>learn</title>
+    <url>/2025/03/31/Docker/</url>
+    <content><![CDATA[<h3 id="visit-this-article"><a href="#visit-this-article" class="headerlink" title="visit this article"></a>visit this article</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/QINGZHID/article/details/144520000</span><br></pre></td></tr></table></figure>
+
+<h2 id="supplement"><a href="#supplement" class="headerlink" title="supplement"></a>supplement</h2><h3 id="install-Vmvare-and-install-the-Linux-system"><a href="#install-Vmvare-and-install-the-Linux-system" class="headerlink" title="install Vmvare and install the Linux system"></a>install Vmvare and install the Linux system</h3><p>···<br><a href="https://blog.csdn.net/weixin_61536532/article/details/129778310">https://blog.csdn.net/weixin_61536532/article/details/129778310</a><br><a href="https://blog.csdn.net/qq_57728300/article/details/139613989">https://blog.csdn.net/qq_57728300/article/details/139613989</a><br><a href="https://blog.csdn.net/weixin_45910027/article/details/130526456">https://blog.csdn.net/weixin_45910027/article/details/130526456</a><br><a href="https://blog.csdn.net/qq_38056704/article/details/90264044">https://blog.csdn.net/qq_38056704/article/details/90264044</a><br>···</p>
+]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+  </entry>
+  <entry>
     <title>PPT</title>
     <url>/2025/04/18/PPT/</url>
     <content><![CDATA[<h1 id="PPT"><a href="#PPT" class="headerlink" title="PPT"></a>PPT</h1><p>因为要参加物理实验竞赛，所以我开始学习做PPT了，基本上参考了这些大佬的教程，也是做出来了一个看上去貌似还不错的PPT</p>
@@ -82,17 +160,6 @@
       </tags>
   </entry>
   <entry>
-    <title>learn</title>
-    <url>/2025/03/31/Docker/</url>
-    <content><![CDATA[<h3 id="visit-this-article"><a href="#visit-this-article" class="headerlink" title="visit this article"></a>visit this article</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/QINGZHID/article/details/144520000</span><br></pre></td></tr></table></figure>
-
-<h2 id="supplement"><a href="#supplement" class="headerlink" title="supplement"></a>supplement</h2><h3 id="install-Vmvare-and-install-the-Linux-system"><a href="#install-Vmvare-and-install-the-Linux-system" class="headerlink" title="install Vmvare and install the Linux system"></a>install Vmvare and install the Linux system</h3><p>···<br><a href="https://blog.csdn.net/weixin_61536532/article/details/129778310">https://blog.csdn.net/weixin_61536532/article/details/129778310</a><br><a href="https://blog.csdn.net/qq_57728300/article/details/139613989">https://blog.csdn.net/qq_57728300/article/details/139613989</a><br><a href="https://blog.csdn.net/weixin_45910027/article/details/130526456">https://blog.csdn.net/weixin_45910027/article/details/130526456</a><br><a href="https://blog.csdn.net/qq_38056704/article/details/90264044">https://blog.csdn.net/qq_38056704/article/details/90264044</a><br>···</p>
-]]></content>
-      <categories>
-        <category>前端开发</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Markdown</title>
     <url>/2025/04/05/markown/</url>
     <content><![CDATA[<h1 id="有什么需要用到外挂标签的地方可以查阅这个大佬写的"><a href="#有什么需要用到外挂标签的地方可以查阅这个大佬写的" class="headerlink" title="有什么需要用到外挂标签的地方可以查阅这个大佬写的"></a>有什么需要用到外挂标签的地方可以查阅这个大佬写的</h1><h3 id="安知鱼主题标签-Tag-Plugins-安知鱼"><a href="#安知鱼主题标签-Tag-Plugins-安知鱼" class="headerlink" title="安知鱼主题标签 Tag Plugins | 安知鱼"></a><a href="https://blog.anheyu.com/posts/d50a.html">安知鱼主题标签 Tag Plugins | 安知鱼</a></h3><p>#：表示一级标题（最大的标题，几个#就是几级，最多六级）</p>
@@ -156,645 +223,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Leetcode刷题记录</title>
-    <url>/2025/04/09/Leetcode%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>太可恶了，我刚学完C++那些基础理论，像泛型编程，类，然后再没什么刷题经验的情况下，来了Leetcode，我就说这咋实现，感觉头都大了，怎么写怎么不对，然后一看发现，数据外部传入，我只需要补充类函数实现就行了，像int main()这些根本不用写，我只需要写个处理方法就行，气死我了！！！ </p>
-<p><a href="https://www.bilibili.com/video/BV1AL4y1H7UH/?spm_id_from=333.337.search-card.all.click&vd_source=df6bd7ad18c270eed1dcad06d9983510">学算法，刷力扣（leetcode）不知道怎么刷？来看看，我把刷题网站上线了！最强刷题攻略！_哔哩哔哩_bilibili</a></p>
-<p><a href="https://programmercarl.com/">代码随想录</a></p>
-<h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><h4 id="第704题"><a href="#第704题" class="headerlink" title="第704题"></a>第704题</h4><p><a href="https://leetcode.cn/problems/binary-search/description/">704. 二分查找 - 力扣（LeetCode）</a></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">search</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right=nums.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        <span class="type">int</span> mid;</span><br><span class="line">        <span class="keyword">while</span>(left&lt;=right)</span><br><span class="line">        &#123;</span><br><span class="line">            mid=left+(right-left)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]==target)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> mid;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&gt;target)</span><br><span class="line">            &#123;</span><br><span class="line">                right=mid<span class="number">-1</span>;<span class="comment">/*为什么加一，因为边界条件一定不满足，可以丢弃，而且可以实现最终结束循环，left&gt;right-1!!!*/</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&lt;target)</span><br><span class="line">            &#123;</span><br><span class="line">                left=mid<span class="number">+1</span>;<span class="comment">/*为什么加一，因为边界条件一定不满足，可以丢弃，而且可以实现最终结束循环，left+1&gt;right!!!*/</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/*这道题目的前提是数组为有序数组，同时题目还强调数组中无重复元素，因为一旦有重复元素，使用二分查找法返回的元素下标可能不是唯一的，这些都是使用二分法的前提条件，当大家看到题目描述满足如上条件的时候，可要想一想是不是可以用二分法了。</span></span><br><span class="line"><span class="comment">第一种写法，我们定义 target 是在一个在左闭右闭的区间里，也就是[left, right] （这个很重要非常重要）。</span></span><br><span class="line"><span class="comment">while (left &lt;= right) 要使用 &lt;= ，因为left == right是有意义的，所以使用 &lt;=</span></span><br><span class="line"><span class="comment">if (nums[middle] &gt; target) right 要赋值为 middle - 1，因为当前这个nums[middle]一定不是target，那么接下来要查找的左区间结束下标位置就是 middle - 1</span></span><br><span class="line"><span class="comment">如果说定义 target 是在一个在左闭右开的区间里，也就是[left, right) ，那么二分法的边界处理方式则截然不同。</span></span><br><span class="line"><span class="comment">while (left &lt; right)，这里使用 &lt; ,因为left == right在区间[left, right)是没有意义的</span></span><br><span class="line"><span class="comment">if (nums[middle] &gt; target) right 更新为 middle，因为当前nums[middle]不等于target，去左区间继续寻找，而寻找区间是左闭右开区间，所以right更新为middle，即：下一个查询区间不会去比较nums[middle]*/</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="第35题"><a href="#第35题" class="headerlink" title="第35题"></a>第35题</h4><p><a href="https://leetcode.cn/problems/search-insert-position/description/">35. 搜索插入位置 - 力扣（LeetCode）</a></p>
-<h4 id="第34题"><a href="#第34题" class="headerlink" title="第34题"></a>第34题</h4><p><a href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/">34. 在排序数组中查找元素的第一个和最后一个位置 - 力扣（LeetCode）</a></p>
-<h4 id="第69题"><a href="#第69题" class="headerlink" title="第69题"></a>第69题</h4><p><a href="https://leetcode.cn/problems/sqrtx/description/">69. x 的平方根 - 力扣（LeetCode）</a></p>
-<h4 id="第367题"><a href="#第367题" class="headerlink" title="第367题"></a>第367题</h4><p><a href="https://leetcode.cn/problems/valid-perfect-square/description/">367. 有效的完全平方数 - 力扣（LeetCode）</a></p>
-<h1 id="哈希"><a href="#哈希" class="headerlink" title="哈希"></a>哈希</h1><h4 id="第242题"><a href="#第242题" class="headerlink" title="第242题"></a>第242题</h4><p><a href="https://leetcode.cn/problems/valid-anagram/description/">242. 有效的字母异位词 - 力扣（LeetCode）</a></p>
-<p><img src="C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20250409211853398.png" alt="image-20250409211853398"></p>
-<p>好家伙，这就速度能比，那个内存分布有点奇怪，提交次数不一样，内存分布大小就不一样</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isAnagram</span><span class="params">(string s, string t)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> hash[<span class="number">26</span>]=&#123;<span class="number">0</span>&#125;;<span class="comment">/*切记不要忘了化0！！！C++ 中的局部变量如果没有手动初始化，值是随机的垃圾值。你需要把 hash 初始化为全 0*/</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:s)</span><br><span class="line">        &#123;</span><br><span class="line">            hash[i-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> j:t)</span><br><span class="line">        &#123;</span><br><span class="line">            hash[j-<span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> n=<span class="number">0</span>;n&lt;<span class="number">26</span>;n++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(hash[n]!=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="第349题"><a href="#第349题" class="headerlink" title="第349题"></a>第349题</h4><p><a href="https://leetcode.cn/problems/intersection-of-two-arrays/solutions/469445/liang-ge-shu-zu-de-jiao-ji-by-leetcode-solution/">349. 两个数组的交集 - 力扣（LeetCode）</a></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">intersection</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums1, vector&lt;<span class="type">int</span>&gt;&amp; nums2)</span> </span>&#123;</span><br><span class="line">        <span class="function">unordered_set&lt;<span class="type">int</span>&gt; <span class="title">u1</span><span class="params">(nums<span class="number">1.</span>begin(),nums<span class="number">1.</span>end())</span></span>;<span class="comment">//记住vector!!!很有说法</span></span><br><span class="line">        <span class="comment">//他们之间相互转化很有意思，iterator</span></span><br><span class="line">        set&lt;<span class="type">int</span>&gt; u2;<span class="comment">//目的是帮我去重！！！</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:nums2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(u<span class="number">1.f</span>ind(i)!=u<span class="number">1.</span><span class="built_in">end</span>())<span class="comment">//记住这些方法！，因为find没有则返回.end()</span></span><br><span class="line">            &#123;</span><br><span class="line">                u<span class="number">2.</span><span class="built_in">insert</span>(i);<span class="comment">//vector与set，insert不一样</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt;num;<span class="comment">//我的返回值是vector</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:u2)</span><br><span class="line">        &#123;</span><br><span class="line">            num.<span class="built_in">push_back</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/*因为题目改了，所以我也可以用数组，因为范围小了，习惯性数组都要大一点hash[1005]，因为要给hash碰撞腾出空间*/</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">intersection</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums1, vector&lt;<span class="type">int</span>&gt;&amp; nums2)</span> </span>&#123;</span><br><span class="line">        unordered_set&lt;<span class="type">int</span>&gt; s1;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">        vec.<span class="built_in">reserve</span>(<span class="number">1000</span>);</span><br><span class="line">        <span class="type">int</span> hash[<span class="number">1005</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i:nums1)</span><br><span class="line">        &#123;</span><br><span class="line">            hash[i]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j:nums2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(hash[j]==<span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                s<span class="number">1.</span><span class="built_in">insert</span>(j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> a:s1)</span><br><span class="line">        &#123;</span><br><span class="line">            vec.<span class="built_in">push_back</span>(a);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> vec;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;;<span class="comment">//但是数组的空间占用更多了</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="第202题"><a href="#第202题" class="headerlink" title="第202题"></a>第202题</h4><p><a href="https://leetcode.cn/problems/happy-number/">202. 快乐数 - 力扣（LeetCode）</a></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">Sum</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="type">int</span> m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(n)</span><br><span class="line">        &#123;</span><br><span class="line">            m+=(n%<span class="number">10</span>)*(n%<span class="number">10</span>);</span><br><span class="line">            n=n/<span class="number">10</span>;</span><br><span class="line">            <span class="comment">//这里写的好，要实现一个数每一项都进行一个操作，就用while循环判定，从最后一位向高位推进，每次丢掉最后一位就行了！！！！</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> m;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//这个地方就是来验证是否出现过，判定是否是死循环，提前退出，避免时间浪费</span></span><br><span class="line">    unordered_set&lt;<span class="type">int</span>&gt; s1;</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isHappy</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(n==<span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            s<span class="number">1.</span><span class="built_in">insert</span>(n);</span><br><span class="line">            n=<span class="built_in">Sum</span>(n);</span><br><span class="line">            <span class="keyword">if</span>(s<span class="number">1.f</span>ind(n)!=s<span class="number">1.</span><span class="built_in">end</span>())</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;   </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;<span class="comment">//判定一个元素是否在一个整体里出现过就用hash</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<h4 id="第1题"><a href="#第1题" class="headerlink" title="第1题"></a>第1题</h4><p><a href="https://leetcode.cn/problems/two-sum/submissions/">1. 两数之和 - 力扣（LeetCode）</a></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:<span class="comment">//当时学了STL，但不了解咋做题，直接给我弄红温了</span></span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); j++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(nums[i] + nums[j] == target)&#123;</span><br><span class="line">                        <span class="keyword">return</span> &#123;i,j&#125;;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> &#123;<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;<span class="comment">/*这一次写出来，是因为要蓝桥杯了，所以临时抱佛脚，赶紧来做题，所有耐下心慢慢看我的问题，然后给我说int main有问题，我就知道了，所以稍加修改*/</span></span><br><span class="line"><span class="comment">//当然，看这个题还有个原因是刚好看了hash，来试试，显然没有头绪，所以我决定看看代码随想录了。</span></span><br><span class="line"><span class="comment">/*因为本题，我们不仅要知道元素有没有遍历过，还要知道这个元素对应的下标，需要使用 key value结构来存放，key来存元素，value来存下标，那么使用map正合适。*/</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        unordered_map&lt;<span class="type">int</span>,<span class="type">int</span>&gt;mp;<span class="comment">//map就是遇到有下标保存输出的情况</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">auto</span> iter=mp.<span class="built_in">find</span>(target-nums[i]);<span class="comment">/*明确自己的目标哦，因为find返回的地址，所以用迭代器去接收*/</span></span><br><span class="line">            <span class="keyword">if</span>(iter!=mp.<span class="built_in">end</span>())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;iter-&gt;second,i&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">            mp.<span class="built_in">insert</span>(<span class="built_in">pair</span>&lt;<span class="type">int</span>,<span class="type">int</span>&gt;(nums[i],i));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;;<span class="comment">/*根据题目，虽然我们知道一定会有结果，但一定还是写上如果找不到的情况，增加代码的健壮性，return接相当于break，只不过return更强，代表直接结束，break只能循环里用！！！*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;<span class="comment">//切记我们要查找什么，要得到什么，查的放key（因为可以用find(key)返回），要得到的什么，得到的用value，可以iter-&gt;second()来查找!</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>数组的大小是受限制的，而且如果元素很少，而哈希值太大会造成内存空间的浪费。</p>
-</li>
-<li><p>set是一个集合，里面放的元素只能是一个key，而两数之和这道题目，不仅要判断y是否存在而且还要记录y的下标位置，因为要返回x 和 y的下标。所以set 也不能用。</p>
-</li>
-<li><p>std::map 和std::multimap 的key也是有序的有序才用红黑树为底层的，无序直接用哈希表为底层的</p>
-</li>
-<li><p><strong>map用来做什么</strong></p>
-</li>
-<li><p><strong>map中key和value分别表示什么</strong></p>
-</li>
-</ul>
-<p>map目的用来存放我们访问过的元素，因为遍历数组的时候，需要记录我们之前遍历过哪些元素和对应的下标，这样才能找到与当前元素相匹配的（也就是相加等于target）</p>
-<p>接下来是map中key和value分别表示什么。</p>
-<p>这道题 我们需要 给出一个元素，判断这个元素是否出现过，如果出现过，返回这个元素的下标。</p>
-<p>那么判断元素是否出现，这个元素就要作为key，所以数组中的元素作为key，有key对应的就是value，value用来存下标。</p>
-<p>所以 map中的存储结构为 {key：数据元素，value：数组元素对应的下标}。</p>
-<p>在遍历数组的时候，只需要向map去查询是否有和目前遍历元素匹配的数值，如果有，就找到的匹配对，如果没有，就把目前遍历的元素放进map中，因为map存放的就是我们访问过的元素。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/20220711202638.png" alt="过程一"></p>
-<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><h4 id="第509题"><a href="#第509题" class="headerlink" title="第509题"></a>第509题</h4><p><a href="https://leetcode.cn/problems/fibonacci-number/submissions/622484941/">509. 斐波那契数 - 力扣（LeetCode）</a></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">fib</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>||n==<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">fib</span>(n<span class="number">-1</span>)+<span class="built_in">fib</span>(n<span class="number">-2</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;<span class="comment">//暴力，从后向前推</span></span><br><span class="line"><span class="comment">//这样是根据函数来感觉，还可以自定义一个数组，向里面存放数据，这样更有感觉，从前向后推</span></span><br><span class="line"><span class="comment">//还可以采用动态规划，剪枝，避免重复运算，使时间复杂度变大</span></span><br><span class="line"><span class="comment">//用的dp[]数组保留来实现</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">dp</span><span class="params">(<span class="type">int</span> n)</span></span>;<span class="comment">//这是动态规划</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">iteration</span><span class="params">(<span class="type">int</span> n)</span></span>;<span class="comment">//这是迭代</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;输入你想知道的斐波拉契第几项：&quot;</span>;</span><br><span class="line">		cin &gt;&gt; n;</span><br><span class="line">		cout &lt;&lt; <span class="built_in">dp</span>(n) &lt;&lt;<span class="string">&quot; --动态规划&quot;</span>&lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; <span class="built_in">iteration</span>(n) &lt;&lt;<span class="string">&quot; --迭代&quot;</span>&lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">dp</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> dp[<span class="number">1000</span>] = &#123; <span class="number">0</span>,<span class="number">1</span> &#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		dp[i + <span class="number">2</span>] = dp[i] + dp[i + <span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> dp[n];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">iteration</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span> || n == <span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">1</span>, b = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">2</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> temp = a + b;</span><br><span class="line">		a = b;</span><br><span class="line">		b = temp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="第70题"><a href="#第70题" class="headerlink" title="第70题"></a>第70题</h4><p><a href="https://leetcode.cn/problems/climbing-stairs/submissions/622491197/">70. 爬楼梯 - 力扣（LeetCode）</a></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">climbStairs</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">1</span>||n==<span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">climbStairs</span>(n<span class="number">-1</span>)+<span class="built_in">climbStairs</span>(n<span class="number">-2</span>);</span><br><span class="line">        <span class="comment">//考虑所有可能实现的，然后加上去，这就是马尔科夫链那种呀</span></span><br><span class="line">        <span class="comment">//切记这里是俩，所以我们至少得有俩终止条件，否则会无限递归停不下来！！！！</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//暴力，但是已经超出时间了，因为同Fibonacci一样，越是后面越是指数级增长，所以我们需要动态规划减枝</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>examination</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基于干涉环影成像的光学签名系统</title>
-    <url>/2025/04/19/%E5%9F%BA%E4%BA%8E%E5%B9%B2%E6%B6%89%E7%8E%AF%E5%BD%B1%E6%88%90%E5%83%8F%E7%9A%84%E5%85%89%E5%AD%A6%E7%AD%BE%E5%90%8D%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<h1 id="基于干涉环影成像的光学签名系统"><a href="#基于干涉环影成像的光学签名系统" class="headerlink" title="基于干涉环影成像的光学签名系统"></a><strong>基于干涉环影成像的光学签名系统</strong></h1><h3 id="——光落指尖，签下不可复制的你"><a href="#——光落指尖，签下不可复制的你" class="headerlink" title="*——光落指尖，签下不可复制的你*"></a><em><strong>*——光落指尖，签下不可复制的你*</strong></em></h3><h3 id="一句话总结："><a href="#一句话总结：" class="headerlink" title="*一句话总结：*"></a><em><strong>*一句话总结：*</strong></em></h3><h4 id="“用一枚小透镜和一束光，拍一张图，就能验证，你是不是你。”"><a href="#“用一枚小透镜和一束光，拍一张图，就能验证，你是不是你。”" class="headerlink" title="“用一枚小透镜和一束光，拍一张图，就能验证，你是不是你。”"></a>“用一枚小透镜和一束光，拍一张图，就能验证，你是不是你。”</h4><p><img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps1.png" alt="img"> </p>
-<p>****摘要：****本项目提出了一种基于牛顿环的指纹识别系统，融合了物理光学与人工智能图像识别技术，打造出一种全新的且高度防伪的身份认证方式。系统利用透镜与平面之间的干涉现象生成独一无二的干涉环图样，将其作为个人或设备的“光学签名”。我们设计并搭建了完整的实验装置，结合Python + OpenCV + 深度学习算法，实现了干涉图像的精准提取与自动识别。项目兼具科学性、创新性与工程可行性，在身份认证、防伪溯源、智能终端加密等领域具备广阔的应用前景。通过本项目，我们展示了干涉成像在信息安全领域的强大潜力。</p>
-<p>****关键词：****牛顿环干涉图样（Newton’s rings pattern），光学签名（Optical signature），干涉成像（Interference imaging），AI图像识别（AI-based image recognition），身份认证（Identity authentication），防伪技术（Anti-counterfeiting technology），图样唯一性（Pattern uniqueness），鲁棒性识别（Robust recognition），非接触式认证（Contactless verification），光学安全（Optical security）</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a><strong>目录</strong></h1><h4 id="基于干涉环影成像的光学签名系统-1"><a href="#基于干涉环影成像的光学签名系统-1" class="headerlink" title="*基于干涉环影成像的光学签名系统*"></a><em><strong>*基于干涉环影成像的光学签名系统*</strong></em></h4><p><strong>1.<strong><strong>引言</strong></strong><br>** <strong>1.1</strong></strong>.<strong><strong>研究背景与动机</strong></strong><br>** <strong>1.2</strong>**.**<strong>项目意义与应用前景</strong></p>
-<p><strong>2</strong><strong>.<strong><strong>物理原理与成像机制</strong></strong><br>** <strong>2.1</strong></strong>.<strong><strong>牛顿环干涉现象</strong></strong><br>** <strong>2.2</strong><strong>.<strong><strong>干涉图样的生成原理</strong></strong><br>** <strong>2.3</strong></strong>.<strong><strong>光学系统结构与成像路径</strong></strong><br>** <strong>2.4</strong>**.**<strong>干涉图样的特征与差异性分析</strong></p>
-<p><strong>3</strong><strong>.<strong><strong>图像识别系统设计</strong></strong><br>** <strong>3.1</strong></strong>.<strong><strong>干涉图像采集与预处理</strong></strong><br>** <strong>3.2</strong><strong>.<strong><strong>AI图像识别模型结构</strong></strong><br>** <strong>3.3</strong></strong>.<strong><strong>签名图样的训练与验证</strong></strong><br>** <strong>3.4</strong>**.**<strong>多样性与鲁棒性测试</strong></p>
-<p><strong>4</strong><strong>.<strong><strong>安全性分析与应用扩展</strong></strong><br>** <strong>4.1</strong></strong>.<strong><strong>图像伪造与攻击防御分析</strong></strong><br>** <strong>4.2</strong><strong>.<strong><strong>光学签名的防伪优势对比</strong></strong><br>** <strong>4.3</strong></strong>.**<strong>在身份认证与信息安全中的应用前景</strong></p>
-<p><strong>5</strong><strong>.<strong><strong>实验设计与实现过程</strong></strong><br>** <strong>5.1</strong></strong>.<strong><strong>实验光学系统搭建</strong></strong><br>** <strong>5.2</strong><strong>.<strong><strong>干涉图样采集流程</strong></strong><br>** <strong>5.3</strong></strong>.<strong><strong>数据训练与模型评估</strong></strong><br>** <strong>5.4</strong>**.**<strong>可视化演示与结果展示</strong></p>
-<p><strong>6</strong><strong>.<strong><strong>结论与未来展望</strong></strong><br>** <strong>6.1</strong></strong>.<strong><strong>研究总结</strong></strong><br>** <strong>6.2</strong>**.**<strong>后续优化方向</strong></p>
-<h2 id="-2"><a href="#-2" class="headerlink" title=""></a></h2><h2 id="-3"><a href="#-3" class="headerlink" title=""></a></h2><h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a><strong>引言</strong></h1><h3 id="1-1-研究背景与动机"><a href="#1-1-研究背景与动机" class="headerlink" title="*1.1 研究背景与动机*"></a><em><strong>*1.1 研究背景与动机*</strong></em></h3><p>随着信息技术的发展，身份识别与数据防伪在金融、政务、智能终端等领域扮演着越来越关键的角色。然而，传统的电子签名、指纹识别、二维码验证等技术，虽然便捷，但面临伪造风险高、易受攻击、依赖数据库等问题，安全性和唯一性亟待突破。</p>
-<p>与此同时，物理层防伪技术近年来成为研究热点，其中利用光学干涉现象生成不可复制的图像指纹，被认为是实现高度防伪认证的一种理想路径。尤其是牛顿环干涉图样，由自然光波叠加产生，具有高度敏感性与结构依赖性，具备天然“签名”特征。</p>
-<p>本项目的研究动机正是基于此：能否将物理干涉图样作为一种新的“光学签名”，并借助人工智能手段对其进行稳定识别，从而构建一个安全、无接触、高可靠的认证系统？这一问题连接了物理、工程与信息科学，为本研究提供了充足的理论基础与技术挑战。</p>
-<p>因此，我们提出并搭建了一个基于干涉环影成像的光学签名识别系统，探索干涉图样在身份认证、防伪标识与信息加密等场景中的应用潜力，力求打通物理光学与数字识别之间的技术壁垒，拓展干涉成像的多学科融合边界</p>
-<p>​	我们的实验是通过牛顿环来实现光学签名识别系统，这是一种基于干涉光学与人工智能相结合的身份认证技术。它通过记录用户在透明表面上按压凸透镜形成的干涉图样（即牛顿环），提取图像中的干扰特征，进而作为个体唯一“光学签名”进行身份验证。这一系统将传统物理实验中的干涉现象，转化为高度个性化、难以伪造的身份认证手段，具有低成本、高保密性、强防伪性等优势。</p>
-<p>​	</p>
-<p>​	就像人写字一样，别人可以模仿你签名的笔画，但很难复现你下笔的力量、笔尖轨迹和微妙颤动。</p>
-<h3 id="1-2-项目意义与应用前景"><a href="#1-2-项目意义与应用前景" class="headerlink" title="*1.2 项目意义与应用前景*"></a><em><strong>*1.2 项目意义与应用前景*</strong></em></h3><p>本项目以牛顿环等干涉图样为研究对象，融合光学成像、计算机视觉与人工智能识别技术，提出了一种新型的光学签名识别机制，具有以下多方面的重要意义：</p>
-<h4 id="1-提出“光学签名”新范式，拓展身份识别手段"><a href="#1-提出“光学签名”新范式，拓展身份识别手段" class="headerlink" title="*1. 提出“光学签名”新范式，拓展身份识别手段*"></a><em><strong>*1. 提出“光学签名”新范式，拓展身份识别手段*</strong></em></h4><p>本项目首创性地将干涉环图样作为个体物理特征的“签名”载体，通过图样的不可复制性实现身份认证，为身份识别提供了高物理安全性、强唯一性的全新方案，有望突破传统识别方式对生物特征和数据库的依赖。</p>
-<h4 id="2-推动干涉光学在信息应用中的落地"><a href="#2-推动干涉光学在信息应用中的落地" class="headerlink" title="*2. 推动干涉光学在信息应用中的落地*"></a><em><strong>*2. 推动干涉光学在信息应用中的落地*</strong></em></h4><p>干涉现象长期应用于物理测量与成像，本项目将其用于信息加密与防伪识别，成功打通物理光学与信息工程的应用通道，推动“实验室光学”向“工程化应用”转化，具有从理论走向实用的示范价值。</p>
-<h4 id="3-融合人工智能与光学物理，体现学科交叉创新"><a href="#3-融合人工智能与光学物理，体现学科交叉创新" class="headerlink" title="*3. 融合人工智能与光学物理，体现学科交叉创新*"></a><em><strong>*3. 融合人工智能与光学物理，体现学科交叉创新*</strong></em></h4><p>项目综合使用干涉成像实验、图样识别算法（OpenCV + CNN）以及3D可视化仿真手段（Three.js），体现了光学、计算机、工程物理等多个学科的深度融合，展现出科技竞赛所倡导的跨学科创新精神。</p>
-<h4 id="4-具备广泛应用前景与推广潜力"><a href="#4-具备广泛应用前景与推广潜力" class="headerlink" title="*4. 具备广泛应用前景与推广潜力*"></a><em><strong>*4. 具备广泛应用前景与推广潜力*</strong></em></h4><h2 id="该系统可广泛应用于智能设备身份验证、商品真伪防伪标识、密钥生成与加密芯片安全认证等领域，具有高适应性与良好推广价值，在军工-政府认证登录-基于物理干涉-AI校验，难以仿造-；金融级身份签章-签名图样唯一可复现但无法逆向伪造-；实验室-科研认证访问-替代指纹门禁或高权限验证-；数字艺术签名-艺术家按压生成唯一认证图样，每次都不同，类似“光学签章”-；物流-保密快递封签-开封必须验证按压者唯一图样中均有应用前景-。"><a href="#该系统可广泛应用于智能设备身份验证、商品真伪防伪标识、密钥生成与加密芯片安全认证等领域，具有高适应性与良好推广价值，在军工-政府认证登录-基于物理干涉-AI校验，难以仿造-；金融级身份签章-签名图样唯一可复现但无法逆向伪造-；实验室-科研认证访问-替代指纹门禁或高权限验证-；数字艺术签名-艺术家按压生成唯一认证图样，每次都不同，类似“光学签章”-；物流-保密快递封签-开封必须验证按压者唯一图样中均有应用前景-。" class="headerlink" title="该系统可广泛应用于智能设备身份验证、商品真伪防伪标识、密钥生成与加密芯片安全认证等领域，具有高适应性与良好推广价值，在军工&#x2F;政府认证登录(基于物理干涉+AI校验，难以仿造)；金融级身份签章(签名图样唯一可复现但无法逆向伪造)；实验室&#x2F;科研认证访问(替代指纹门禁或高权限验证)；数字艺术签名(艺术家按压生成唯一认证图样，每次都不同，类似“光学签章”)；物流&#x2F;保密快递封签(开封必须验证按压者唯一图样中均有应用前景)。"></a>该系统可广泛应用于智能设备身份验证、商品真伪防伪标识、密钥生成与加密芯片安全认证等领域，具有高适应性与良好推广价值，在军工&#x2F;政府认证登录(基于物理干涉+AI校验，难以仿造)；金融级身份签章(签名图样唯一可复现但无法逆向伪造)；实验室&#x2F;科研认证访问(替代指纹门禁或高权限验证)；数字艺术签名(艺术家按压生成唯一认证图样，每次都不同，类似“光学签章”)；物流&#x2F;保密快递封签(开封必须验证按压者唯一图样中均有应用前景)。</h2><p><img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps2.jpg" alt="img"> </p>
-<h1 id="物理原理与成像机制-2-1-牛顿环干涉现象"><a href="#物理原理与成像机制-2-1-牛顿环干涉现象" class="headerlink" title="物理原理与成像机制** ** *2.1 牛顿环干涉现象*"></a><strong>物理原理与成像机制</strong>** ** <em><strong>*2.1 牛顿环干涉现象*</strong></em></h1><p>牛顿环是一种典型的光学干涉现象，最早由牛顿在研究透镜表面时发现。当一个凸透镜与平面玻璃紧密接触时，在两者之间形成空气薄膜。若用单色光垂直照射该系统，反射光由于上下两界面的光程差，会在成像屏或显微镜下呈现出明暗相间、同心圆状的干涉条纹——这就是牛顿环。</p>
-<p>该干涉条纹的形成遵循光程差与相干干涉的原理，其明暗分布取决于空气膜的厚度变化与入射光波长。当使用白光照明时，不同波长在不同位置干涉加强或相消，牛顿环呈现出彩色干涉环纹，具有强烈的视觉辨识度与规律性。</p>
-<p>牛顿环图样的几何特征（如条纹间距、颜色分布）与透镜曲率、接触面状态等物理结构密切相关，因此具有唯一性与高敏感性。这些特性使其在本项目中被选为“光学签名”载体，用于身份识别与防伪认证，体现了将经典光学现象与现代信息技术融合的创新思路。</p>
-<p><img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps3.jpg" alt="img"> </p>
-<h3 id="2-2-干涉图样的生成原理"><a href="#2-2-干涉图样的生成原理" class="headerlink" title="*2.2 干涉图样的生成原理*"></a><em><strong>*2.2 干涉图样的生成原理*</strong></em></h3><p>干涉图样产生的根本机制是光程差引起的相干干涉。设空气膜厚度为 d(r)，波长为 <img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps4.png" alt="img">，则不同位置处的反射光会因光程差 <img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps5.png" alt="img"> 发生干涉。相干条件为：</p>
-<p>构成亮纹（相长干涉）：<img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps6.png" alt="img"><img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps7.png" alt="img"></p>
-<p>构成暗纹（相消干涉）：<img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps8.png" alt="img">其中 m为干涉级次。由于透镜表面为球面，膜厚 d(r) 与径向位置 r 成抛物型变化，最终形成一组可预测的环状条纹结构。图样的精细结构与干涉介质的厚度、均匀性和曲率密切相关。</p>
-<p><img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps9.jpg" alt="img"> </p>
-<h3 id="2-3-光学系统结构与成像路径"><a href="#2-3-光学系统结构与成像路径" class="headerlink" title="*2.3 光学系统结构与成像路径*"></a><em><strong>*2.3 光学系统结构与成像路径*</strong></em></h3><p>本系统使用标准光学平台构建简易牛顿环干涉装置，主要包括：白光源（或激光源）、凸透镜、平面玻璃片、摄像模组及显示装置。光源垂直照射透镜与玻璃片界面，经反射产生干涉图样，图像由相机捕获并通过图像识别算法提取其特征参数。整个成像路径从光源发出、干涉图样形成、到图像数字化提取，构成完整的光学—电信号转换链路，为信息识别系统提供高精度物理基础。</p>
-<h3 id="2-4-干涉图样的特征与差异性分析"><a href="#2-4-干涉图样的特征与差异性分析" class="headerlink" title="*2.4 干涉图样的特征与差异性分析*"></a><em><strong>*2.4 干涉图样的特征与差异性分析*</strong></em></h3><p>牛顿环图样具有良好的结构对称性、强干涉对比度和高空间分辨率。更重要的是，其条纹半径分布、色彩层次与干涉级次之间存在稳定的数学关系。当系统中任一参数（如曲率半径、压合状态、材料厚度）发生微小变化，图样将随之显著改变。利用这一特性可实现“光学签名”身份认证与样品结构分析。每组图样可被视为具有唯一性的二维干涉“指纹”，通过图像处理算法提取关键特征点后可用于个体识别、结构测量与防伪溯源等场景。</p>
-<h1 id="图像识别系统设计"><a href="#图像识别系统设计" class="headerlink" title="图像识别系统设计"></a><strong>图像识别系统设计</strong></h1><h3 id="3-1-干涉图像采集与预处理"><a href="#3-1-干涉图像采集与预处理" class="headerlink" title="*3.1 干涉图像采集与预处理*"></a><em><strong>*3.1 干涉图像采集与预处理*</strong></em></h3><p><img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps10.jpg" alt="img">系统使用摄像头模块对牛顿环图样进行采集，图像采集过程中可能存在光照变化、畸变等问题，因此需要进行以下预处理步骤：</p>
-<p><strong>图像灰度化</strong>：简化颜色干扰，聚焦条纹结构；</p>
-<p><strong>边缘检测</strong>：利用 Canny 算法等方法提取条纹边界；</p>
-<p><strong>图像增强</strong>：改善条纹对比度，提高特征识别率；</p>
-<p><strong>ROI 区域提取</strong>：聚焦图样区域，剔除无效背景；</p>
-<p><strong>标准化</strong>：统一图像大小和格式，便于模型处理。</p>
-<h3 id="3-2-AI图像识别模型结构"><a href="#3-2-AI图像识别模型结构" class="headerlink" title="*3.2 AI图像识别模型结构*"></a><em><strong>*3.2 AI图像识别模型结构*</strong></em></h3><p>使用基于 CNN（卷积神经网络）的模型进行特征提取</p>
-<p>和身份匹配，核心流程如下：</p>
-<p><strong>输入层</strong>：预处理后的图像；</p>
-<p><strong>卷积层</strong>：提取条纹密度、对称性、纹理扰动等特征；</p>
-<p><strong>池化层</strong>：降维、保留关键特征；</p>
-<p><strong>全连接层</strong>：构建个体签名向量；</p>
-<p><strong>Softmax 层</strong>：输出匹配概率或身份标签。</p>
-<p><img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps11.jpg" alt="img"> </p>
-<p><img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps12.jpg" alt="img"> </p>
-<p>（补充：· <strong>原始牛顿环图</strong>（仿真）：</p>
-<p>使用多个同心圆模拟干涉环。</p>
-<p>· <strong>灰度图</strong>：</p>
-<p>实际上原图就是灰度图，但此处保留转换步骤，保证处理流程统一。</p>
-<p>· <strong>边缘提取图</strong>：</p>
-<p>使用 cv2.Canny() 提取环的边缘，突出干涉条纹。</p>
-<p>· <strong>圈检测图</strong>：</p>
-<p>用 cv2.HoughCircles() 检测圆环，输出检测位置和半径。</p>
-<p>· <strong>拟合输出图</strong>：</p>
-<p>显示检测到的圆圈并编号，为后续半径统计与拟合分析做准备。）</p>
-<p>使用 PyTorch实现模型，支持模型调参、迭代训练、过拟合控制等。</p>
-<p>pip install opencv-python PyQt5</p>
-<p>python ai_newtonrings_gui.py</p>
-<p>import sys</p>
-<p>import cv2</p>
-<p>import numpy as np</p>
-<p>from PyQt5.QtWidgets import (QApplication, QWidget, QLabel, QPushButton, QFileDialog, QVBoxLayout, QHBoxLayout, QSlider)</p>
-<p>from PyQt5.QtGui import QPixmap, QImage</p>
-<p>from PyQt5.QtCore import Qt</p>
-<p>class NewtonRingApp(QWidget):</p>
-<p>  def <strong>init</strong>(self):</p>
-<p>​    super().<strong>init</strong>()</p>
-<p>​    self.setWindowTitle(“AI牛顿环识别界面 Demo”)</p>
-<p>​    self.resize(1000, 600)</p>
-<p>​    # Layouts</p>
-<p>​    self.layout &#x3D; QHBoxLayout()</p>
-<p>​    self.setLayout(self.layout)</p>
-<p>​    self.image_label &#x3D; QLabel(“图像显示区”)</p>
-<p>​    self.image_label.setAlignment(Qt.AlignCenter)</p>
-<p>​    self.image_label.setFixedSize(600, 600)</p>
-<p>​    self.load_btn &#x3D; QPushButton(“导入图像”)</p>
-<p>​    self.load_btn.clicked.connect(self.load_image)</p>
-<p>​    self.process_btn &#x3D; QPushButton(“开始识别”)</p>
-<p>​    self.process_btn.clicked.connect(self.process_image)</p>
-<p>​    self.slider_label &#x3D; QLabel(“识别精度 (param2):”)</p>
-<p>​    self.slider &#x3D; QSlider(Qt.Horizontal)</p>
-<p>​    self.slider.setMinimum(10)</p>
-<p>​    self.slider.setMaximum(100)</p>
-<p>​    self.slider.setValue(30)</p>
-<p>​    # Control panel</p>
-<p>​    self.control_panel &#x3D; QVBoxLayout()</p>
-<p>​    self.control_panel.addWidget(self.load_btn)</p>
-<p>​    self.control_panel.addWidget(self.process_btn)</p>
-<p>​    self.control_panel.addWidget(self.slider_label)</p>
-<p>​    self.control_panel.addWidget(self.slider)</p>
-<p>​    self.control_panel.addStretch()</p>
-<p>​    self.layout.addWidget(self.image_label)</p>
-<p>​    self.layout.addLayout(self.control_panel)</p>
-<p>​    self.img &#x3D; None</p>
-<p>  def load_image(self):</p>
-<p>​    path, _ &#x3D; QFileDialog.getOpenFileName(self, “选择图像”, “”, “Image Files (*.png *.jpg *.bmp)”)</p>
-<p>​    if path:</p>
-<p>​      self.img &#x3D; cv2.imread(path)</p>
-<p>​      self.display_image(self.img)</p>
-<p>  def display_image(self, img):</p>
-<p>​    rgb_image &#x3D; cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</p>
-<p>​    h, w, ch &#x3D; rgb_image.shape</p>
-<p>​    bytes_per_line &#x3D; ch * w</p>
-<p>​    qt_image &#x3D; QImage(rgb_image.data, w, h, bytes_per_line, QImage.Format_RGB888)</p>
-<p>​    self.image_label.setPixmap(QPixmap.fromImage(qt_image).scaled(self.image_label.size(), Qt.KeepAspectRatio))</p>
-<p>  def process_image(self):</p>
-<p>​    if self.img is None:</p>
-<p>​      return</p>
-<p>​    gray &#x3D; cv2.cvtColor(self.img, cv2.COLOR_BGR2GRAY)</p>
-<p>​    param2 &#x3D; self.slider.value()</p>
-<p>​    circles &#x3D; cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1.2, 20,</p>
-<p>​                  param1&#x3D;50, param2&#x3D;param2, minRadius&#x3D;10, maxRadius&#x3D;300)</p>
-<p>​    output &#x3D; self.img.copy()</p>
-<p>​    if circles is not None:</p>
-<p>​      circles &#x3D; np.uint16(np.around(circles))</p>
-<p>​      for i, (x, y, r) in enumerate(circles[0, :]):</p>
-<p>​        cv2.circle(output, (x, y), r, (0, 255, 0), 2)</p>
-<p>​        cv2.putText(output, str(i+1), (x - 10, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)</p>
-<p>​    self.display_image(output)</p>
-<p>if <strong>name</strong> &#x3D;&#x3D; ‘<strong>main</strong>‘:</p>
-<p>  app &#x3D; QApplication(sys.argv)</p>
-<p>  window &#x3D; NewtonRingApp()</p>
-<p>  window.show()</p>
-<p>  sys.exit(app.exec_())</p>
-<h3 id="3-3-签名图样的训练与验证"><a href="#3-3-签名图样的训练与验证" class="headerlink" title="*3.3 签名图样的训练与验证*"></a><em><strong>*3.3 签名图样的训练与验证*</strong></em></h3><p>与传统指纹不同，光学签名具有动态变化性。训练时采用以下策略：</p>
-<p><strong>多样本采集</strong>：每个用户按压 5–10 次</p>
-<p><strong>数据增强</strong>：模拟轻微扰动（旋转、光照变化）提高鲁棒性；</p>
-<p><strong>特征学习</strong>：模型不记住单帧图像，而是学习个体“行为特征”分布；</p>
-<p><strong>验证集划分</strong>：按 7:3 比例构建训练与验证数据集；</p>
-<p><strong>性能指标</strong>：采用准确率、召回率、F1 值评估识别效果。</p>
-<h3 id="3-4-多样性与鲁棒性测试"><a href="#3-4-多样性与鲁棒性测试" class="headerlink" title="*3.4 多样性与鲁棒性测试*"></a><em><strong>*3.4 多样性与鲁棒性测试*</strong></em></h3><p><strong>相似度匹配阈值设计</strong>：</p>
-<p>普通认证 ≥80%</p>
-<p>高安全 ≥95%</p>
-<p>多重验证 ≥70% + 二次验证</p>
-<p><strong>失败识别处理机制</strong>：</p>
-<p>支持验证码、动态码等容错备选；</p>
-<p>本次图样如认证成功，可纳入签名样本库优化模型；</p>
-<p>构建用户“签名图谱”，实现越用越准。</p>
-<h1 id="安全性分析与应用扩展"><a href="#安全性分析与应用扩展" class="headerlink" title="安全性分析与应用扩展"></a><strong>安全性分析与应用扩展</strong></h1><h3 id="4-1-图像伪造与攻击防御分析"><a href="#4-1-图像伪造与攻击防御分析" class="headerlink" title="*4.1 图像伪造与攻击防御分析*"></a><em><strong>*4.1 图像伪造与攻击防御分析*</strong></em></h3><p>面临的攻击路径与对应防御机制如下：</p>
-<table>
-<thead>
-<tr>
-<th><em><strong>*攻击方式*</strong></em></th>
-<th><em><strong>*防御手段*</strong></em></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>静态图像伪造</td>
-<td>使用动态图样序列识别</td>
-</tr>
-<tr>
-<td>模仿按压力度&#x2F;角度</td>
-<td>提取局部扰动与非对称纹理，加入动态行为特征</td>
-</tr>
-<tr>
-<td>恶意多次尝试登录</td>
-<td>加入失败次数限制与二次验证机制（如验证码）</td>
-</tr>
-<tr>
-<td>指纹膜&#x2F;3D打印复制</td>
-<td>多维度识别行为差异（扰动纹理、时间序列、按压节奏）</td>
-</tr>
-</tbody></table>
-<h3 id="4-2-光学签名的防伪优势对比"><a href="#4-2-光学签名的防伪优势对比" class="headerlink" title="*4.2 光学签名的防伪优势对比*"></a><em><strong>*4.2 光学签名的防伪优势对比*</strong></em></h3><p>对比电容式指纹识别系统：</p>
-<table>
-<thead>
-<tr>
-<th><em><strong>*指标*</strong></em></th>
-<th><em><strong>*电容指纹识别*</strong></em></th>
-<th><em><strong>*牛顿环光学签名识别*</strong></em></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>原理</td>
-<td>电容板检测脊线凹凸</td>
-<td>微米级空气隙干涉图样</td>
-</tr>
-<tr>
-<td>成本</td>
-<td>中等（芯片）</td>
-<td>极低（透镜+玻璃+LED）</td>
-</tr>
-<tr>
-<td>精度</td>
-<td>高</td>
-<td>高度唯一性（取决于模型训练）</td>
-</tr>
-<tr>
-<td>难以伪造</td>
-<td>有硅胶仿制手段</td>
-<td>行为特征难以复制</td>
-</tr>
-<tr>
-<td>使用场景</td>
-<td>解锁、门禁</td>
-<td>身份签名、加密访问、图章认证</td>
-</tr>
-<tr>
-<td>创新感</td>
-<td>成熟技术</td>
-<td>前沿探索，具有“科幻感”</td>
-</tr>
-<tr>
-<td>可扩展性</td>
-<td>固定用途</td>
-<td>可拓展为动态签名&#x2F;行为签章&#x2F;图样输入等</td>
-</tr>
-</tbody></table>
-<h3 id="4-3-在身份认证与信息安全中的应用前景"><a href="#4-3-在身份认证与信息安全中的应用前景" class="headerlink" title="*4.3 在身份认证与信息安全中的应用前景*"></a><em><strong>*4.3 在身份认证与信息安全中的应用前景*</strong></em></h3><p>适用典型场景包括：</p>
-<p><strong>军工&#x2F;政府登录</strong>：物理干涉+AI 校验，难以仿造；</p>
-<p><strong>金融级身份签章</strong>：图样唯一、动态防伪；</p>
-<p><strong>实验室&#x2F;高权限门禁</strong>：替代指纹&#x2F;虹膜等识别方式；</p>
-<p><strong>数字艺术签名</strong>：艺术家通过按压形成光学签章，具备不可复刻性；</p>
-<p><strong>物流快递防篡签</strong>：接收方需提供按压签名验证才能开封。</p>
-<p>· <img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps13.jpg" alt="img"></p>
-<h1 id="实验设计与实现过程"><a href="#实验设计与实现过程" class="headerlink" title="实验设计与实现过程"></a><strong>实验设计与实现过程</strong></h1><h3 id="5-1-实验光学系统搭建"><a href="#5-1-实验光学系统搭建" class="headerlink" title="*5.1 实验光学系统搭建*"></a><em><strong>*5.1 实验光学系统搭建*</strong></em></h3><p>实验系统搭建包括以下核心组件：</p>
-<p><strong>压膜装置</strong>：玻璃平板 + 柔性透镜材料（PDMS 等），控制接触压力；</p>
-<p><strong>LED 背光源</strong>：波长 530–600nm，保证均匀光照；</p>
-<p><strong>摄像头模块</strong>：使用 CMOS 传感器，分辨率不低于 1080p；</p>
-<p><strong>安装架与调节结构</strong>：确保透镜与玻璃水平，避免图样畸变；</p>
-<p><strong>隔光罩与防反射处理</strong>：减少环境光干扰，提升干涉对比度。</p>
-<p>安装示意图如下所示（已可通过前面导图配合理解）：</p>
-<p><em><strong>*指尖 ↓*</strong></em><em><strong>*[柔性透镜]*</strong></em></p>
-<p> <em><strong>*|*</strong></em><em><strong>*[玻璃基底]*</strong></em><em><strong>*——*</strong></em><em><strong>*[LED 背光]*</strong></em><em><strong>*←（从下方照射）*</strong></em></p>
-<p> <em><strong>*↑*</strong></em><em><strong>*[摄像头]*</strong></em><em><strong>*←（侧后方捕获图样）*</strong></em></p>
-<h3 id="5-2-干涉图样采集流程"><a href="#5-2-干涉图样采集流程" class="headerlink" title="*5.2 干涉图样采集流程*"></a><em><strong>*5.2 干涉图样采集流程*</strong></em></h3><p>实验采集遵循标准化流程：</p>
-<p><strong>用户注册</strong>：记录基本信息并编号；	</p>
-<p><strong>手指按压</strong>：手指以自然速度按下、维持、抬起；</p>
-<p><strong>图样采集</strong>：全程录像或定帧采样 5–10 张；</p>
-<p><strong>图像标注</strong>：记录时间、位置、角度等信息；</p>
-<p><strong>样本去重与清洗</strong>：排除无效图样与重复帧；</p>
-<p><strong>图像数据库构建</strong>：分类存储为训练&#x2F;验证&#x2F;测试集。</p>
-<h3 id="5-3-数据训练与模型评估"><a href="#5-3-数据训练与模型评估" class="headerlink" title="*5.3 数据训练与模型评估*"></a><em><strong>*5.3 数据训练与模型评估*</strong></em></h3><p><strong>训练参数</strong>：</p>
-<p>数据增强方式：随机旋转 ±10°，亮度扰动 ±15%，添加高斯噪声；</p>
-<p>CNN 网络结构：3 层卷积 + ReLU + MaxPooling + Dropout（0.25）；</p>
-<p>Optimizer：Adam，学习率 0.001；</p>
-<p>Epochs：共训练 80 轮，早停机制防止过拟合；</p>
-<p>Batch size：32；</p>
-<p>Loss function：交叉熵 + 特征中心损失联合优化。</p>
-<p><strong>评估指标</strong>：</p>
-<table>
-<thead>
-<tr>
-<th><em><strong>*指标*</strong></em></th>
-<th><em><strong>*结果*</strong></em></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>准确率</td>
-<td>95.7%</td>
-</tr>
-<tr>
-<td>召回率</td>
-<td>93.4%</td>
-</tr>
-<tr>
-<td>F1 值</td>
-<td>94.5%</td>
-</tr>
-<tr>
-<td>Top-3 命中率</td>
-<td>98.9%</td>
-</tr>
-<tr>
-<td>验证时间</td>
-<td>0.41 秒</td>
-</tr>
-</tbody></table>
-<h3 id="5-4-可视化演示与结果展示"><a href="#5-4-可视化演示与结果展示" class="headerlink" title="*5.4 可视化演示与结果展示*"></a><em><strong>*5.4 可视化演示与结果展示*</strong></em></h3><p>构建了一个交互式演示系统，功能包括：</p>
-<p><strong>实时图样显示</strong>：摄像头采集即显示干涉环；</p>
-<p><strong>识别反馈</strong>：识别结果实时输出身份信息或验证通过&#x2F;失败；</p>
-<p><strong>异常检测</strong>：若识别失败，则标出失败原因（模糊&#x2F;伪造&#x2F;图样异常）；</p>
-<p><strong>样本对比</strong>：支持同一用户不同图样可视化重叠对比。</p>
-<p><strong>结论与未来展望</strong><br> <em><strong>*6.1 研究总结*</strong></em></p>
-<p>牛顿环光学签名识别系统是一种将传统物理现象与AI深度学习融合的新兴技术路径。通过多维特征提取、自适应模型训练以及灵活的多因子认证机制，在低成本条件下实现了高防伪、高保密性身份认证。它并非为了替代现有指纹识别系统，而是致力于填补“高安全认证+行为签章+视觉识别+低成本”这一空白领域，未来可在科研、军事、金融、加密通信等高安全行业发挥重要作用。它像是一枚可视化的、行为绑定的‘光学签章’，更适合对保密性、安全性有极高要求的场合。</p>
-<p><em><strong>*6.2 后续优化方向*</strong></em></p>
-<p>· <strong>模型轻量化</strong>：使其可嵌入移动设备；</p>
-<p>· · <strong>多模态融合</strong>：结合压力传感器、温度等数据提升鲁棒性；</p>
-<p>· · <strong>图样可控扰动验证</strong>：引入挑战式图样干预（如“按一下抬起”）；</p>
-<p>· · <strong>通用图样识别框架</strong>：扩展至掌纹、水波纹、压痕等其他生物图样；</p>
-<p>· <strong>实用产品化</strong>：结合现有门禁、系统登录 API 开发 SDK 接口。</p>
-<p>一些思考：</p>
-<p>一．优势分析（现在不是已经有了电容来实现了吗？光学指纹不也有反射和折射了呀）</p>
-<h3 id="1-相比电容式指纹识别的优势"><a href="#1-相比电容式指纹识别的优势" class="headerlink" title="1. 相比电容式指纹识别的优势"></a>1. 相比电容式指纹识别的优势</h3><table>
-<thead>
-<tr>
-<th>特性</th>
-<th>电容指纹识别</th>
-<th>牛顿环光学签名识别</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>原理</td>
-<td>通过手指和电容感应板的微电流变化检测指纹脊线凹凸</td>
-<td>通过微米级接触面产生干涉条纹，提取接触时的干涉图样</td>
-</tr>
-<tr>
-<td>成本</td>
-<td>中等，需要特定传感芯片</td>
-<td>极低，一块玻璃+透镜+LED即可</td>
-</tr>
-<tr>
-<td>精度</td>
-<td>很高，已广泛用于手机解锁</td>
-<td>取决于AI训练强度，但“唯一性”非常高</td>
-</tr>
-<tr>
-<td>难以伪造</td>
-<td>难伪造指纹，但已有硅胶仿制手段</td>
-<td>非常难模仿，受压力&#x2F;角度&#x2F;纹理影响</td>
-</tr>
-<tr>
-<td>使用场景</td>
-<td>静态验证（解锁）</td>
-<td>动态行为签名、身份认证、图样可嵌入数字签名</td>
-</tr>
-<tr>
-<td>创新感</td>
-<td>已成熟，少有新鲜感</td>
-<td>新颖前沿，有“科幻感”</td>
-</tr>
-<tr>
-<td>可扩展性</td>
-<td>固定在指纹识别</td>
-<td>可拓展为“光学行为签名”、“动态图样输入”、“安全签章”</td>
-</tr>
-</tbody></table>
-<h3 id="2-抗伪造性原理"><a href="#2-抗伪造性原理" class="headerlink" title="2. 抗伪造性原理"></a>2. 抗伪造性原理</h3><p>牛顿环图样不仅取决于接触表面的微观结构，还包含：</p>
-<p>压力分布差异</p>
-<p>手指角度与动态轨迹</p>
-<p>干涉条纹的微扰纹理</p>
-<p>仿造者即便复制了指纹外形，也难以还原干涉行为全过程，系统通过多维度提取和图像序列学习实现精准识别。</p>
-<h3 id="所以，虽然电容指纹识别已经存在，甚至非常成熟-——-但光学签名识别的价值并不在于替代它，而在于拓展边界。虽然电容指纹识别已经解决了很多身份验证问题，但：光学签名它可以用在高安全场景（比如加密签名）、艺术性认证（比如数字画作签章）；它的成本低、结构简单、可视化强我们并不与电容指纹识别做全面竞争，因为它在商用识别上已极为成熟。但我们利用牛顿环光学签名识别技术，在高安全性、防伪需求强、动态签名行为输入、低成本设备改造等方向展现出独特优势。换句话说，我们是面向电容指纹识别尚未覆盖的‘未被满足的高价值场景’提供解决方案。"><a href="#所以，虽然电容指纹识别已经存在，甚至非常成熟-——-但光学签名识别的价值并不在于替代它，而在于拓展边界。虽然电容指纹识别已经解决了很多身份验证问题，但：光学签名它可以用在高安全场景（比如加密签名）、艺术性认证（比如数字画作签章）；它的成本低、结构简单、可视化强我们并不与电容指纹识别做全面竞争，因为它在商用识别上已极为成熟。但我们利用牛顿环光学签名识别技术，在高安全性、防伪需求强、动态签名行为输入、低成本设备改造等方向展现出独特优势。换句话说，我们是面向电容指纹识别尚未覆盖的‘未被满足的高价值场景’提供解决方案。" class="headerlink" title="所以，虽然电容指纹识别已经存在，甚至非常成熟 —— 但光学签名识别的价值并不在于替代它，而在于拓展边界。虽然电容指纹识别已经解决了很多身份验证问题，但：光学签名它可以用在高安全场景（比如加密签名）、艺术性认证（比如数字画作签章）；它的成本低、结构简单、可视化强我们并不与电容指纹识别做全面竞争，因为它在商用识别上已极为成熟。但我们利用牛顿环光学签名识别技术，在高安全性、防伪需求强、动态签名行为输入、低成本设备改造等方向展现出独特优势。换句话说，我们是面向电容指纹识别尚未覆盖的‘未被满足的高价值场景’提供解决方案。"></a>所以，虽然电容指纹识别已经存在，甚至非常成熟 —— 但光学签名识别的价值并不在于替代它，而在于拓展边界。虽然电容指纹识别已经解决了很多身份验证问题，但：光学签名它可以用在高安全场景（比如加密签名）、艺术性认证（比如数字画作签章）；它的成本低、结构简单、可视化强我们并不与电容指纹识别做全面竞争，因为它在商用识别上已极为成熟。但我们利用牛顿环光学签名识别技术，在高安全性、防伪需求强、动态签名行为输入、低成本设备改造等方向展现出独特优势。换句话说，我们是面向电容指纹识别尚未覆盖的‘未被满足的高价值场景’提供解决方案。</h3><p>2.现有光学指纹验证系统使用的是反射&#x2F;折射成像技术。并没有利用牛顿环干涉现象，我们为什么用牛顿环呢？</p>
-<p>首先先来看现有光学指纹识别的原理：</p>
-<p>目前手机或设备上的光学指纹识别主要分为两类：</p>
-<h4 id="1-透射-反射式成像："><a href="#1-透射-反射式成像：" class="headerlink" title="1. 透射&#x2F;反射式成像："></a>1. 透射&#x2F;反射式成像：</h4><p>光从屏幕下方发出，手指放上去后，指纹脊线和谷线的反射光不同；</p>
-<p>摄像头或传感器接收反射图像，进行二维图像对比。</p>
-<h4 id="2-超声波指纹识别（某些高端机型）："><a href="#2-超声波指纹识别（某些高端机型）：" class="headerlink" title="2. 超声波指纹识别（某些高端机型）："></a>2. 超声波指纹识别（某些高端机型）：</h4><p>发出超声波，脊线和谷线回波不同：</p>
-<p>构建深度图像。</p>
-<p>这些系统是基于几何光学原理（光线的传播、反射、折射），而不是干涉光学。</p>
-<p>牛顿环还没有被主流应用在指纹识别中，原因包括：</p>
-<table>
-<thead>
-<tr>
-<th>原因</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>结构难以标准化</td>
-<td>牛顿环依赖于凸透镜与平面之间极微小的空气层（几十到几百纳米），不易稳定控制</td>
-</tr>
-<tr>
-<td>变化太敏感</td>
-<td>轻微角度、压强、纹理就会引起图样剧变，不适合做“稳定图像对比”</td>
-</tr>
-<tr>
-<td>拍摄成像要求高</td>
-<td>要拍出清晰牛顿环，需要特定照明角度、拍摄距离，和成像系统</td>
-</tr>
-<tr>
-<td>不适合批量生产</td>
-<td>光学干涉本身很美，但不是标准工业化方式中的“稳态识别”手段</td>
-</tr>
-</tbody></table>
-<h3 id="那为什么我们提出“牛顿环光学签名识别”？"><a href="#那为什么我们提出“牛顿环光学签名识别”？" class="headerlink" title="那为什么我们提出“牛顿环光学签名识别”？"></a>那为什么我们提出“牛顿环光学签名识别”？</h3><p>因为我们不是用它做“传统指纹图像比对”，而是用它做一种“动态物理行为签名”：每次按压形成不同图样；提取的不是脊线纹路，而是干涉条纹的密度、对称性、中心分布等物理特征；用的是机器学习去建模这种个体行为特征，而不是图像像素对比。</p>
-<p>目前市面上的光学指纹识别，大多依赖反射成像原理，而本项目首创性地利用了‘牛顿环’这一干涉现象，将每一次按压生成的干涉图样作为‘光学签名’，既独一无二，又难以伪造，为身份识别提供了一种全新的高安全性方式。</p>
-<table>
-<thead>
-<tr>
-<th>特性</th>
-<th>牛顿环光学签名</th>
-<th>传统光学指纹识别</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>静态 vs 动态</td>
-<td>动态干涉图样，每次略有不同但可校验</td>
-<td>静态图像，几乎恒定</td>
-</tr>
-<tr>
-<td>仿造难度</td>
-<td>极难：不仅要复刻表面，还要复刻压力、倾角等行为</td>
-<td>中等：可通过高分辨率指纹图像+3D打印&#x2F;硅胶仿造</td>
-</tr>
-<tr>
-<td>图像唯一性</td>
-<td>利用干涉纹理、环间距、中心偏移等物理特征构建模型，不止“外观”</td>
-<td>主要依赖脊线形状匹配</td>
-</tr>
-<tr>
-<td>可变签名</td>
-<td>可设计“行为式签名”机制（比如同一个人每次以特定节奏按压）</td>
-<td>固定特征，不具备行为输入性</td>
-</tr>
-</tbody></table>
-<h3 id="二．这种安全系数高吗？那如果训练后识别，我也打不开怎么办，如果牛顿环图样每次按压都有差异，那万一我本人按了一次却识别失败，怎么办？系统岂不是不稳定？如何确保我每次按压都能被识别为我自己，而不是被系统误判为冒名者？"><a href="#二．这种安全系数高吗？那如果训练后识别，我也打不开怎么办，如果牛顿环图样每次按压都有差异，那万一我本人按了一次却识别失败，怎么办？系统岂不是不稳定？如何确保我每次按压都能被识别为我自己，而不是被系统误判为冒名者？" class="headerlink" title="二．这种安全系数高吗？那如果训练后识别，我也打不开怎么办，如果牛顿环图样每次按压都有差异，那万一我本人按了一次却识别失败，怎么办？系统岂不是不稳定？如何确保我每次按压都能被识别为我自己，而不是被系统误判为冒名者？"></a>二．这种安全系数高吗？那如果训练后识别，我也打不开怎么办，如果牛顿环图样每次按压都有差异，那万一我本人按了一次却识别失败，怎么办？系统岂不是不稳定？如何确保我每次按压都能被识别为我自己，而不是被系统误判为冒名者？</h3><p>容错模型训练（注册阶段就考虑变化）</p>
-<p>不是只采集一张牛顿环图像，而是注册阶段采集你5~10次按压图样，构建其特征变化区间。系统不识别“单次图像”，而是匹配“行为模式范围”。用 AI（CNN）提取你行为习惯下的“稳定特征分布范围”：</p>
-<p>条纹密度分布；</p>
-<p>圆心偏移方向；</p>
-<p>对称性轮廓；</p>
-<p>局部纹理干涉扰动模式等；</p>
-<p>这样系统学到的不是“死图”，而是你的“签名习惯”</p>
-<p>类比：就像你写签名，有时快、有时慢，但你就是你。</p>
-<p>相似度区间判断 + 安全等级切换</p>
-<p>系统设置“容忍区间”，并允许多种模式：</p>
-<table>
-<thead>
-<tr>
-<th>模式</th>
-<th>相似度要求</th>
-<th>使用建议</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>普通模式</td>
-<td>≥80%</td>
-<td>日常解锁</td>
-</tr>
-<tr>
-<td>安全模式</td>
-<td>≥95%</td>
-<td>访问加密文件夹</td>
-</tr>
-<tr>
-<td>多重认证模式</td>
-<td>≥70% + 动态码</td>
-<td>访问核心密钥区</td>
-</tr>
-</tbody></table>
-<h3 id="失败不等于锁死：允许二次验证-自我修复机制"><a href="#失败不等于锁死：允许二次验证-自我修复机制" class="headerlink" title="失败不等于锁死：允许二次验证 + 自我修复机制"></a>失败不等于锁死：允许二次验证 + 自我修复机制</h3><p>若验证失败，可以设置二次校验（如输入密码&#x2F;指令&#x2F;动态码）；</p>
-<p>用户输入密码或验证码后，系统将本次签名纳入新样本（前提是后续成功才纳入，不然会污染样本库）优化模型，这样系统会越用越懂你</p>
-<p><img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33556\wps14.jpg" alt="img"> </p>
-<p>“签名图谱”可导出 + 时间戳 + 加密验证</p>
-<p>比如访问机密文件时，不仅比对图样，还可导出该次图样的唯一特征码并记录时间戳；</p>
-<p>可以设计“带行为签名的访问日志”，防篡改、可审计。</p>
-<p>“确实，牛顿环图样每次略有差异，但这并不是缺陷，而是我们用来识别用户‘行为特征’的核心信息。通过多次采样、自适应学习、相似度阈值设定和多重认证机制，我们可以做到在确保识别稳定性的同时，极大提升安全性与抗伪造能力。”</p>
-<h2 id="三、防御仿造攻击设计"><a href="#三、防御仿造攻击设计" class="headerlink" title="三、防御仿造攻击设计"></a>三、防御仿造攻击设计</h2><h3 id="攻击者可能策略："><a href="#攻击者可能策略：" class="headerlink" title="攻击者可能策略："></a>攻击者可能策略：</h3><p>使用硅胶膜复制指纹，控制压力模仿按压行为</p>
-<h3 id="系统防护机制："><a href="#系统防护机制：" class="headerlink" title="系统防护机制："></a>系统防护机制：</h3><table>
-<thead>
-<tr>
-<th>攻击路径</th>
-<th>防御手段</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>静态图像伪造</td>
-<td>采用动态图样序列学习</td>
-</tr>
-<tr>
-<td>模仿按压力度</td>
-<td>提取局部扰动与非对称纹理</td>
-</tr>
-<tr>
-<td>恶意重复尝试</td>
-<td>失败后切换二次验证通道</td>
-</tr>
-</tbody></table>
-<p>这是很多基于行为式生物特征识别（比如签名、打字节奏、走路姿态）都会遇到的问题：每次都有“自然波动”，但我们想识别的是“这个人”的特征，而不是“这次具体图样”的100%复现。</p>
-<p>那么如果攻击者用高仿指纹膜（如3D打印+硅胶），然后学习用户的按压力度和角度习惯，是否能伪造出接近图样骗过系统？</p>
-<h2 id="牛顿环不是只看“图像相似度”，而是多个维度"><a href="#牛顿环不是只看“图像相似度”，而是多个维度" class="headerlink" title="牛顿环不是只看“图像相似度”，而是多个维度"></a>牛顿环不是只看“图像相似度”，而是多个维度</h2><table>
-<thead>
-<tr>
-<th>判断维度</th>
-<th>攻击者难以掌控吗？</th>
-<th>原因</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>条纹数目（波前干涉）</td>
-<td>可模拟</td>
-<td>与膜形状&#x2F;压力&#x2F;表面密度相关</td>
-</tr>
-<tr>
-<td>中心偏移 &amp; 环对称性</td>
-<td>较难</td>
-<td>需完美对齐接触角度</td>
-</tr>
-<tr>
-<td>局部扰动微纹（局部纹理破碎）</td>
-<td>极难</td>
-<td>每次真实按压自然形成，随机性强</td>
-</tr>
-<tr>
-<td>时间序列特征（帧级变化）</td>
-<td>极难</td>
-<td>攻击者无法还原真实按压动态过程</td>
-</tr>
-<tr>
-<td>生物行为特征（微抖动、按压节奏）</td>
-<td>极难</td>
-<td>需还原肌肉特征&#x2F;接触反馈</td>
-</tr>
-</tbody></table>
-<h2 id="牛顿环系统的安全性不应依赖“图像一次判断”，而应该依赖-AI-多帧序列-行为分布-来判断："><a href="#牛顿环系统的安全性不应依赖“图像一次判断”，而应该依赖-AI-多帧序列-行为分布-来判断：" class="headerlink" title="牛顿环系统的安全性不应依赖“图像一次判断”，而应该依赖 AI+多帧序列+行为分布 来判断："></a>牛顿环系统的安全性不应依赖“图像一次判断”，而应该依赖 AI+多帧序列+行为分布 来判断：</h2><p>不是“图像像不像”；而是“你按下来的方式+干涉动态图样+局部扰动是否符合你的生物行为签名”。就像人脸识别现在用的是“活体检测+表情动作”，而不是只看一张照片 所以，我们的设计原则是：“就算攻击者拿到一张高保真复制图，也难以还原你按压时带来的复杂干涉结构、局部扰动、微小偏移行为。”</p>
-<h3 id="模仿“图像”容易，但模仿“行为”极难"><a href="#模仿“图像”容易，但模仿“行为”极难" class="headerlink" title="模仿“图像”容易，但模仿“行为”极难"></a>模仿“图像”容易，但模仿“行为”极难</h3><p>连续帧图样采集：按压过程录制0.5秒图像序列，提升判断维度；</p>
-<p>局部扰动提取模型：训练AI识别“自然扰动” vs “仿制统一干扰”；</p>
-<p>图样签名时间戳绑定：用于动态行为识别；</p>
-<p>环境因素检测：温度&#x2F;湿度&#x2F;指压面积分析，识别“假指膜”异常参数；</p>
-<p>但是如果用动态码也能解锁了，那么别人就可以从动态码方面采取攻破，那光学指纹这个防护手段防护效果会不会大打折扣？如果我为了保险加了一个动态码（OTP）作为备份手段，是不是反而让强安全的光学验证失去了意义</p>
-<h2 id="先说原理：系统的安全性-≈-最弱环节的安全性"><a href="#先说原理：系统的安全性-≈-最弱环节的安全性" class="headerlink" title="先说原理：系统的安全性 ≈ 最弱环节的安全性"></a>先说原理：系统的安全性 ≈ 最弱环节的安全性</h2><p>所以，如果“牛顿环光学识别”是超强的防伪机制；</p>
-<p>但我只要拿到一个6位动态码就能绕过它；</p>
-<p>那么，整个系统就退化成了“动态码系统”，而不是光学签名系统。</p>
-<h2 id="那我们该怎么做才能“用动态码增强，而不是削弱安全性”？"><a href="#那我们该怎么做才能“用动态码增强，而不是削弱安全性”？" class="headerlink" title="那我们该怎么做才能“用动态码增强，而不是削弱安全性”？"></a>那我们该怎么做才能“用动态码增强，而不是削弱安全性”？</h2><p>答案就是——设计合理的“权限分级 + 条件触发 + 安全协同策略”</p>
-<h2 id="建议的多因子安全策略结构："><a href="#建议的多因子安全策略结构：" class="headerlink" title="建议的多因子安全策略结构："></a>建议的多因子安全策略结构：</h2><table>
-<thead>
-<tr>
-<th>安全等级</th>
-<th>验证方式</th>
-<th>场景</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>低级认证</td>
-<td>牛顿环签名即可</td>
-<td>普通解锁&#x2F;查看历史数据</td>
-<td>快速、安全、方便</td>
-</tr>
-<tr>
-<td>中级认证</td>
-<td>牛顿环 + 动态码</td>
-<td>修改设置&#x2F;导出数据</td>
-<td>双因子协同，确保是本人</td>
-</tr>
-<tr>
-<td>高级认证</td>
-<td>牛顿环 + 动态码 + 二次确认</td>
-<td>删除身份&#x2F;打开密钥仓库</td>
-<td>防误操作、防远程控制入侵</td>
-</tr>
-</tbody></table>
-<h2 id="动态码不是“替代”，而是“补充-增强”"><a href="#动态码不是“替代”，而是“补充-增强”" class="headerlink" title="动态码不是“替代”，而是“补充+增强”"></a>动态码不是“替代”，而是“补充+增强”</h2><p>动态码不是“我验证失败后的备胎”；</p>
-<p>而是系统判断风险后额外要求的“第二把锁”；</p>
-<p>例如：</p>
-<p>本次图样与标准模型相似度仅为 81%（低于阈值）→ 要求动态码</p>
-<p>本次登录 IP 异常 &#x2F; 地理位置异常 → 要求动态码</p>
-<p>用户触发高权限操作 → 要求动态码</p>
-<p>动态码不是用来代替光学验证的，而是系统在识别出现模糊边界或风险触发条件下的‘辅助认证手段’。我们始终以牛顿环签名识别为主认证手段，动态码只在高风险或二次确认场景中启用，从而在提升安全性的同时，兼顾了容错率与体验。</p>
-<p>我们不依赖单帧图像做决策，而是利用图像序列、局部扰动纹理、生物行为特征等高维特征进行身份判断。正因如此，即使攻击者模仿了指纹表面和按压力度，只要行为和接触过程有微小偏差，系统也能有效识别并拒绝授权，从而构建起比传统静态图像识别更坚固的防伪壁垒。</p>
-]]></content>
-      <tags>
-        <tag>大学比赛</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>react实现</title>
-    <url>/2025/04/07/react%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<p>我在page.pug内插入了<br>    div#react-root  &#x2F;&#x2F; 这是 React 组件的挂载点</p>
-<p>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;js&#x2F;bundle.js’)</p>
-<p>创建了有关index.js在src里面（src也是为创建的）<br>还创建了一个webpack.config.js和react.babelrc</p>
-<p>装了这些<br>npm install react react-dom<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;preset-env @babel&#x2F;preset-react webpack webpack-cli babel-loader<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;cli @babel&#x2F;preset-env @babel&#x2F;preset-react babel-loader<br>然后还要在layout.pug里面加上<br>    &#x2F;&#x2F;- 弹窗通知<br>    !&#x3D;partial(‘includes&#x2F;popup&#x2F;index’, {}, {cache: true})</p>
-<pre><code>block scripts（加上这句话，与上面弹窗通知对齐！）就可以实现react了
-我将bundle.js从&quot;C:\Users\86198\myblog\world-map-widget\node_modules\ajv\scripts\bundle.js&quot;移动到了source/js
-我在source/js里加了一个world-map.js
-在about里的index.md里面加了
-&lt;world-map data-dots=&#39;[&#123;&quot;start&quot;:&#123;&quot;lat&quot;:34.0522,&quot;lng&quot;:-118.2437&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:40.7128,&quot;lng&quot;:-74.0060&#125;&#125;,&#123;&quot;start&quot;:&#123;&quot;lat&quot;:51.5074,&quot;lng&quot;:-0.1278&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:48.8566,&quot;lng&quot;:2.3522&#125;&#125;]&#39;&gt;&lt;/world-map&gt;
-</code></pre>
-<script src="/js/world-map.js"></script>
-<p>cao,就是加载不出来地图<br>我删除了一个index.js<br>内容&#x2F;<em>在 index.js 中编写你的 React 组件代码。例如：</em>&#x2F;<br>import React from ‘react’;<br>import ReactDOM from ‘react-dom’;</p>
-<p>function App() {<br>  return <div>Hello from React!</div>;<br>}</p>
-<p>ReactDOM.render(<App />, document.getElementById(‘react-root’));</p>
-<p>我从source&#x2F;js里把echarts.min.js移动到桌面了<br>我删除了page.pug里的<br>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;public&#x2F;js&#x2F;bundle.js’)</p>
-]]></content>
-      <tags>
-        <tag>try</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2025/04/13/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -811,15 +239,6 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>如何写一篇文章</title>
-    <url>/2025/04/05/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h2 id="详情参考："><a href="#详情参考：" class="headerlink" title="详情参考："></a>详情参考：</h2><p><strong><a href="https://markdown.com.cn/basic-syntax/code.html">https://markdown.com.cn/basic-syntax/code.html</a></strong></p>
-]]></content>
-      <tags>
-        <tag>learn</tag>
-      </tags>
   </entry>
   <entry>
     <title>如何在hexo里面实现类似动态播放视频</title>
@@ -888,124 +307,27 @@
       </tags>
   </entry>
   <entry>
-    <title>我搭建hexo博客之路</title>
-    <url>/2025/04/07/%E6%88%91%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/</url>
-    <content><![CDATA[<h1 id="我的第四版网页："><a href="#我的第四版网页：" class="headerlink" title="我的第四版网页："></a>我的第四版网页：</h1><p>​	（有一点我觉得很正确，如果你是什么也不会的小白^因为我也是小白^，那么看我这个，也可以写出自己喜欢的blog，&#x3D;&#x3D;而且要学会借助人工智能&#x3D;&#x3D;！Chat gpt（至少现在）挺好用的，可以帮你很快上手，而且你即使有很好的功底，你也可以用它节约你写这个的过程，毕竟花时间在开发上，比花时间在搭建这个写代码上更有意义，现在的博客都是扒代码，取其精华）前前后后已经搭建了三次了，挺可惜的，但虽然不断搭建花费了我很多时间，但我却也愈发熟悉了，我打算记录一下我的建站过程和感受，以防在某一个时刻我忘记了当初的细节而再次建站浪费时间。</p>
-<h2 id="第一章-创建blog"><a href="#第一章-创建blog" class="headerlink" title="第一章:创建blog"></a>第一章:创建blog</h2><h3 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1.安装Git"></a>1.安装Git</h3><p>​			Git（分布式版本控制系统）（&#x3D;&#x3D;不要纠结叫什么，在处理hexo里面也就是用来管理你的hexo博客文章，上传到GitHub的工具。&#x3D;&#x3D;）</p>
-<p>​			因为我用的Windows，所以Windows：到git官网上下载,<a href="https://gitforwindows.org/">Download git</a>,下载后会有一个&#x3D;&#x3D;Git Bash&#x3D;&#x3D;的命令工具，以后就用这个工具来使用git！！</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git --version   //这里就开始使用git bash了</span><br></pre></td></tr></table></figure>
+    <title></title>
+    <url>/2025/04/16/%E7%89%9B%E9%A1%BF%E7%8E%AF/</url>
+    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc; clear; close all;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 基本参数设置</span></span><br><span class="line"></span><br><span class="line">lambda_all = [<span class="number">450e-9</span>, <span class="number">550e-9</span>, <span class="number">650e-9</span>]; <span class="comment">% 多波长：蓝、绿、红</span></span><br><span class="line"></span><br><span class="line">colors = [<span class="number">0</span> <span class="number">0</span> <span class="number">1</span>; <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>; <span class="number">1</span> <span class="number">0</span> <span class="number">0</span>]; <span class="comment">% RGB颜色</span></span><br><span class="line"></span><br><span class="line">f = <span class="number">20e-3</span>; <span class="comment">% 透镜焦距</span></span><br><span class="line"></span><br><span class="line">R = <span class="number">100e-3</span>; <span class="comment">% 曲率半径（调大，更明显）</span></span><br><span class="line"></span><br><span class="line">lens_z = <span class="number">0</span>; <span class="comment">% 透镜位置</span></span><br><span class="line"></span><br><span class="line">screen_z = <span class="number">25e-3</span>; <span class="comment">% 屏幕位置</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">num_frames = <span class="number">50</span>; <span class="comment">% 动画帧数</span></span><br><span class="line"></span><br><span class="line">num_rays = <span class="number">30</span>; <span class="comment">% 光线数量</span></span><br><span class="line"></span><br><span class="line">theta = <span class="built_in">linspace</span>(-<span class="built_in">pi</span>/<span class="number">12</span>, <span class="built_in">pi</span>/<span class="number">12</span>, num_rays); <span class="comment">% 光线角度</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 视频设置</span></span><br><span class="line"></span><br><span class="line">v = VideoWriter(<span class="string">&#x27;newton_rings_full_fixed.avi&#x27;</span>);</span><br><span class="line"></span><br><span class="line">v.FrameRate = <span class="number">15</span>;</span><br><span class="line"></span><br><span class="line">open(v);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 设置固定大小的图窗</span></span><br><span class="line"></span><br><span class="line">fig = <span class="built_in">figure</span>(<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;Position&#x27;</span>, [<span class="number">100</span>, <span class="number">100</span>, <span class="number">800</span>, <span class="number">600</span>]);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 动画主循环</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> t = <span class="number">1</span>:num_frames</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">clf;</span><br><span class="line"></span><br><span class="line"><span class="built_in">hold</span> on; axis equal; grid on;</span><br><span class="line"></span><br><span class="line">xlabel(<span class="string">&#x27;X (m)&#x27;</span>); ylabel(<span class="string">&#x27;Y (m)&#x27;</span>); zlabel(<span class="string">&#x27;Z (m)&#x27;</span>);</span><br><span class="line"></span><br><span class="line">xlim([<span class="number">-0.02</span> <span class="number">0.02</span>]); ylim([<span class="number">-0.02</span> <span class="number">0.02</span>]); zlim([<span class="number">0</span> <span class="number">0.03</span>]);</span><br><span class="line"></span><br><span class="line">view([<span class="number">0</span> <span class="number">90</span>]); <span class="comment">% 俯视（XY 平面）</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">title(<span class="string">&#x27;多波长牛顿环光线传播&#x27;</span>);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 光线追踪（多波长）</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> w = <span class="number">1</span>:<span class="built_in">length</span>(lambda_all)</span><br><span class="line"></span><br><span class="line">lambda = lambda_all(w);</span><br><span class="line"></span><br><span class="line">color = colors(w, :);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:num_rays</span><br><span class="line"></span><br><span class="line"><span class="built_in">angle</span> = theta(<span class="built_in">i</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 初始点和方向</span></span><br><span class="line"></span><br><span class="line">x0 = <span class="number">0</span>; y0 = <span class="number">0</span>; z0 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">vx1 = <span class="built_in">sin</span>(<span class="built_in">angle</span>); vy1 = <span class="number">0</span>; vz1 = <span class="built_in">cos</span>(<span class="built_in">angle</span>);</span><br><span class="line"></span><br><span class="line">t1 = (lens_z - z0) / vz1;</span><br><span class="line"></span><br><span class="line">x1 = x0 + vx1 * t1;</span><br><span class="line"></span><br><span class="line">y1 = y0 + vy1 * t1;</span><br><span class="line"></span><br><span class="line">z1 = lens_z;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">% 折射计算</span></span><br><span class="line"></span><br><span class="line">n1 = <span class="number">1.0</span>; n2 = <span class="number">1.5</span>;</span><br><span class="line"></span><br><span class="line">theta2 = <span class="built_in">asin</span>(n1/n2 * <span class="built_in">sin</span>(<span class="built_in">angle</span>));</span><br><span class="line"></span><br><span class="line">vx2 = <span class="built_in">sin</span>(theta2); vy2 = <span class="number">0</span>; vz2 = <span class="built_in">cos</span>(theta2);</span><br><span class="line"></span><br><span class="line">t2 = (screen_z - lens_z) / vz2;</span><br><span class="line"></span><br><span class="line">x2 = x1 + vx2 * t2;</span><br><span class="line"></span><br><span class="line">y2 = y1 + vy2 * t2;</span><br><span class="line"></span><br><span class="line">z2 = screen_z;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">% 动态比例</span></span><br><span class="line"></span><br><span class="line">scale1 = <span class="built_in">min</span>(<span class="number">1</span>, t / num_frames);</span><br><span class="line"></span><br><span class="line">scale2 = <span class="built_in">max</span>(<span class="number">0</span>, t/num_frames - <span class="number">0.5</span>) * <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">% 绘制第一段（空气中）</span></span><br><span class="line"></span><br><span class="line">xa = x0 + vx1 * t1 * scale1;</span><br><span class="line"></span><br><span class="line">ya = y0 + vy1 * t1 * scale1;</span><br><span class="line"></span><br><span class="line">za = z0 + vz1 * t1 * scale1;</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot3</span>([x0 xa], [y0 ya], [z0 za], <span class="string">&#x27;Color&#x27;</span>, color, <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">1.2</span>);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">% 绘制第二段（透镜中）</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> t &gt; num_frames/<span class="number">2</span></span><br><span class="line"></span><br><span class="line">xb = x1 + vx2 * t2 * scale2;</span><br><span class="line"></span><br><span class="line">yb = y1 + vy2 * t2 * scale2;</span><br><span class="line"></span><br><span class="line">zb = z1 + vz2 * t2 * scale2;</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot3</span>([x1 xb], [y1 yb], [z1 zb], <span class="string">&#x27;Color&#x27;</span>, color * <span class="number">0.8</span> + <span class="number">0.2</span>, ...</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;LineStyle&#x27;</span>,<span class="string">&#x27;--&#x27;</span>, <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 牛顿环绘制（增强可视化）</span></span><br><span class="line"></span><br><span class="line">num_rings = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> w = <span class="number">1</span>:<span class="built_in">length</span>(lambda_all)</span><br><span class="line"></span><br><span class="line">lambda = lambda_all(w);</span><br><span class="line"></span><br><span class="line">color = colors(w,:);</span><br><span class="line"></span><br><span class="line">bright_color = color * <span class="number">0.8</span> + <span class="number">0.2</span>; <span class="comment">% 提亮颜色</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n = <span class="number">1</span>:num_rings</span><br><span class="line"></span><br><span class="line">r_n = <span class="built_in">sqrt</span>(n * lambda * R); <span class="comment">% Newton ring 半径</span></span><br><span class="line"></span><br><span class="line">theta_ring = <span class="built_in">linspace</span>(<span class="number">0</span>, <span class="number">2</span>*<span class="built_in">pi</span>, <span class="number">200</span>);</span><br><span class="line"></span><br><span class="line">x_ring = r_n * <span class="built_in">cos</span>(theta_ring);</span><br><span class="line"></span><br><span class="line">y_ring = r_n * <span class="built_in">sin</span>(theta_ring);</span><br><span class="line"></span><br><span class="line">z_ring = (screen_z + <span class="number">1e-4</span>) * <span class="built_in">ones</span>(<span class="built_in">size</span>(x_ring)); <span class="comment">% 抬高，避免遮挡</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">fill3(x_ring, y_ring, z_ring, bright_color, ...</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;FaceAlpha&#x27;</span>, <span class="number">0.15</span> + <span class="number">0.02</span>*w, ...</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;EdgeColor&#x27;</span>, bright_color * <span class="number">0.9</span>, <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">0.5</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 写入帧，强制统一为 800x600 尺寸</span></span><br><span class="line"></span><br><span class="line">raw_frame = getframe(fig);</span><br><span class="line"></span><br><span class="line">resized_frame = imresize(raw_frame.cdata, [<span class="number">600</span> <span class="number">800</span>]); <span class="comment">% 高度 × 宽度</span></span><br><span class="line"></span><br><span class="line">writeVideo(v, im2frame(resized_frame));</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">close(v);</span><br></pre></td></tr></table></figure>
 
-<p>​			如果没找到，点击最下方的 显示更多选项，切记是&#x3D;&#x3D;git bash&#x3D;&#x3D;(不是git GUI)，然后就会看到这个命令行，就可以开始输入代码了。（接下来就不会用cmd了）</p>
-<p><img src="https://i.postimg.cc/15fkshBw/1.png"></p>
-<p>​	复制粘贴（合理偷懒）git –version 注意：这个里面CTRL+v不能用CTRL+c可以复制但也会终止当前命令，别不小心终止了这里的复制可以右键命令行来查看。Paste这就是粘贴（后面的Shift+Ins是快捷键！）</p>
-<p><img src="https://i.postimg.cc/YSwZ64Hz/2.png"></p>
-<p>​	Hexo是基于nodeJS编写的，所以需要安装一下nodeJs和里面的npm工具。（都直接next）</p>
-<p><img src="https://i.postimg.cc/3R8qqPWy/3.png"></p>
-<p>​	可以顺手看看版本，也是确保已经安装好了	接下来（下载hexo）并看一下版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+<p><img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33496\wps1.jpg" alt="img"> </p>
+ <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc; clear; close all;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 基本参数设置</span></span><br><span class="line"></span><br><span class="line">lambda = <span class="number">550e-9</span>; <span class="comment">% 单色光：绿光</span></span><br><span class="line"></span><br><span class="line">color = [<span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]; <span class="comment">% 白色光线</span></span><br><span class="line"></span><br><span class="line">f = <span class="number">20e-3</span>; <span class="comment">% 透镜焦距</span></span><br><span class="line"></span><br><span class="line">R = <span class="number">10e-3</span>; <span class="comment">% 曲率半径</span></span><br><span class="line"></span><br><span class="line">lens_z = <span class="number">0</span>; <span class="comment">% 透镜位置</span></span><br><span class="line"></span><br><span class="line">screen_z = <span class="number">25e-3</span>; <span class="comment">% 屏幕位置</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">num_frames = <span class="number">50</span>; <span class="comment">% 动画帧数</span></span><br><span class="line"></span><br><span class="line">num_rays = <span class="number">30</span>; <span class="comment">% 光线数量</span></span><br><span class="line"></span><br><span class="line">theta = <span class="built_in">linspace</span>(-<span class="built_in">pi</span>/<span class="number">12</span>, <span class="built_in">pi</span>/<span class="number">12</span>, num_rays); <span class="comment">% 光线角度</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 视频设置</span></span><br><span class="line"></span><br><span class="line">v = VideoWriter(<span class="string">&#x27;newton_rings_white_on_black.avi&#x27;</span>);</span><br><span class="line"></span><br><span class="line">v.FrameRate = <span class="number">15</span>;</span><br><span class="line"></span><br><span class="line">open(v);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 设置固定大小的图窗</span></span><br><span class="line"></span><br><span class="line">fig = <span class="built_in">figure</span>(<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;Position&#x27;</span>, [<span class="number">100</span>, <span class="number">100</span>, <span class="number">800</span>, <span class="number">600</span>]);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 动画主循环</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> t = <span class="number">1</span>:num_frames</span><br><span class="line"></span><br><span class="line">clf;</span><br><span class="line"></span><br><span class="line"><span class="built_in">hold</span> on; axis equal; grid on;</span><br><span class="line"></span><br><span class="line">xlabel(<span class="string">&#x27;X (m)&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>); ylabel(<span class="string">&#x27;Y (m)&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>); zlabel(<span class="string">&#x27;Z (m)&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>);</span><br><span class="line"></span><br><span class="line">xlim([<span class="number">-0.01</span> <span class="number">0.01</span>]); ylim([<span class="number">-0.01</span> <span class="number">0.01</span>]); zlim([<span class="number">-0.005</span> <span class="number">0.03</span>]);</span><br><span class="line"></span><br><span class="line">set(gca, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;XColor&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;YColor&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;ZColor&#x27;</span>, <span class="string">&#x27;w&#x27;</span>);</span><br><span class="line"></span><br><span class="line">view(<span class="number">2</span>); <span class="comment">% 改为俯视图（更容易看出环）</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">title(<span class="string">&#x27;白光牛顿环&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 光线追踪</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:num_rays</span><br><span class="line"></span><br><span class="line"><span class="built_in">angle</span> = theta(<span class="built_in">i</span>);</span><br><span class="line"></span><br><span class="line">x0 = <span class="number">0</span>; y0 = <span class="number">0</span>; z0 = <span class="number">-5e-3</span>;</span><br><span class="line"></span><br><span class="line">vx1 = <span class="built_in">sin</span>(<span class="built_in">angle</span>); vy1 = <span class="number">0</span>; vz1 = <span class="built_in">cos</span>(<span class="built_in">angle</span>);</span><br><span class="line"></span><br><span class="line">t1 = (lens_z - z0) / vz1;</span><br><span class="line"></span><br><span class="line">x1 = x0 + vx1 * t1;</span><br><span class="line"></span><br><span class="line">y1 = y0 + vy1 * t1;</span><br><span class="line"></span><br><span class="line">z1 = lens_z;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">n1 = <span class="number">1.0</span>; n2 = <span class="number">1.5</span>;</span><br><span class="line"></span><br><span class="line">theta2 = <span class="built_in">asin</span>(n1/n2 * <span class="built_in">sin</span>(<span class="built_in">angle</span>));</span><br><span class="line"></span><br><span class="line">vx2 = <span class="built_in">sin</span>(theta2); vy2 = <span class="number">0</span>; vz2 = <span class="built_in">cos</span>(theta2);</span><br><span class="line"></span><br><span class="line">t2 = (screen_z - lens_z) / vz2;</span><br><span class="line"></span><br><span class="line">x2 = x1 + vx2 * t2;</span><br><span class="line"></span><br><span class="line">y2 = y1 + vy2 * t2;</span><br><span class="line"></span><br><span class="line">z2 = screen_z;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">scale1 = <span class="built_in">min</span>(<span class="number">1</span>, t / num_frames);</span><br><span class="line"></span><br><span class="line">scale2 = <span class="built_in">max</span>(<span class="number">0</span>, t/num_frames - <span class="number">0.5</span>) * <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">xa = x0 + vx1 * t1 * scale1;</span><br><span class="line"></span><br><span class="line">ya = y0 + vy1 * t1 * scale1;</span><br><span class="line"></span><br><span class="line">za = z0 + vz1 * t1 * scale1;</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot3</span>([x0 xa], [y0 ya], [z0 za], <span class="string">&#x27;Color&#x27;</span>, color, <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">1.2</span>);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> t &gt; num_frames/<span class="number">2</span></span><br><span class="line"></span><br><span class="line">xb = x1 + vx2 * t2 * scale2;</span><br><span class="line"></span><br><span class="line">yb = y1 + vy2 * t2 * scale2;</span><br><span class="line"></span><br><span class="line">zb = z1 + vz2 * t2 * scale2;</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot3</span>([x1 xb], [y1 yb], [z1 zb], <span class="string">&#x27;Color&#x27;</span>, color * <span class="number">0.8</span> + <span class="number">0.2</span>, ...</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;LineStyle&#x27;</span>,<span class="string">&#x27;--&#x27;</span>, <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 屏幕贴图牛顿环图案（灰度）</span></span><br><span class="line"></span><br><span class="line">[xg, yg] = <span class="built_in">meshgrid</span>(<span class="built_in">linspace</span>(<span class="number">-0.002</span>, <span class="number">0.002</span>, <span class="number">600</span>)); <span class="comment">% 缩小范围</span></span><br><span class="line"></span><br><span class="line">rg = <span class="built_in">sqrt</span>(xg.^<span class="number">2</span> + yg.^<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">intensity = <span class="built_in">cos</span>(<span class="built_in">pi</span> * rg.^<span class="number">2</span> / (lambda * R)).^<span class="number">2</span>; <span class="comment">% 经典牛顿环表达式</span></span><br><span class="line"></span><br><span class="line">zg = screen_z * <span class="built_in">ones</span>(<span class="built_in">size</span>(xg));</span><br><span class="line"></span><br><span class="line">surf(xg, yg, zg, intensity, <span class="string">&#x27;EdgeColor&#x27;</span>, <span class="string">&#x27;none&#x27;</span>);</span><br><span class="line"></span><br><span class="line">colormap(gray);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 写入帧</span></span><br><span class="line"></span><br><span class="line">raw_frame = getframe(fig);</span><br><span class="line"></span><br><span class="line">resized_frame = imresize(raw_frame.cdata, [<span class="number">600</span> <span class="number">800</span>]);</span><br><span class="line"></span><br><span class="line">writeVideo(v, im2frame(resized_frame));</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">close(v);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://i.postimg.cc/90znmZdC/4.png"></p>
-<p>​	然后电脑上就已经有了hexo了，接下来就是创建项目（也就是自己的博客）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init myblog    //hexo init 自己取的博客名,这一般会在c盘里面（记得找到位置）</span><br></pre></td></tr></table></figure>
+<p> <video src="C:\Users\86198\Desktop\屏幕录制 2025-04-16 112215.mp4"></video></p>
+ <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc; clear; close all;</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 基本参数设置</span></span><br><span class="line">lambda = <span class="number">550e-9</span>;                <span class="comment">% 中心波长</span></span><br><span class="line">f = <span class="number">20e-3</span>;                      <span class="comment">% 透镜焦距</span></span><br><span class="line">R = <span class="number">10e-3</span>;                      <span class="comment">% 曲率半径</span></span><br><span class="line">lens_z = <span class="number">0</span>;                     <span class="comment">% 透镜位置</span></span><br><span class="line">screen_z = <span class="number">25e-3</span>;               <span class="comment">% 屏幕位置</span></span><br><span class="line"></span><br><span class="line">num_frames = <span class="number">50</span>;               <span class="comment">% 动画帧数</span></span><br><span class="line">num_rays = <span class="number">30</span>;                 <span class="comment">% 光线数量</span></span><br><span class="line">theta = <span class="built_in">linspace</span>(-<span class="built_in">pi</span>/<span class="number">12</span>, <span class="built_in">pi</span>/<span class="number">12</span>, num_rays);  <span class="comment">% 光线角度</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%% 视频设置</span></span><br><span class="line">v = VideoWriter(<span class="string">&#x27;newton_rings_color_dynamic.avi&#x27;</span>);</span><br><span class="line">v.FrameRate = <span class="number">15</span>;</span><br><span class="line">open(v);</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 设置固定大小的图窗</span></span><br><span class="line">fig = <span class="built_in">figure</span>(<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;Position&#x27;</span>, [<span class="number">100</span>, <span class="number">100</span>, <span class="number">800</span>, <span class="number">600</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 动画主循环</span></span><br><span class="line"><span class="keyword">for</span> t = <span class="number">1</span>:num_frames</span><br><span class="line">    clf;</span><br><span class="line">    <span class="built_in">hold</span> on; axis equal; grid on;</span><br><span class="line">    xlabel(<span class="string">&#x27;X (m)&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>); ylabel(<span class="string">&#x27;Y (m)&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>); zlabel(<span class="string">&#x27;Z (m)&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>);</span><br><span class="line">    xlim([<span class="number">-0.005</span> <span class="number">0.005</span>]); ylim([<span class="number">-0.005</span> <span class="number">0.005</span>]); zlim([<span class="number">-0.005</span> <span class="number">0.03</span>]);</span><br><span class="line">    set(gca, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;XColor&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;YColor&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;ZColor&#x27;</span>, <span class="string">&#x27;w&#x27;</span>);</span><br><span class="line">    view(<span class="number">3</span>);  <span class="comment">% 三维视角</span></span><br><span class="line"></span><br><span class="line">    title(<span class="string">&#x27;彩色动态三维牛顿环&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">%% 光线追踪</span></span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:num_rays</span><br><span class="line">        <span class="built_in">angle</span> = theta(<span class="built_in">i</span>);</span><br><span class="line">        x0 = <span class="number">0</span>; y0 = <span class="number">0</span>; z0 = <span class="number">-5e-3</span>;</span><br><span class="line">        vx1 = <span class="built_in">sin</span>(<span class="built_in">angle</span>); vy1 = <span class="number">0</span>; vz1 = <span class="built_in">cos</span>(<span class="built_in">angle</span>);</span><br><span class="line">        t1 = (lens_z - z0) / vz1;</span><br><span class="line">        x1 = x0 + vx1 * t1;</span><br><span class="line">        y1 = y0 + vy1 * t1;</span><br><span class="line">        z1 = lens_z;</span><br><span class="line"></span><br><span class="line">        n1 = <span class="number">1.0</span>; n2 = <span class="number">1.5</span>;</span><br><span class="line">        theta2 = <span class="built_in">asin</span>(n1/n2 * <span class="built_in">sin</span>(<span class="built_in">angle</span>));</span><br><span class="line">        vx2 = <span class="built_in">sin</span>(theta2); vy2 = <span class="number">0</span>; vz2 = <span class="built_in">cos</span>(theta2);</span><br><span class="line">        t2 = (screen_z - lens_z) / vz2;</span><br><span class="line">        x2 = x1 + vx2 * t2;</span><br><span class="line">        y2 = y1 + vy2 * t2;</span><br><span class="line">        z2 = screen_z;</span><br><span class="line"></span><br><span class="line">        scale1 = <span class="built_in">min</span>(<span class="number">1</span>, t / num_frames);</span><br><span class="line">        scale2 = <span class="built_in">max</span>(<span class="number">0</span>, t/num_frames - <span class="number">0.5</span>) * <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">        xa = x0 + vx1 * t1 * scale1;</span><br><span class="line">        ya = y0 + vy1 * t1 * scale1;</span><br><span class="line">        za = z0 + vz1 * t1 * scale1;</span><br><span class="line">        <span class="built_in">plot3</span>([x0 xa], [y0 ya], [z0 za], <span class="string">&#x27;Color&#x27;</span>, [<span class="number">1</span> <span class="number">1</span> <span class="number">1</span>], <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">1.2</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> t &gt; num_frames/<span class="number">2</span></span><br><span class="line">            xb = x1 + vx2 * t2 * scale2;</span><br><span class="line">            yb = y1 + vy2 * t2 * scale2;</span><br><span class="line">            zb = z1 + vz2 * t2 * scale2;</span><br><span class="line">            <span class="built_in">plot3</span>([x1 xb], [y1 yb], [z1 zb], <span class="string">&#x27;Color&#x27;</span>, [<span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]*<span class="number">0.8</span>, ...</span><br><span class="line">                  <span class="string">&#x27;LineStyle&#x27;</span>,<span class="string">&#x27;--&#x27;</span>, <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">%% 彩色动态干涉牛顿环（模拟RGB三波段）</span></span><br><span class="line">    [xg, yg] = <span class="built_in">meshgrid</span>(<span class="built_in">linspace</span>(<span class="number">-0.002</span>, <span class="number">0.002</span>, <span class="number">400</span>));</span><br><span class="line">    rg = <span class="built_in">sqrt</span>(xg.^<span class="number">2</span> + yg.^<span class="number">2</span>);</span><br><span class="line">    zg = screen_z + <span class="number">0.0002</span> * <span class="built_in">sin</span>(<span class="number">2</span>*<span class="built_in">pi</span>*t/num_frames) * <span class="built_in">sin</span>(<span class="number">50</span> * rg);  <span class="comment">% 三维起伏</span></span><br><span class="line">    lambda_rgb = [<span class="number">620e-9</span>, <span class="number">550e-9</span>, <span class="number">470e-9</span>];  <span class="comment">% R G B</span></span><br><span class="line">    img = <span class="built_in">zeros</span>([<span class="built_in">size</span>(xg), <span class="number">3</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> k = <span class="number">1</span>:<span class="number">3</span></span><br><span class="line">        phase = <span class="built_in">pi</span> * rg.^<span class="number">2</span> / (lambda_rgb(k) * R) + <span class="number">2</span>*<span class="built_in">pi</span>*t/num_frames;</span><br><span class="line">        img(:,:,k) = <span class="number">0.5</span> + <span class="number">0.5</span> * <span class="built_in">cos</span>(phase).^<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">    surf(xg, yg, zg, img, <span class="string">&#x27;EdgeColor&#x27;</span>, <span class="string">&#x27;none&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">%% 可视化透镜</span></span><br><span class="line">    [X,Y,Z] = cylinder(<span class="built_in">linspace</span>(<span class="number">0.001</span>, <span class="number">0.01</span>, <span class="number">50</span>), <span class="number">60</span>);</span><br><span class="line">    Z = -Z * <span class="number">1e-3</span> + <span class="number">0.5e-3</span>;</span><br><span class="line">    surf(X, Y, Z + lens_z, <span class="string">&#x27;FaceAlpha&#x27;</span>, <span class="number">0.3</span>, <span class="string">&#x27;EdgeColor&#x27;</span>, <span class="string">&#x27;none&#x27;</span>, ...</span><br><span class="line">         <span class="string">&#x27;FaceColor&#x27;</span>, [<span class="number">0.3</span> <span class="number">0.6</span> <span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="comment">%% 写入帧</span></span><br><span class="line">    raw_frame = getframe(fig);</span><br><span class="line">    resized_frame = imresize(raw_frame.cdata, [<span class="number">600</span> <span class="number">800</span>]);</span><br><span class="line">    writeVideo(v, im2frame(resized_frame));</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">close(v);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://i.postimg.cc/WzKfhz8r/5.png"></p>
-<p>​	这种情况是自己已经有了这个名字的博客了（不用担心，白色边框内就是地址）</p>
-<p><img src="https://i.postimg.cc/3JschydQ/6.png"></p>
-<p>​	这就表示成功了，这就是我们的第一个博客！</p>
-<p><img src="https://i.postimg.cc/hGgZJHLC/7.png"></p>
-<p>​	这一步是表示进入这个文件内部，因为我们以后的操作几乎都在这里面(cd 表进这个文件，注意空格)</p>
-<p>​	然后npm install（这个速度很慢，可以考虑用淘宝的镜像）</p>
-<p>​	当前项目使用npm install安装所有module依赖太慢了，但又不想安装整一个cnpm下来，这时就可以把源换成淘宝镜像，会快很多</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --registry=http://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
-
-<p>​	互联网上的东西变化很快，日日新，所以一旦遇到问题，可能是这个镜像换了，直接浏览器搜索镜像就行了或者不会用，就搜索：npm淘宝镜像(就有人教)，很详细（所以就不附加网址了，以后会改变）</p>
-<p>​	补上一句：</p>
-<p>​		对于npm总是会出现一些无法使用的问题的时候就重新安装一下npm。最简单的方法是从官方安装程序重新安装 node</p>
-<p>（都不需要删除），官网上会弹出删除选项，他帮你删除，删除后再下载（记得注意有时候没变化可能是需要看后台开管理员权限）</p>
-<p>如果报错了可以：</p>
-<p><strong>1. 清理 npm 缓存：</strong></p>
-<p>​	npm 缓存有时会被损坏，导致安装失败。你可以尝试清理缓存：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure>
-
-<p><strong>2. 更新npm(新的可能修复了)</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g npm@latest</span><br></pre></td></tr></table></figure>
-
-<p><strong>3.万不得已了，尝试删除 node_modules 目录和 package-lock.json 文件，重装</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -rf node_modules package-lock.json</span><br><span class="line">npm install --registry=http://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
-
-<p>补充： 可以忽略这些依赖冲突，进行安装。</p>
-<p>​	 <em>然后检查：</em></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gitnpm config list</span><br></pre></td></tr></table></figure>
-
-<p>​	这将显示你的 npm 配置文件内容，包括注册表、代理设置等。如果你看到异常的配置，可能需要进行修改。</p>
-<p>​	这里介绍一下AI的食用：这一大段我不想看怎么快速知道什么意思（复制，粘贴，AI）<img src="https://i.postimg.cc/v89PzY0P/8.png"></p>
-<p><img src="https://i.postimg.cc/PrQ2g6sY/9.png"></p>
-<p><img src="https://i.postimg.cc/RZPGFN00/10.png"></p>
-<p><img src="https://i.postimg.cc/Z5qF14Lz/11.png"></p>
-<p>我们的第一个博客网页就搭建好了，当然，这远远不够，我们要美化和部署，加域名绑定服务器才算一个精美的blog，还可以创主副页</p>
-<h2 id="第二章：部署到GitHub上"><a href="#第二章：部署到GitHub上" class="headerlink" title="第二章：部署到GitHub上"></a>第二章：部署到GitHub上</h2><h3 id="创建GitHub账号"><a href="#创建GitHub账号" class="headerlink" title="创建GitHub账号"></a>创建GitHub账号</h3><p>点击左上角<img src="https://i.postimg.cc/W4Fm18K9/12.png">到Home页面</p>
-<p><img src="https://i.postimg.cc/hvgVMBGw/14.png"></p>
-<p>​	就会有这个，直接创建即可，因为我不是第一次创建，所以有一点不一样</p>
-<p>​	如果你是第一次搭建，我建议创建一个和你用户名相同的仓库，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名（主要是避免一些麻烦，新手能简单点就好）</p>
-<p><img src="https://i.postimg.cc/ryC1sKnL/15.png"></p>
-<p>​	然后就是将hexo部署到GitHub的这个仓库了</p>
-<h3 id="生成SSH添加到GitHub"><a href="#生成SSH添加到GitHub" class="headerlink" title="生成SSH添加到GitHub"></a>生成SSH添加到GitHub</h3><p>（看到这个git就是在git bash里面，记得要在你的博客所处的文件夹下执行）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot; //内部写自己的名字和邮箱</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://i.postimg.cc/FH13TG99/16.png"></p>
-<p>​	这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。</p>
-<p>​	可以用以下两条，检查一下你有没有输对</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
-
-<p>​	然后创建SSH,一路回车，（中间有一个问题，如果已经创建过一个ssh了会问你）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://i.postimg.cc/QtZ7x3ct/17.png"></p>
-<p>​	ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
-<p>​	而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key把你的id_rsa.pub里面的信息复制进去。</p>
-<p><img src="https://i.postimg.cc/CMN8Y95h/18.png"></p>
-<p><strong>如果你想用指令打开也行</strong></p>
-<p>通过命令窗口:</p>
-<p>​	a. 打开你的 <strong>git bash</strong> 窗口</p>
-<p>​	b. 进入 <strong>.ssh</strong> 目录：<em><strong>*cd ~&#x2F;.ssh*</strong></em></p>
-<p>​	c. 找到 <strong>id_rsa.pub</strong> 文件：<em><strong>*ls*</strong></em></p>
-<p>​	d. 查看公钥：<em><strong>*cat id_rsa.pub*</strong></em> </p>
-<p><img src="https://i.postimg.cc/8Pz6Cwfh/19.png"></p>
-<p>输入这个</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://i.postimg.cc/Yq0v79TR/21.png"></p>
-<p>​	出现这个就代表成功了，&#x3D;&#x3D;不用管后面那个but那个是一直都有&#x3D;&#x3D;</p>
-<p>​	打开站点配置文件 _config.yml，翻到最后，修改为</p>
-<p>​	YourgithubName就是你的GitHub账户</p>
-<p><img src="https://i.postimg.cc/SRsxmT1R/22.png"></p>
-<p>​	切记我们是用的ssh，所以我们复制ssh下的，不然后面会出问题（这是在_config.yml里最下面写的）</p>
-<p><img src="https://i.postimg.cc/rFDwbHtY/23.png"></p>
-<p>​	这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>​	其中 hexo clean清除了你之前生成的东西，也可以不加。(我习惯加了)</p>
-<p>​	hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写（埋个点，后面安装一些插件的时候可能会使hexo g不可使用了，准确的来讲是为了方便，所以采取不用hexo g的这种方式）</p>
-<p>​	hexo deploy 部署文章，可以用hexo d缩写</p>
-<p>​	注意deploy时可能要你输入username和password。</p>
-<p>得到下图就说明部署成功了，过一会儿就可以在<a href="http://yourname.github.io/">http://yourname.github.io</a> 这个网站看到你的博客了！！</p>
-<p><img src="https://i.postimg.cc/yNH6DYpw/24.png"></p>
-<p>​	很有可能你会遇到这个</p>
-<p>​	我没找到解决方法</p>
-<p>​	但是这并不影响后面的操作，因为设置个人域名后又可以打开</p>
-<p>​	注册一个阿里云账户,在<a href="https://wanwang.aliyun.com/?spm=5176.8142029.digitalization.2.e9396d3e46JCc5">阿里云</a>上买一个域名，我买的是 sangyufeiwan.com，各个后缀的价格不太一样，比如最广泛的.com就比较贵，看个人喜好咯</p>
-<p>​	你需要先去进行实名认证,然后在域名控制台中，看到你购买的域名。</p>
-<p><img src="https://i.postimg.cc/cHDdk71S/25.png"></p>
-<p><img src="https://i.postimg.cc/2yVrsq3B/26.png"></p>
-<p>​	这是GitHub的服务器地址记得添加</p>
-<p><img src="https://i.postimg.cc/59CxSzcZ/27.png"></p>
-<p>​	这是你的博客网页的记得添加</p>
-<p>​	登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名sangyufeiwan.com</p>
-<p><img src="https://i.postimg.cc/SN4pLtfM/28.png"></p>
-<p><img src="https://i.postimg.cc/bNRfmHmF/29.png"></p>
-<p>​	大致上就这样</p>
-<p>​	然后在你的博客文件source中创建一个名为CNAME文件，不要后缀。写上你的域名。</p>
+<p><video src="C:\Users\86198\Desktop\屏幕录制 2025-04-16 114108.mp4"></video></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>如何写一篇文章</title>
+    <url>/2025/04/05/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h2 id="详情参考："><a href="#详情参考：" class="headerlink" title="详情参考："></a>详情参考：</h2><p><strong><a href="https://markdown.com.cn/basic-syntax/code.html">https://markdown.com.cn/basic-syntax/code.html</a></strong></p>
+]]></content>
+      <tags>
+        <tag>learn</tag>
+      </tags>
   </entry>
   <entry>
     <title>这是一篇文章</title>
@@ -1287,17 +609,146 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2025/04/16/%E7%89%9B%E9%A1%BF%E7%8E%AF/</url>
-    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc; clear; close all;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 基本参数设置</span></span><br><span class="line"></span><br><span class="line">lambda_all = [<span class="number">450e-9</span>, <span class="number">550e-9</span>, <span class="number">650e-9</span>]; <span class="comment">% 多波长：蓝、绿、红</span></span><br><span class="line"></span><br><span class="line">colors = [<span class="number">0</span> <span class="number">0</span> <span class="number">1</span>; <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>; <span class="number">1</span> <span class="number">0</span> <span class="number">0</span>]; <span class="comment">% RGB颜色</span></span><br><span class="line"></span><br><span class="line">f = <span class="number">20e-3</span>; <span class="comment">% 透镜焦距</span></span><br><span class="line"></span><br><span class="line">R = <span class="number">100e-3</span>; <span class="comment">% 曲率半径（调大，更明显）</span></span><br><span class="line"></span><br><span class="line">lens_z = <span class="number">0</span>; <span class="comment">% 透镜位置</span></span><br><span class="line"></span><br><span class="line">screen_z = <span class="number">25e-3</span>; <span class="comment">% 屏幕位置</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">num_frames = <span class="number">50</span>; <span class="comment">% 动画帧数</span></span><br><span class="line"></span><br><span class="line">num_rays = <span class="number">30</span>; <span class="comment">% 光线数量</span></span><br><span class="line"></span><br><span class="line">theta = <span class="built_in">linspace</span>(-<span class="built_in">pi</span>/<span class="number">12</span>, <span class="built_in">pi</span>/<span class="number">12</span>, num_rays); <span class="comment">% 光线角度</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 视频设置</span></span><br><span class="line"></span><br><span class="line">v = VideoWriter(<span class="string">&#x27;newton_rings_full_fixed.avi&#x27;</span>);</span><br><span class="line"></span><br><span class="line">v.FrameRate = <span class="number">15</span>;</span><br><span class="line"></span><br><span class="line">open(v);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 设置固定大小的图窗</span></span><br><span class="line"></span><br><span class="line">fig = <span class="built_in">figure</span>(<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;Position&#x27;</span>, [<span class="number">100</span>, <span class="number">100</span>, <span class="number">800</span>, <span class="number">600</span>]);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 动画主循环</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> t = <span class="number">1</span>:num_frames</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">clf;</span><br><span class="line"></span><br><span class="line"><span class="built_in">hold</span> on; axis equal; grid on;</span><br><span class="line"></span><br><span class="line">xlabel(<span class="string">&#x27;X (m)&#x27;</span>); ylabel(<span class="string">&#x27;Y (m)&#x27;</span>); zlabel(<span class="string">&#x27;Z (m)&#x27;</span>);</span><br><span class="line"></span><br><span class="line">xlim([<span class="number">-0.02</span> <span class="number">0.02</span>]); ylim([<span class="number">-0.02</span> <span class="number">0.02</span>]); zlim([<span class="number">0</span> <span class="number">0.03</span>]);</span><br><span class="line"></span><br><span class="line">view([<span class="number">0</span> <span class="number">90</span>]); <span class="comment">% 俯视（XY 平面）</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">title(<span class="string">&#x27;多波长牛顿环光线传播&#x27;</span>);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 光线追踪（多波长）</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> w = <span class="number">1</span>:<span class="built_in">length</span>(lambda_all)</span><br><span class="line"></span><br><span class="line">lambda = lambda_all(w);</span><br><span class="line"></span><br><span class="line">color = colors(w, :);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:num_rays</span><br><span class="line"></span><br><span class="line"><span class="built_in">angle</span> = theta(<span class="built_in">i</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 初始点和方向</span></span><br><span class="line"></span><br><span class="line">x0 = <span class="number">0</span>; y0 = <span class="number">0</span>; z0 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">vx1 = <span class="built_in">sin</span>(<span class="built_in">angle</span>); vy1 = <span class="number">0</span>; vz1 = <span class="built_in">cos</span>(<span class="built_in">angle</span>);</span><br><span class="line"></span><br><span class="line">t1 = (lens_z - z0) / vz1;</span><br><span class="line"></span><br><span class="line">x1 = x0 + vx1 * t1;</span><br><span class="line"></span><br><span class="line">y1 = y0 + vy1 * t1;</span><br><span class="line"></span><br><span class="line">z1 = lens_z;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">% 折射计算</span></span><br><span class="line"></span><br><span class="line">n1 = <span class="number">1.0</span>; n2 = <span class="number">1.5</span>;</span><br><span class="line"></span><br><span class="line">theta2 = <span class="built_in">asin</span>(n1/n2 * <span class="built_in">sin</span>(<span class="built_in">angle</span>));</span><br><span class="line"></span><br><span class="line">vx2 = <span class="built_in">sin</span>(theta2); vy2 = <span class="number">0</span>; vz2 = <span class="built_in">cos</span>(theta2);</span><br><span class="line"></span><br><span class="line">t2 = (screen_z - lens_z) / vz2;</span><br><span class="line"></span><br><span class="line">x2 = x1 + vx2 * t2;</span><br><span class="line"></span><br><span class="line">y2 = y1 + vy2 * t2;</span><br><span class="line"></span><br><span class="line">z2 = screen_z;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">% 动态比例</span></span><br><span class="line"></span><br><span class="line">scale1 = <span class="built_in">min</span>(<span class="number">1</span>, t / num_frames);</span><br><span class="line"></span><br><span class="line">scale2 = <span class="built_in">max</span>(<span class="number">0</span>, t/num_frames - <span class="number">0.5</span>) * <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">% 绘制第一段（空气中）</span></span><br><span class="line"></span><br><span class="line">xa = x0 + vx1 * t1 * scale1;</span><br><span class="line"></span><br><span class="line">ya = y0 + vy1 * t1 * scale1;</span><br><span class="line"></span><br><span class="line">za = z0 + vz1 * t1 * scale1;</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot3</span>([x0 xa], [y0 ya], [z0 za], <span class="string">&#x27;Color&#x27;</span>, color, <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">1.2</span>);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">% 绘制第二段（透镜中）</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> t &gt; num_frames/<span class="number">2</span></span><br><span class="line"></span><br><span class="line">xb = x1 + vx2 * t2 * scale2;</span><br><span class="line"></span><br><span class="line">yb = y1 + vy2 * t2 * scale2;</span><br><span class="line"></span><br><span class="line">zb = z1 + vz2 * t2 * scale2;</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot3</span>([x1 xb], [y1 yb], [z1 zb], <span class="string">&#x27;Color&#x27;</span>, color * <span class="number">0.8</span> + <span class="number">0.2</span>, ...</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;LineStyle&#x27;</span>,<span class="string">&#x27;--&#x27;</span>, <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 牛顿环绘制（增强可视化）</span></span><br><span class="line"></span><br><span class="line">num_rings = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> w = <span class="number">1</span>:<span class="built_in">length</span>(lambda_all)</span><br><span class="line"></span><br><span class="line">lambda = lambda_all(w);</span><br><span class="line"></span><br><span class="line">color = colors(w,:);</span><br><span class="line"></span><br><span class="line">bright_color = color * <span class="number">0.8</span> + <span class="number">0.2</span>; <span class="comment">% 提亮颜色</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n = <span class="number">1</span>:num_rings</span><br><span class="line"></span><br><span class="line">r_n = <span class="built_in">sqrt</span>(n * lambda * R); <span class="comment">% Newton ring 半径</span></span><br><span class="line"></span><br><span class="line">theta_ring = <span class="built_in">linspace</span>(<span class="number">0</span>, <span class="number">2</span>*<span class="built_in">pi</span>, <span class="number">200</span>);</span><br><span class="line"></span><br><span class="line">x_ring = r_n * <span class="built_in">cos</span>(theta_ring);</span><br><span class="line"></span><br><span class="line">y_ring = r_n * <span class="built_in">sin</span>(theta_ring);</span><br><span class="line"></span><br><span class="line">z_ring = (screen_z + <span class="number">1e-4</span>) * <span class="built_in">ones</span>(<span class="built_in">size</span>(x_ring)); <span class="comment">% 抬高，避免遮挡</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">fill3(x_ring, y_ring, z_ring, bright_color, ...</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;FaceAlpha&#x27;</span>, <span class="number">0.15</span> + <span class="number">0.02</span>*w, ...</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;EdgeColor&#x27;</span>, bright_color * <span class="number">0.9</span>, <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">0.5</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 写入帧，强制统一为 800x600 尺寸</span></span><br><span class="line"></span><br><span class="line">raw_frame = getframe(fig);</span><br><span class="line"></span><br><span class="line">resized_frame = imresize(raw_frame.cdata, [<span class="number">600</span> <span class="number">800</span>]); <span class="comment">% 高度 × 宽度</span></span><br><span class="line"></span><br><span class="line">writeVideo(v, im2frame(resized_frame));</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">close(v);</span><br></pre></td></tr></table></figure>
+    <title>react实现</title>
+    <url>/2025/04/07/react%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<p>我在page.pug内插入了<br>    div#react-root  &#x2F;&#x2F; 这是 React 组件的挂载点</p>
+<p>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;js&#x2F;bundle.js’)</p>
+<p>创建了有关index.js在src里面（src也是为创建的）<br>还创建了一个webpack.config.js和react.babelrc</p>
+<p>装了这些<br>npm install react react-dom<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;preset-env @babel&#x2F;preset-react webpack webpack-cli babel-loader<br>npm install –save-dev @babel&#x2F;core @babel&#x2F;cli @babel&#x2F;preset-env @babel&#x2F;preset-react babel-loader<br>然后还要在layout.pug里面加上<br>    &#x2F;&#x2F;- 弹窗通知<br>    !&#x3D;partial(‘includes&#x2F;popup&#x2F;index’, {}, {cache: true})</p>
+<pre><code>block scripts（加上这句话，与上面弹窗通知对齐！）就可以实现react了
+我将bundle.js从&quot;C:\Users\86198\myblog\world-map-widget\node_modules\ajv\scripts\bundle.js&quot;移动到了source/js
+我在source/js里加了一个world-map.js
+在about里的index.md里面加了
+&lt;world-map data-dots=&#39;[&#123;&quot;start&quot;:&#123;&quot;lat&quot;:34.0522,&quot;lng&quot;:-118.2437&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:40.7128,&quot;lng&quot;:-74.0060&#125;&#125;,&#123;&quot;start&quot;:&#123;&quot;lat&quot;:51.5074,&quot;lng&quot;:-0.1278&#125;,&quot;end&quot;:&#123;&quot;lat&quot;:48.8566,&quot;lng&quot;:2.3522&#125;&#125;]&#39;&gt;&lt;/world-map&gt;
+</code></pre>
+<script src="/js/world-map.js"></script>
+<p>cao,就是加载不出来地图<br>我删除了一个index.js<br>内容&#x2F;<em>在 index.js 中编写你的 React 组件代码。例如：</em>&#x2F;<br>import React from ‘react’;<br>import ReactDOM from ‘react-dom’;</p>
+<p>function App() {<br>  return <div>Hello from React!</div>;<br>}</p>
+<p>ReactDOM.render(<App />, document.getElementById(‘react-root’));</p>
+<p>我从source&#x2F;js里把echarts.min.js移动到桌面了<br>我删除了page.pug里的<br>block scripts<br>  &#x2F;&#x2F; 引入 React 打包后的文件<br>  script(src&#x3D;’&#x2F;public&#x2F;js&#x2F;bundle.js’)</p>
+]]></content>
+      <tags>
+        <tag>try</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我搭建hexo博客之路</title>
+    <url>/2025/04/07/%E6%88%91%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/</url>
+    <content><![CDATA[<h1 id="我的第四版网页："><a href="#我的第四版网页：" class="headerlink" title="我的第四版网页："></a>我的第四版网页：</h1><p>​	（有一点我觉得很正确，如果你是什么也不会的小白^因为我也是小白^，那么看我这个，也可以写出自己喜欢的blog，&#x3D;&#x3D;而且要学会借助人工智能&#x3D;&#x3D;！Chat gpt（至少现在）挺好用的，可以帮你很快上手，而且你即使有很好的功底，你也可以用它节约你写这个的过程，毕竟花时间在开发上，比花时间在搭建这个写代码上更有意义，现在的博客都是扒代码，取其精华）前前后后已经搭建了三次了，挺可惜的，但虽然不断搭建花费了我很多时间，但我却也愈发熟悉了，我打算记录一下我的建站过程和感受，以防在某一个时刻我忘记了当初的细节而再次建站浪费时间。</p>
+<h2 id="第一章-创建blog"><a href="#第一章-创建blog" class="headerlink" title="第一章:创建blog"></a>第一章:创建blog</h2><h3 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1.安装Git"></a>1.安装Git</h3><p>​			Git（分布式版本控制系统）（&#x3D;&#x3D;不要纠结叫什么，在处理hexo里面也就是用来管理你的hexo博客文章，上传到GitHub的工具。&#x3D;&#x3D;）</p>
+<p>​			因为我用的Windows，所以Windows：到git官网上下载,<a href="https://gitforwindows.org/">Download git</a>,下载后会有一个&#x3D;&#x3D;Git Bash&#x3D;&#x3D;的命令工具，以后就用这个工具来使用git！！</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git --version   //这里就开始使用git bash了</span><br></pre></td></tr></table></figure>
 
-<p><img src="file:///C:\Users\86198\AppData\Local\Temp\ksohtml33496\wps1.jpg" alt="img"> </p>
- <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc; clear; close all;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 基本参数设置</span></span><br><span class="line"></span><br><span class="line">lambda = <span class="number">550e-9</span>; <span class="comment">% 单色光：绿光</span></span><br><span class="line"></span><br><span class="line">color = [<span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]; <span class="comment">% 白色光线</span></span><br><span class="line"></span><br><span class="line">f = <span class="number">20e-3</span>; <span class="comment">% 透镜焦距</span></span><br><span class="line"></span><br><span class="line">R = <span class="number">10e-3</span>; <span class="comment">% 曲率半径</span></span><br><span class="line"></span><br><span class="line">lens_z = <span class="number">0</span>; <span class="comment">% 透镜位置</span></span><br><span class="line"></span><br><span class="line">screen_z = <span class="number">25e-3</span>; <span class="comment">% 屏幕位置</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">num_frames = <span class="number">50</span>; <span class="comment">% 动画帧数</span></span><br><span class="line"></span><br><span class="line">num_rays = <span class="number">30</span>; <span class="comment">% 光线数量</span></span><br><span class="line"></span><br><span class="line">theta = <span class="built_in">linspace</span>(-<span class="built_in">pi</span>/<span class="number">12</span>, <span class="built_in">pi</span>/<span class="number">12</span>, num_rays); <span class="comment">% 光线角度</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 视频设置</span></span><br><span class="line"></span><br><span class="line">v = VideoWriter(<span class="string">&#x27;newton_rings_white_on_black.avi&#x27;</span>);</span><br><span class="line"></span><br><span class="line">v.FrameRate = <span class="number">15</span>;</span><br><span class="line"></span><br><span class="line">open(v);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 设置固定大小的图窗</span></span><br><span class="line"></span><br><span class="line">fig = <span class="built_in">figure</span>(<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;Position&#x27;</span>, [<span class="number">100</span>, <span class="number">100</span>, <span class="number">800</span>, <span class="number">600</span>]);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 动画主循环</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> t = <span class="number">1</span>:num_frames</span><br><span class="line"></span><br><span class="line">clf;</span><br><span class="line"></span><br><span class="line"><span class="built_in">hold</span> on; axis equal; grid on;</span><br><span class="line"></span><br><span class="line">xlabel(<span class="string">&#x27;X (m)&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>); ylabel(<span class="string">&#x27;Y (m)&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>); zlabel(<span class="string">&#x27;Z (m)&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>);</span><br><span class="line"></span><br><span class="line">xlim([<span class="number">-0.01</span> <span class="number">0.01</span>]); ylim([<span class="number">-0.01</span> <span class="number">0.01</span>]); zlim([<span class="number">-0.005</span> <span class="number">0.03</span>]);</span><br><span class="line"></span><br><span class="line">set(gca, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;XColor&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;YColor&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;ZColor&#x27;</span>, <span class="string">&#x27;w&#x27;</span>);</span><br><span class="line"></span><br><span class="line">view(<span class="number">2</span>); <span class="comment">% 改为俯视图（更容易看出环）</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">title(<span class="string">&#x27;白光牛顿环&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 光线追踪</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:num_rays</span><br><span class="line"></span><br><span class="line"><span class="built_in">angle</span> = theta(<span class="built_in">i</span>);</span><br><span class="line"></span><br><span class="line">x0 = <span class="number">0</span>; y0 = <span class="number">0</span>; z0 = <span class="number">-5e-3</span>;</span><br><span class="line"></span><br><span class="line">vx1 = <span class="built_in">sin</span>(<span class="built_in">angle</span>); vy1 = <span class="number">0</span>; vz1 = <span class="built_in">cos</span>(<span class="built_in">angle</span>);</span><br><span class="line"></span><br><span class="line">t1 = (lens_z - z0) / vz1;</span><br><span class="line"></span><br><span class="line">x1 = x0 + vx1 * t1;</span><br><span class="line"></span><br><span class="line">y1 = y0 + vy1 * t1;</span><br><span class="line"></span><br><span class="line">z1 = lens_z;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">n1 = <span class="number">1.0</span>; n2 = <span class="number">1.5</span>;</span><br><span class="line"></span><br><span class="line">theta2 = <span class="built_in">asin</span>(n1/n2 * <span class="built_in">sin</span>(<span class="built_in">angle</span>));</span><br><span class="line"></span><br><span class="line">vx2 = <span class="built_in">sin</span>(theta2); vy2 = <span class="number">0</span>; vz2 = <span class="built_in">cos</span>(theta2);</span><br><span class="line"></span><br><span class="line">t2 = (screen_z - lens_z) / vz2;</span><br><span class="line"></span><br><span class="line">x2 = x1 + vx2 * t2;</span><br><span class="line"></span><br><span class="line">y2 = y1 + vy2 * t2;</span><br><span class="line"></span><br><span class="line">z2 = screen_z;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">scale1 = <span class="built_in">min</span>(<span class="number">1</span>, t / num_frames);</span><br><span class="line"></span><br><span class="line">scale2 = <span class="built_in">max</span>(<span class="number">0</span>, t/num_frames - <span class="number">0.5</span>) * <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">xa = x0 + vx1 * t1 * scale1;</span><br><span class="line"></span><br><span class="line">ya = y0 + vy1 * t1 * scale1;</span><br><span class="line"></span><br><span class="line">za = z0 + vz1 * t1 * scale1;</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot3</span>([x0 xa], [y0 ya], [z0 za], <span class="string">&#x27;Color&#x27;</span>, color, <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">1.2</span>);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> t &gt; num_frames/<span class="number">2</span></span><br><span class="line"></span><br><span class="line">xb = x1 + vx2 * t2 * scale2;</span><br><span class="line"></span><br><span class="line">yb = y1 + vy2 * t2 * scale2;</span><br><span class="line"></span><br><span class="line">zb = z1 + vz2 * t2 * scale2;</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot3</span>([x1 xb], [y1 yb], [z1 zb], <span class="string">&#x27;Color&#x27;</span>, color * <span class="number">0.8</span> + <span class="number">0.2</span>, ...</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;LineStyle&#x27;</span>,<span class="string">&#x27;--&#x27;</span>, <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 屏幕贴图牛顿环图案（灰度）</span></span><br><span class="line"></span><br><span class="line">[xg, yg] = <span class="built_in">meshgrid</span>(<span class="built_in">linspace</span>(<span class="number">-0.002</span>, <span class="number">0.002</span>, <span class="number">600</span>)); <span class="comment">% 缩小范围</span></span><br><span class="line"></span><br><span class="line">rg = <span class="built_in">sqrt</span>(xg.^<span class="number">2</span> + yg.^<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">intensity = <span class="built_in">cos</span>(<span class="built_in">pi</span> * rg.^<span class="number">2</span> / (lambda * R)).^<span class="number">2</span>; <span class="comment">% 经典牛顿环表达式</span></span><br><span class="line"></span><br><span class="line">zg = screen_z * <span class="built_in">ones</span>(<span class="built_in">size</span>(xg));</span><br><span class="line"></span><br><span class="line">surf(xg, yg, zg, intensity, <span class="string">&#x27;EdgeColor&#x27;</span>, <span class="string">&#x27;none&#x27;</span>);</span><br><span class="line"></span><br><span class="line">colormap(gray);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">%% 写入帧</span></span><br><span class="line"></span><br><span class="line">raw_frame = getframe(fig);</span><br><span class="line"></span><br><span class="line">resized_frame = imresize(raw_frame.cdata, [<span class="number">600</span> <span class="number">800</span>]);</span><br><span class="line"></span><br><span class="line">writeVideo(v, im2frame(resized_frame));</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">close(v);</span><br></pre></td></tr></table></figure>
+<p>​			如果没找到，点击最下方的 显示更多选项，切记是&#x3D;&#x3D;git bash&#x3D;&#x3D;(不是git GUI)，然后就会看到这个命令行，就可以开始输入代码了。（接下来就不会用cmd了）</p>
+<p><img src="https://i.postimg.cc/15fkshBw/1.png"></p>
+<p>​	复制粘贴（合理偷懒）git –version 注意：这个里面CTRL+v不能用CTRL+c可以复制但也会终止当前命令，别不小心终止了这里的复制可以右键命令行来查看。Paste这就是粘贴（后面的Shift+Ins是快捷键！）</p>
+<p><img src="https://i.postimg.cc/YSwZ64Hz/2.png"></p>
+<p>​	Hexo是基于nodeJS编写的，所以需要安装一下nodeJs和里面的npm工具。（都直接next）</p>
+<p><img src="https://i.postimg.cc/3R8qqPWy/3.png"></p>
+<p>​	可以顺手看看版本，也是确保已经安装好了	接下来（下载hexo）并看一下版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
 
-<p> <video src="C:\Users\86198\Desktop\屏幕录制 2025-04-16 112215.mp4"></video></p>
- <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc; clear; close all;</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 基本参数设置</span></span><br><span class="line">lambda = <span class="number">550e-9</span>;                <span class="comment">% 中心波长</span></span><br><span class="line">f = <span class="number">20e-3</span>;                      <span class="comment">% 透镜焦距</span></span><br><span class="line">R = <span class="number">10e-3</span>;                      <span class="comment">% 曲率半径</span></span><br><span class="line">lens_z = <span class="number">0</span>;                     <span class="comment">% 透镜位置</span></span><br><span class="line">screen_z = <span class="number">25e-3</span>;               <span class="comment">% 屏幕位置</span></span><br><span class="line"></span><br><span class="line">num_frames = <span class="number">50</span>;               <span class="comment">% 动画帧数</span></span><br><span class="line">num_rays = <span class="number">30</span>;                 <span class="comment">% 光线数量</span></span><br><span class="line">theta = <span class="built_in">linspace</span>(-<span class="built_in">pi</span>/<span class="number">12</span>, <span class="built_in">pi</span>/<span class="number">12</span>, num_rays);  <span class="comment">% 光线角度</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%% 视频设置</span></span><br><span class="line">v = VideoWriter(<span class="string">&#x27;newton_rings_color_dynamic.avi&#x27;</span>);</span><br><span class="line">v.FrameRate = <span class="number">15</span>;</span><br><span class="line">open(v);</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 设置固定大小的图窗</span></span><br><span class="line">fig = <span class="built_in">figure</span>(<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;Position&#x27;</span>, [<span class="number">100</span>, <span class="number">100</span>, <span class="number">800</span>, <span class="number">600</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 动画主循环</span></span><br><span class="line"><span class="keyword">for</span> t = <span class="number">1</span>:num_frames</span><br><span class="line">    clf;</span><br><span class="line">    <span class="built_in">hold</span> on; axis equal; grid on;</span><br><span class="line">    xlabel(<span class="string">&#x27;X (m)&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>); ylabel(<span class="string">&#x27;Y (m)&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>); zlabel(<span class="string">&#x27;Z (m)&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>);</span><br><span class="line">    xlim([<span class="number">-0.005</span> <span class="number">0.005</span>]); ylim([<span class="number">-0.005</span> <span class="number">0.005</span>]); zlim([<span class="number">-0.005</span> <span class="number">0.03</span>]);</span><br><span class="line">    set(gca, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;XColor&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;YColor&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;ZColor&#x27;</span>, <span class="string">&#x27;w&#x27;</span>);</span><br><span class="line">    view(<span class="number">3</span>);  <span class="comment">% 三维视角</span></span><br><span class="line"></span><br><span class="line">    title(<span class="string">&#x27;彩色动态三维牛顿环&#x27;</span>, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;w&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">%% 光线追踪</span></span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:num_rays</span><br><span class="line">        <span class="built_in">angle</span> = theta(<span class="built_in">i</span>);</span><br><span class="line">        x0 = <span class="number">0</span>; y0 = <span class="number">0</span>; z0 = <span class="number">-5e-3</span>;</span><br><span class="line">        vx1 = <span class="built_in">sin</span>(<span class="built_in">angle</span>); vy1 = <span class="number">0</span>; vz1 = <span class="built_in">cos</span>(<span class="built_in">angle</span>);</span><br><span class="line">        t1 = (lens_z - z0) / vz1;</span><br><span class="line">        x1 = x0 + vx1 * t1;</span><br><span class="line">        y1 = y0 + vy1 * t1;</span><br><span class="line">        z1 = lens_z;</span><br><span class="line"></span><br><span class="line">        n1 = <span class="number">1.0</span>; n2 = <span class="number">1.5</span>;</span><br><span class="line">        theta2 = <span class="built_in">asin</span>(n1/n2 * <span class="built_in">sin</span>(<span class="built_in">angle</span>));</span><br><span class="line">        vx2 = <span class="built_in">sin</span>(theta2); vy2 = <span class="number">0</span>; vz2 = <span class="built_in">cos</span>(theta2);</span><br><span class="line">        t2 = (screen_z - lens_z) / vz2;</span><br><span class="line">        x2 = x1 + vx2 * t2;</span><br><span class="line">        y2 = y1 + vy2 * t2;</span><br><span class="line">        z2 = screen_z;</span><br><span class="line"></span><br><span class="line">        scale1 = <span class="built_in">min</span>(<span class="number">1</span>, t / num_frames);</span><br><span class="line">        scale2 = <span class="built_in">max</span>(<span class="number">0</span>, t/num_frames - <span class="number">0.5</span>) * <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">        xa = x0 + vx1 * t1 * scale1;</span><br><span class="line">        ya = y0 + vy1 * t1 * scale1;</span><br><span class="line">        za = z0 + vz1 * t1 * scale1;</span><br><span class="line">        <span class="built_in">plot3</span>([x0 xa], [y0 ya], [z0 za], <span class="string">&#x27;Color&#x27;</span>, [<span class="number">1</span> <span class="number">1</span> <span class="number">1</span>], <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">1.2</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> t &gt; num_frames/<span class="number">2</span></span><br><span class="line">            xb = x1 + vx2 * t2 * scale2;</span><br><span class="line">            yb = y1 + vy2 * t2 * scale2;</span><br><span class="line">            zb = z1 + vz2 * t2 * scale2;</span><br><span class="line">            <span class="built_in">plot3</span>([x1 xb], [y1 yb], [z1 zb], <span class="string">&#x27;Color&#x27;</span>, [<span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]*<span class="number">0.8</span>, ...</span><br><span class="line">                  <span class="string">&#x27;LineStyle&#x27;</span>,<span class="string">&#x27;--&#x27;</span>, <span class="string">&#x27;LineWidth&#x27;</span>, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">%% 彩色动态干涉牛顿环（模拟RGB三波段）</span></span><br><span class="line">    [xg, yg] = <span class="built_in">meshgrid</span>(<span class="built_in">linspace</span>(<span class="number">-0.002</span>, <span class="number">0.002</span>, <span class="number">400</span>));</span><br><span class="line">    rg = <span class="built_in">sqrt</span>(xg.^<span class="number">2</span> + yg.^<span class="number">2</span>);</span><br><span class="line">    zg = screen_z + <span class="number">0.0002</span> * <span class="built_in">sin</span>(<span class="number">2</span>*<span class="built_in">pi</span>*t/num_frames) * <span class="built_in">sin</span>(<span class="number">50</span> * rg);  <span class="comment">% 三维起伏</span></span><br><span class="line">    lambda_rgb = [<span class="number">620e-9</span>, <span class="number">550e-9</span>, <span class="number">470e-9</span>];  <span class="comment">% R G B</span></span><br><span class="line">    img = <span class="built_in">zeros</span>([<span class="built_in">size</span>(xg), <span class="number">3</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> k = <span class="number">1</span>:<span class="number">3</span></span><br><span class="line">        phase = <span class="built_in">pi</span> * rg.^<span class="number">2</span> / (lambda_rgb(k) * R) + <span class="number">2</span>*<span class="built_in">pi</span>*t/num_frames;</span><br><span class="line">        img(:,:,k) = <span class="number">0.5</span> + <span class="number">0.5</span> * <span class="built_in">cos</span>(phase).^<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">    surf(xg, yg, zg, img, <span class="string">&#x27;EdgeColor&#x27;</span>, <span class="string">&#x27;none&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">%% 可视化透镜</span></span><br><span class="line">    [X,Y,Z] = cylinder(<span class="built_in">linspace</span>(<span class="number">0.001</span>, <span class="number">0.01</span>, <span class="number">50</span>), <span class="number">60</span>);</span><br><span class="line">    Z = -Z * <span class="number">1e-3</span> + <span class="number">0.5e-3</span>;</span><br><span class="line">    surf(X, Y, Z + lens_z, <span class="string">&#x27;FaceAlpha&#x27;</span>, <span class="number">0.3</span>, <span class="string">&#x27;EdgeColor&#x27;</span>, <span class="string">&#x27;none&#x27;</span>, ...</span><br><span class="line">         <span class="string">&#x27;FaceColor&#x27;</span>, [<span class="number">0.3</span> <span class="number">0.6</span> <span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="comment">%% 写入帧</span></span><br><span class="line">    raw_frame = getframe(fig);</span><br><span class="line">    resized_frame = imresize(raw_frame.cdata, [<span class="number">600</span> <span class="number">800</span>]);</span><br><span class="line">    writeVideo(v, im2frame(resized_frame));</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">close(v);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://i.postimg.cc/90znmZdC/4.png"></p>
+<p>​	然后电脑上就已经有了hexo了，接下来就是创建项目（也就是自己的博客）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init myblog    //hexo init 自己取的博客名,这一般会在c盘里面（记得找到位置）</span><br></pre></td></tr></table></figure>
 
-<p><video src="C:\Users\86198\Desktop\屏幕录制 2025-04-16 114108.mp4"></video></p>
+<p><img src="https://i.postimg.cc/WzKfhz8r/5.png"></p>
+<p>​	这种情况是自己已经有了这个名字的博客了（不用担心，白色边框内就是地址）</p>
+<p><img src="https://i.postimg.cc/3JschydQ/6.png"></p>
+<p>​	这就表示成功了，这就是我们的第一个博客！</p>
+<p><img src="https://i.postimg.cc/hGgZJHLC/7.png"></p>
+<p>​	这一步是表示进入这个文件内部，因为我们以后的操作几乎都在这里面(cd 表进这个文件，注意空格)</p>
+<p>​	然后npm install（这个速度很慢，可以考虑用淘宝的镜像）</p>
+<p>​	当前项目使用npm install安装所有module依赖太慢了，但又不想安装整一个cnpm下来，这时就可以把源换成淘宝镜像，会快很多</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --registry=http://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+
+<p>​	互联网上的东西变化很快，日日新，所以一旦遇到问题，可能是这个镜像换了，直接浏览器搜索镜像就行了或者不会用，就搜索：npm淘宝镜像(就有人教)，很详细（所以就不附加网址了，以后会改变）</p>
+<p>​	补上一句：</p>
+<p>​		对于npm总是会出现一些无法使用的问题的时候就重新安装一下npm。最简单的方法是从官方安装程序重新安装 node</p>
+<p>（都不需要删除），官网上会弹出删除选项，他帮你删除，删除后再下载（记得注意有时候没变化可能是需要看后台开管理员权限）</p>
+<p>如果报错了可以：</p>
+<p><strong>1. 清理 npm 缓存：</strong></p>
+<p>​	npm 缓存有时会被损坏，导致安装失败。你可以尝试清理缓存：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. 更新npm(新的可能修复了)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g npm@latest</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.万不得已了，尝试删除 node_modules 目录和 package-lock.json 文件，重装</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -rf node_modules package-lock.json</span><br><span class="line">npm install --registry=http://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+
+<p>补充： 可以忽略这些依赖冲突，进行安装。</p>
+<p>​	 <em>然后检查：</em></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gitnpm config list</span><br></pre></td></tr></table></figure>
+
+<p>​	这将显示你的 npm 配置文件内容，包括注册表、代理设置等。如果你看到异常的配置，可能需要进行修改。</p>
+<p>​	这里介绍一下AI的食用：这一大段我不想看怎么快速知道什么意思（复制，粘贴，AI）<img src="https://i.postimg.cc/v89PzY0P/8.png"></p>
+<p><img src="https://i.postimg.cc/PrQ2g6sY/9.png"></p>
+<p><img src="https://i.postimg.cc/RZPGFN00/10.png"></p>
+<p><img src="https://i.postimg.cc/Z5qF14Lz/11.png"></p>
+<p>我们的第一个博客网页就搭建好了，当然，这远远不够，我们要美化和部署，加域名绑定服务器才算一个精美的blog，还可以创主副页</p>
+<h2 id="第二章：部署到GitHub上"><a href="#第二章：部署到GitHub上" class="headerlink" title="第二章：部署到GitHub上"></a>第二章：部署到GitHub上</h2><h3 id="创建GitHub账号"><a href="#创建GitHub账号" class="headerlink" title="创建GitHub账号"></a>创建GitHub账号</h3><p>点击左上角<img src="https://i.postimg.cc/W4Fm18K9/12.png">到Home页面</p>
+<p><img src="https://i.postimg.cc/hvgVMBGw/14.png"></p>
+<p>​	就会有这个，直接创建即可，因为我不是第一次创建，所以有一点不一样</p>
+<p>​	如果你是第一次搭建，我建议创建一个和你用户名相同的仓库，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名（主要是避免一些麻烦，新手能简单点就好）</p>
+<p><img src="https://i.postimg.cc/ryC1sKnL/15.png"></p>
+<p>​	然后就是将hexo部署到GitHub的这个仓库了</p>
+<h3 id="生成SSH添加到GitHub"><a href="#生成SSH添加到GitHub" class="headerlink" title="生成SSH添加到GitHub"></a>生成SSH添加到GitHub</h3><p>（看到这个git就是在git bash里面，记得要在你的博客所处的文件夹下执行）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot; //内部写自己的名字和邮箱</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.postimg.cc/FH13TG99/16.png"></p>
+<p>​	这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。</p>
+<p>​	可以用以下两条，检查一下你有没有输对</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+
+<p>​	然后创建SSH,一路回车，（中间有一个问题，如果已经创建过一个ssh了会问你）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.postimg.cc/QtZ7x3ct/17.png"></p>
+<p>​	ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
+<p>​	而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key把你的id_rsa.pub里面的信息复制进去。</p>
+<p><img src="https://i.postimg.cc/CMN8Y95h/18.png"></p>
+<p><strong>如果你想用指令打开也行</strong></p>
+<p>通过命令窗口:</p>
+<p>​	a. 打开你的 <strong>git bash</strong> 窗口</p>
+<p>​	b. 进入 <strong>.ssh</strong> 目录：<em><strong>*cd ~&#x2F;.ssh*</strong></em></p>
+<p>​	c. 找到 <strong>id_rsa.pub</strong> 文件：<em><strong>*ls*</strong></em></p>
+<p>​	d. 查看公钥：<em><strong>*cat id_rsa.pub*</strong></em> </p>
+<p><img src="https://i.postimg.cc/8Pz6Cwfh/19.png"></p>
+<p>输入这个</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.postimg.cc/Yq0v79TR/21.png"></p>
+<p>​	出现这个就代表成功了，&#x3D;&#x3D;不用管后面那个but那个是一直都有&#x3D;&#x3D;</p>
+<p>​	打开站点配置文件 _config.yml，翻到最后，修改为</p>
+<p>​	YourgithubName就是你的GitHub账户</p>
+<p><img src="https://i.postimg.cc/SRsxmT1R/22.png"></p>
+<p>​	切记我们是用的ssh，所以我们复制ssh下的，不然后面会出问题（这是在_config.yml里最下面写的）</p>
+<p><img src="https://i.postimg.cc/rFDwbHtY/23.png"></p>
+<p>​	这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>​	其中 hexo clean清除了你之前生成的东西，也可以不加。(我习惯加了)</p>
+<p>​	hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写（埋个点，后面安装一些插件的时候可能会使hexo g不可使用了，准确的来讲是为了方便，所以采取不用hexo g的这种方式）</p>
+<p>​	hexo deploy 部署文章，可以用hexo d缩写</p>
+<p>​	注意deploy时可能要你输入username和password。</p>
+<p>得到下图就说明部署成功了，过一会儿就可以在<a href="http://yourname.github.io/">http://yourname.github.io</a> 这个网站看到你的博客了！！</p>
+<p><img src="https://i.postimg.cc/yNH6DYpw/24.png"></p>
+<p>​	很有可能你会遇到这个</p>
+<p>​	我没找到解决方法</p>
+<p>​	但是这并不影响后面的操作，因为设置个人域名后又可以打开</p>
+<p>​	注册一个阿里云账户,在<a href="https://wanwang.aliyun.com/?spm=5176.8142029.digitalization.2.e9396d3e46JCc5">阿里云</a>上买一个域名，我买的是 sangyufeiwan.com，各个后缀的价格不太一样，比如最广泛的.com就比较贵，看个人喜好咯</p>
+<p>​	你需要先去进行实名认证,然后在域名控制台中，看到你购买的域名。</p>
+<p><img src="https://i.postimg.cc/cHDdk71S/25.png"></p>
+<p><img src="https://i.postimg.cc/2yVrsq3B/26.png"></p>
+<p>​	这是GitHub的服务器地址记得添加</p>
+<p><img src="https://i.postimg.cc/59CxSzcZ/27.png"></p>
+<p>​	这是你的博客网页的记得添加</p>
+<p>​	登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名sangyufeiwan.com</p>
+<p><img src="https://i.postimg.cc/SN4pLtfM/28.png"></p>
+<p><img src="https://i.postimg.cc/bNRfmHmF/29.png"></p>
+<p>​	大致上就这样</p>
+<p>​	然后在你的博客文件source中创建一个名为CNAME文件，不要后缀。写上你的域名。</p>
 ]]></content>
   </entry>
 </search>
