@@ -20,26 +20,34 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"co.sangyufeiwan.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.23.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="数据库软件（MySQL）08. 基础-SQL-DDL-数据类型及案例_哔哩哔哩_bilibili 数据库DataBase（DB）（相当于备忘录）：储存数据 数据库管理系统（操纵和管理数据库的大型软件，比如MySQL） SQL（structed query language）:操作关系型数据库的语言 MySQL（免费软件，写数据库用，就像我现在写markdown用Typora一样） 最终都是用的SQ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://co.sangyufeiwan.com/2025/04/13/hello-world/index.html">
+<meta property="og:title" content="MySQL">
+<meta property="og:url" content="https://co.sangyufeiwan.com/2025/04/23/MySQL/index.html">
 <meta property="og:site_name" content="笔记本">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="数据库软件（MySQL）08. 基础-SQL-DDL-数据类型及案例_哔哩哔哩_bilibili 数据库DataBase（DB）（相当于备忘录）：储存数据 数据库管理系统（操纵和管理数据库的大型软件，比如MySQL） SQL（structed query language）:操作关系型数据库的语言 MySQL（免费软件，写数据库用，就像我现在写markdown用Typora一样） 最终都是用的SQ">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-04-13T09:10:17.137Z">
-<meta property="article:modified_time" content="2025-04-12T08:51:48.713Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423170326397.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423181906843.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423182245898.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423182632724.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423182922951.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423220056183.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423221242907.png">
+<meta property="article:published_time" content="2025-04-23T06:00:52.000Z">
+<meta property="article:modified_time" content="2025-04-23T14:13:40.194Z">
 <meta property="article:author" content="桑榆">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423170326397.png">
 
 
-<link rel="canonical" href="https://co.sangyufeiwan.com/2025/04/13/hello-world/">
+<link rel="canonical" href="https://co.sangyufeiwan.com/2025/04/23/MySQL/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://co.sangyufeiwan.com/2025/04/13/hello-world/","path":"2025/04/13/hello-world/","title":"Hello World"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://co.sangyufeiwan.com/2025/04/23/MySQL/","path":"2025/04/23/MySQL/","title":"MySQL"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hello World | 笔记本</title>
+<title>MySQL | 笔记本</title>
   
 
 
@@ -485,7 +493,7 @@
     <div class="sidebar-panel-container">
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%EF%BC%88MySQL%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">数据库软件（MySQL）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MySQL"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">MySQL</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#DDL"><span class="nav-number">2.0.0.0.1.</span> <span class="nav-text">DDL</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#-1"><span class="nav-number">2.0.0.0.2.</span> <span class="nav-text"></span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2"><span class="nav-number">2.1.</span> <span class="nav-text">图形化界面</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#DML"><span class="nav-number">2.1.0.0.1.</span> <span class="nav-text">DML</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DQL"><span class="nav-number">2.1.0.0.2.</span> <span class="nav-text">DQL</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -640,7 +648,7 @@ tagElements.forEach(tag => {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://co.sangyufeiwan.com/2025/04/13/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://co.sangyufeiwan.com/2025/04/23/MySQL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/portrait.jpg#/images/avatar.gif">
@@ -653,12 +661,12 @@ tagElements.forEach(tag => {
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Hello World | 笔记本">
+      <meta itemprop="name" content="MySQL | 笔记本">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          MySQL
         </h1>
 
         <div class="post-meta-container">
@@ -668,15 +676,9 @@ tagElements.forEach(tag => {
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2025-04-13 17:10:17" itemprop="dateCreated datePublished" datetime="2025-04-13T17:10:17+08:00">2025-04-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-04-12 16:51:48" itemprop="dateModified" datetime="2025-04-12T16:51:48+08:00">2025-04-12</time>
+      <time title="创建时间：2025-04-23 14:00:52 / 修改时间：22:13:40" itemprop="dateCreated datePublished" datetime="2025-04-23T14:00:52+08:00">2025-04-23</time>
     </span>
 
   
@@ -695,19 +697,181 @@ tagElements.forEach(tag => {
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h1 id="数据库软件（MySQL）"><a href="#数据库软件（MySQL）" class="headerlink" title="数据库软件（MySQL）"></a>数据库软件（MySQL）</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kr4y1i7ru?spm_id_from=333.788.player.switch&vd_source=df6bd7ad18c270eed1dcad06d9983510&p=8">08. 基础-SQL-DDL-数据类型及案例_哔哩哔哩_bilibili</a></p>
+<p>数据库DataBase（DB）（相当于备忘录）：储存数据</p>
+<p>数据库管理系统（操纵和管理数据库的大型软件，比如MySQL）</p>
+<p>SQL（structed query language）:操作关系型数据库的语言</p>
+<p>MySQL（免费软件，写数据库用，就像我现在写markdown用Typora一样）</p>
+<p>最终都是用的SQL操作，所以软件无所谓的，习惯那个用哪个</p>
+<h4 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h4><ol>
+<li>社区版（免费）</li>
+<li>商业版（给钱）</li>
+</ol>
+<p> 关系型数据库（RDBMS）:建立在关系模型上，由&#x3D;&#x3D;多张连接的二维表&#x3D;&#x3D;组成的数据库！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423170326397.png" alt="image-20250423170326397"></p>
+<p>仅展示两张，这两张的关联在dept_id与id&#x2F;name里！</p>
+<p>非关系型数据库就是不按表储存</p>
+<p>安装了MySQL就相当于有了MySQL服务器，就可以将客户端与DBMS连接</p>
+<p>SQL语法：(和C++类似)</p>
+<ol>
+<li>对缩进和空格要求不严格</li>
+<li>分号结尾</li>
+<li>&#x3D;&#x3D;对大小写不严格，都可以&#x3D;&#x3D;</li>
+<li>注释<ol>
+<li>&#x2F;&#x2F;</li>
+<li><h1 id=""><a href="#" class="headerlink" title=""></a></h1></li>
+<li>&#x2F;* *&#x2F;</li>
+</ol>
+</li>
+</ol>
+<p>DDL（data defination language）:  定义对象（搭建大致框架）</p>
+<p>DML  (data manipulation language): 增 删 改</p>
+<p>DQL  (data quary language): 查询</p>
+<p>DCL  (data control language):  权限问题</p>
+<h5 id="DDL"><a href="#DDL" class="headerlink" title="DDL"></a>DDL</h5><p>查询所有数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW DATABATES;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>查询当前数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT DATABASE();//记不清楚自己的数据库了，记得加括号，这是个函数</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>创建数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE 数据库名；</span><br><span class="line">CREATE DATABASE IF NOT EXISTS 数据库名；</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>删除数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP DATABASE 数据库名；//drop</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>使用数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE 数据库名；//相当于切换到这个数据库下，和cd切换一样</span><br></pre></td></tr></table></figure>
+
+<p>查询当前数据库所有表</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW TABLES;</span><br></pre></td></tr></table></figure>
+
+<p>查询表结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DESC 表名；//description描述</span><br></pre></td></tr></table></figure>
+
+<p>查询指定表的建表语句</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW CREATE TEBLE 表名；//这个比desc多展示一些东西！！！</span><br></pre></td></tr></table></figure>
+
+<p>创建表（函数）&#x2F;&#x2F;&#x3D;&#x3D;切记不要在系统库里面用，创建之前一定要USE到自己的数据库&#x3D;&#x3D;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE 表名//相当于类或结构体</span><br><span class="line">（名 类型 comment &quot;这就是在这里面的对名的注释&quot;;</span><br><span class="line">名 类型；</span><br><span class="line">名 类型）;//这些都是表头上的内容，而成员信息是另一个东西！！！！</span><br></pre></td></tr></table></figure>
+
+<h5 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423181906843.png" alt="image-20250423181906843"></h5><p>int ,float,double</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423182245898.png" alt="image-20250423182245898"></p>
+<p>char&#x2F;&#x2F;固定,但性能好，如果不写长度，默认为1</p>
+<p>varchar&#x2F;&#x2F;可变，性能差</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423182632724.png" alt="image-20250423182632724"></p>
+<p>date,time</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423182922951.png" alt="image-20250423182922951"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE;</span><br><span class="line">USE DATABASE;</span><br><span class="line">CREATE TABLE INFORMATION</span><br><span class="line">(</span><br><span class="line">	编号 int,</span><br><span class="line">	员工工号 varchar(10),</span><br><span class="line">	员工姓名 VARCHAR(10),</span><br><span class="line">	性别 CHAR(1),</span><br><span class="line">	年龄 TINYINT,</span><br><span class="line">	身份证号 CHAR(18),</span><br><span class="line">	入职时间 DATA</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名ADD 字段名 类型（长度） COMMENT 注释；//alter是改变！</span><br></pre></td></tr></table></figure>
+
+<p>案例</p>
+<p>为emp表增加一个新字段nickname，类型为varchar(20)</p>
+<p>修改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//修改数据类型</span><br><span class="line">ALTER TABLE 表名 MODIFY 字段名 新数据类型（长度）；//modify也是修改</span><br><span class="line">//修改字段名和数据类型</span><br><span class="line">ALTER TABLE 表名 CHANGE 旧名 新名 类型（长度） COMMENT 注释；</span><br></pre></td></tr></table></figure>
+
+<p>案例</p>
+<p>将emp表的nickname改成username，类型为varchar(30)</p>
+<p>删除字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名 DROP 字段名；</span><br></pre></td></tr></table></figure>
+
+<p>案例</p>
+<p>将emp表的username删除</p>
+<p>修改表名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名 RENAME TO 新表名；</span><br></pre></td></tr></table></figure>
+
+<p>案例</p>
+<p>将emp表的表名修改为employee</p>
+<p>删除表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE IF EXISTS 表名；//IF EXISTS可以不加</span><br></pre></td></tr></table></figure>
+
+<p>删除指定表，并重新创建该表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TRUNCATE TABLE 表名；//truncate删除</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//内容回顾DDL</span><br><span class="line">SHOW DATABASES;</span><br><span class="line">CREAT DATABASE 数据库名；</span><br><span class="line">USE 数据库名；</span><br><span class="line">SELECT DATABASE();</span><br><span class="line">DROP DATABASE 数据库名;</span><br><span class="line"></span><br><span class="line">SHOW TABLES;</span><br><span class="line">CREAT TABLE 表名</span><br><span class="line">（）；//切记表名得和内部元素一同创建，不然就是一个空表</span><br><span class="line">DESC 表名；</span><br><span class="line">SHOW CREAT TABLE 表名；//有的时候你得说清楚是什么表，所以得加表名，而CREAT对象很多</span><br><span class="line">//所以有的时候又得说清楚CREAT DATABASE/TABLE</span><br><span class="line">ALTER TABLE ADD/DROP/CHANGE/MODIFY/RENAME TO</span><br><span class="line">DROP TABLE 表名；</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;但是这样子在命令行里操作不直观，所以可以可视化处理，这样子可以清晰且提高效率&#x3D;&#x3D;</p>
+<h2 id="图形化界面"><a href="#图形化界面" class="headerlink" title="图形化界面"></a>图形化界面</h2><p>Sqlyog&#x2F;&#x3D;&#x3D;DataGrip&#x3D;&#x3D;&#x2F;Navicat</p>
+<p>DataGrip里创建数据库schema和database一样</p>
+<h5 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h5><p>增加（INSERT）</p>
+<p>修改（UPDATE）</p>
+<p>删除（DELETE）</p>
+<p>添加数据</p>
+<ol>
+<li><p>给指定字段添加数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO 表名 （字段1，字段2，...）VALUES(值1，值2，....);</span><br><span class="line">//如果是给所有字段添加数据，那么就直接不写（字段1，字段2，...）</span><br><span class="line">//如果要批量添加：VALUES(值1，值2，....)，(值1，值2，....)，(值1，值2，....);</span><br><span class="line">//在value后添加”，“隔开。</span><br><span class="line">//*可不可以表示泛呢？好像没法。</span><br><span class="line">//实质上也是键值对，所以要对应</span><br><span class="line">//字符串和日期本质都是字符串，所以要放在引号里</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">UPDATE 表名 SET 字段名1=值1，字段名2=值2，... WHERE 条件；</span><br><span class="line">//没有条件就是修改整张表！！！所以修改一个那么就得加条件，别一个不小心把整张表都改了</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM 表名 WHERE 条件；</span><br><span class="line">//没有条件就是删除整张表的数据</span><br><span class="line">//DELETE不能只删除某一个字段的值（可以用update）</span><br></pre></td></tr></table></figure></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//内容回顾</span><br><span class="line">INSERT INTO 表名 （字段1，字段2，...）VALUES(值1，值2，....);</span><br><span class="line">UPDATE 表名 SET 字段名1=值1，字段名2=值2，... WHERE 条件；</span><br><span class="line">DELETE FROM 表名 WHERE 条件；</span><br></pre></td></tr></table></figure>
+
+<h5 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h5><p>SELECT</p>
+<p>​	字段列表</p>
+<p>FROM</p>
+<p>​	表名列表</p>
+<p>WHERE</p>
+<p>​	条件列表</p>
+<p>GROUP BY</p>
+<p>​	分组字段列表</p>
+<p>HAVING</p>
+<p>​	分组后条件列表</p>
+<p>ORDER BY</p>
+<p>​	排序字段列表</p>
+<p>LIMIT</p>
+<p>​	分页参数</p>
+<ul>
+<li><p>基本查询</p>
+</li>
+<li><p>条件查询</p>
+</li>
+<li><p>聚合函数</p>
+</li>
+<li><p>分组查询</p>
+</li>
+<li><p>排序查询</p>
+</li>
+<li><p>分页查询</p>
+</li>
+</ul>
+<p>查询&#x2F;&#x2F;返回的是一个表！按列返回</p>
+<p>所有查询的本质就是</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT 字段列表 FROM 表名；</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>基本查询</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//查询返回多个字段</span><br><span class="line">SELECT 字段1 AS 别名1，字段2，字段3... FROM 表名；//AS可以省略</span><br><span class="line">SELECT * FROM 表名；//*表泛，可以给字段设别名</span><br><span class="line">//去除重复记录</span><br><span class="line">SELECT DISTINCT 字段列表 FROM 表名；//DISTINCT就是个去重操作</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>条件查询&#x2F;&#x2F;加WHERE实现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT 字段列表 FROM 表名 WHERE 条件列表；</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423220056183.png" alt="image-20250423220056183"></p>
+</li>
+<li><p>聚合函数（将一列数据作为一个整体，进行纵向计算）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT 聚合函数（字段列表）FROM 表名；</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423221242907.png" alt="image-20250423221242907"></p>
+</li>
+</ol>
 
     </div>
 
@@ -721,14 +885,11 @@ tagElements.forEach(tag => {
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2025/04/09/Leetcode%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="prev" title="Leetcode刷题记录">
-                  <i class="fa fa-angle-left"></i> Leetcode刷题记录
+                <a href="/2025/04/23/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="prev" title="数据库">
+                  <i class="fa fa-angle-left"></i> 数据库
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025/04/13/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" rel="next" title="这是一篇文章">
-                  这是一篇文章 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
