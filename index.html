@@ -419,7 +419,7 @@
       <h1 class="site-title">笔记本</h1>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">桑榆的积累</p>
+      <p class="site-subtitle" itemprop="description">字落桑榆影，光存笔记中</p>
   </div>
 
   <div class="site-nav-right">
@@ -491,7 +491,7 @@
     <img class="site-author-image" itemprop="image" alt="桑榆"
       src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/portrait.jpg#/images/avatar.gif">
   <p class="site-author-name" itemprop="name">桑榆</p>
-  <div class="site-description" itemprop="description"><span style='font-size: 36px; color: #FFFFFF; font-weight: 600; text-shadow: 0 0 10px rgba(255,255,255,0.85);'>字落桑榆影，光存笔记中。</span></div>
+  <div class="site-description" itemprop="description"><span style='font-size: 36px; color: #8FBCE6; font-weight: 500; font-family: KaiTi, STKaiti, cursive; text-shadow: 0 0 10px rgba(143, 188, 230, 0.85);'>字落桑榆影，光存笔记中。</span></div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -645,7 +645,7 @@ tagElements.forEach(tag => {
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="笔记本">
-      <meta itemprop="description" content="<span style='font-size: 36px; color: #FFFFFF; font-weight: 600; text-shadow: 0 0 10px rgba(255,255,255,0.85);'>字落桑榆影，光存笔记中。</span>">
+      <meta itemprop="description" content="<span style='font-size: 36px; color: #8FBCE6; font-weight: 500; font-family: KaiTi, STKaiti, cursive; text-shadow: 0 0 10px rgba(143, 188, 230, 0.85);'>字落桑榆影，光存笔记中。</span>">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -664,9 +664,15 @@ tagElements.forEach(tag => {
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-04-23 14:00:52 / 修改时间：22:13:40" itemprop="dateCreated datePublished" datetime="2025-04-23T14:00:52+08:00">2025-04-23</time>
+      <time title="创建时间：2025-04-23 14:00:52" itemprop="dateCreated datePublished" datetime="2025-04-23T14:00:52+08:00">2025-04-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-04-24 12:55:09" itemprop="dateModified" datetime="2025-04-24T12:55:09+08:00">2025-04-24</time>
     </span>
 
   
@@ -732,10 +738,10 @@ tagElements.forEach(tag => {
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DESC 表名；//description描述</span><br></pre></td></tr></table></figure>
 
 <p>查询指定表的建表语句</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW CREATE TEBLE 表名；//这个比desc多展示一些东西！！！</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW CREATE TEBLE 表名；//这个比desc多展示一些东西！！！		</span><br></pre></td></tr></table></figure>
 
 <p>创建表（函数）&#x2F;&#x2F;&#x3D;&#x3D;切记不要在系统库里面用，创建之前一定要USE到自己的数据库&#x3D;&#x3D;</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE 表名//相当于类或结构体</span><br><span class="line">（名 类型 comment &quot;这就是在这里面的对名的注释&quot;;</span><br><span class="line">名 类型；</span><br><span class="line">名 类型）;//这些都是表头上的内容，而成员信息是另一个东西！！！！</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE 表名//相当于类或结构体</span><br><span class="line">（名 类型 comment &quot;这就是在这里面的对名的注释&quot;;</span><br><span class="line">名 类型；</span><br><span class="line">名 类型）;//这些都是表头上的内容，而成员信息是另一个东西！！！！,切记不能是空表</span><br></pre></td></tr></table></figure>
 
 <h5 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423181906843.png" alt="image-20250423181906843"></h5><p>int ,float,double</p>
 <p><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250423182245898.png" alt="image-20250423182245898"></p>
@@ -789,6 +795,7 @@ tagElements.forEach(tag => {
 <p>&#x3D;&#x3D;但是这样子在命令行里操作不直观，所以可以可视化处理，这样子可以清晰且提高效率&#x3D;&#x3D;</p>
 <h2 id="图形化界面"><a href="#图形化界面" class="headerlink" title="图形化界面"></a>图形化界面</h2><p>Sqlyog&#x2F;&#x3D;&#x3D;DataGrip&#x3D;&#x3D;&#x2F;Navicat</p>
 <p>DataGrip里创建数据库schema和database一样</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sangyu520/picgo/img/image-20250424110243582.png" alt="image-20250424110243582"></p>
 <h5 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h5><p>增加（INSERT）</p>
 <p>修改（UPDATE）</p>
 <p>删除（DELETE）</p>
@@ -889,7 +896,7 @@ tagElements.forEach(tag => {
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="笔记本">
-      <meta itemprop="description" content="<span style='font-size: 36px; color: #FFFFFF; font-weight: 600; text-shadow: 0 0 10px rgba(255,255,255,0.85);'>字落桑榆影，光存笔记中。</span>">
+      <meta itemprop="description" content="<span style='font-size: 36px; color: #8FBCE6; font-weight: 500; font-family: KaiTi, STKaiti, cursive; text-shadow: 0 0 10px rgba(143, 188, 230, 0.85);'>字落桑榆影，光存笔记中。</span>">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -958,7 +965,7 @@ tagElements.forEach(tag => {
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="笔记本">
-      <meta itemprop="description" content="<span style='font-size: 36px; color: #FFFFFF; font-weight: 600; text-shadow: 0 0 10px rgba(255,255,255,0.85);'>字落桑榆影，光存笔记中。</span>">
+      <meta itemprop="description" content="<span style='font-size: 36px; color: #8FBCE6; font-weight: 500; font-family: KaiTi, STKaiti, cursive; text-shadow: 0 0 10px rgba(143, 188, 230, 0.85);'>字落桑榆影，光存笔记中。</span>">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1088,7 +1095,7 @@ tagElements.forEach(tag => {
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="笔记本">
-      <meta itemprop="description" content="<span style='font-size: 36px; color: #FFFFFF; font-weight: 600; text-shadow: 0 0 10px rgba(255,255,255,0.85);'>字落桑榆影，光存笔记中。</span>">
+      <meta itemprop="description" content="<span style='font-size: 36px; color: #8FBCE6; font-weight: 500; font-family: KaiTi, STKaiti, cursive; text-shadow: 0 0 10px rgba(143, 188, 230, 0.85);'>字落桑榆影，光存笔记中。</span>">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1166,7 +1173,7 @@ tagElements.forEach(tag => {
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="笔记本">
-      <meta itemprop="description" content="<span style='font-size: 36px; color: #FFFFFF; font-weight: 600; text-shadow: 0 0 10px rgba(255,255,255,0.85);'>字落桑榆影，光存笔记中。</span>">
+      <meta itemprop="description" content="<span style='font-size: 36px; color: #8FBCE6; font-weight: 500; font-family: KaiTi, STKaiti, cursive; text-shadow: 0 0 10px rgba(143, 188, 230, 0.85);'>字落桑榆影，光存笔记中。</span>">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1235,7 +1242,7 @@ tagElements.forEach(tag => {
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="笔记本">
-      <meta itemprop="description" content="<span style='font-size: 36px; color: #FFFFFF; font-weight: 600; text-shadow: 0 0 10px rgba(255,255,255,0.85);'>字落桑榆影，光存笔记中。</span>">
+      <meta itemprop="description" content="<span style='font-size: 36px; color: #8FBCE6; font-weight: 500; font-family: KaiTi, STKaiti, cursive; text-shadow: 0 0 10px rgba(143, 188, 230, 0.85);'>字落桑榆影，光存笔记中。</span>">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1323,7 +1330,7 @@ tagElements.forEach(tag => {
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="笔记本">
-      <meta itemprop="description" content="<span style='font-size: 36px; color: #FFFFFF; font-weight: 600; text-shadow: 0 0 10px rgba(255,255,255,0.85);'>字落桑榆影，光存笔记中。</span>">
+      <meta itemprop="description" content="<span style='font-size: 36px; color: #8FBCE6; font-weight: 500; font-family: KaiTi, STKaiti, cursive; text-shadow: 0 0 10px rgba(143, 188, 230, 0.85);'>字落桑榆影，光存笔记中。</span>">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1457,7 +1464,7 @@ tagElements.forEach(tag => {
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="笔记本">
-      <meta itemprop="description" content="<span style='font-size: 36px; color: #FFFFFF; font-weight: 600; text-shadow: 0 0 10px rgba(255,255,255,0.85);'>字落桑榆影，光存笔记中。</span>">
+      <meta itemprop="description" content="<span style='font-size: 36px; color: #8FBCE6; font-weight: 500; font-family: KaiTi, STKaiti, cursive; text-shadow: 0 0 10px rgba(143, 188, 230, 0.85);'>字落桑榆影，光存笔记中。</span>">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1536,7 +1543,7 @@ tagElements.forEach(tag => {
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="笔记本">
-      <meta itemprop="description" content="<span style='font-size: 36px; color: #FFFFFF; font-weight: 600; text-shadow: 0 0 10px rgba(255,255,255,0.85);'>字落桑榆影，光存笔记中。</span>">
+      <meta itemprop="description" content="<span style='font-size: 36px; color: #8FBCE6; font-weight: 500; font-family: KaiTi, STKaiti, cursive; text-shadow: 0 0 10px rgba(143, 188, 230, 0.85);'>字落桑榆影，光存笔记中。</span>">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1877,7 +1884,7 @@ tagElements.forEach(tag => {
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="笔记本">
-      <meta itemprop="description" content="<span style='font-size: 36px; color: #FFFFFF; font-weight: 600; text-shadow: 0 0 10px rgba(255,255,255,0.85);'>字落桑榆影，光存笔记中。</span>">
+      <meta itemprop="description" content="<span style='font-size: 36px; color: #8FBCE6; font-weight: 500; font-family: KaiTi, STKaiti, cursive; text-shadow: 0 0 10px rgba(143, 188, 230, 0.85);'>字落桑榆影，光存笔记中。</span>">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
