@@ -1439,7 +1439,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #d27d9f;
+  background: #ffffe8;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2976,4 +2976,48 @@ code {
 canvas#tag-cloud {
   color: #fcf !important;
   text-shadow: 0 0 8px #fcf !important;
+}
+.site-title {
+  font-size: 4em;
+  font-weight: 600;
+  font-family: "KaiTi", "STKaiti", "Dancing Script", cursive;
+  background: linear-gradient(to right, #fff, #ffe6f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255,255,255,0.75);
+  letter-spacing: 0.06em;
+  animation: fadeInTitle 2.2s ease-out both;
+}
+.site-subtitle {
+  font-size: 1.6em;
+  font-style: italic;
+  color: #f0f8ff;
+  text-shadow: 0 0 6px rgba(255,255,255,0.5);
+  animation: fadeInSubtitle 2.6s ease-out both;
+}
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+    filter: blur(4px);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+@keyframes fadeInSubtitle {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
